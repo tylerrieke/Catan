@@ -1,0 +1,39 @@
+.vertical-center {
+    min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+    min-height: 100vh; /* These two lines are counted as one :-)       */
+
+    align-items: center;
+}
+
+.category {
+    background: none repeat scroll 0 0 #FCCF27;
+    border-radius: 3px;
+    color: black;
+    font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
+    height: 100%;
+    line-height: 65px;
+    margin-left: 0;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.category-name {
+    margin-left: 0px;
+    width:100%;
+    padding-top: 100px;
+    font-size: 60px;
+}
+
+
+.field-button {
+    width: 120px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+.field-button-area {
+    margin-left: 2px;
+}

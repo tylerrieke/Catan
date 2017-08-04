@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
+       default-autowire="byName">
+
+    <bean id="ore" class="com.rieke.bmore.catan.base.resources.Ore"/>
+    <bean id="brick" class="com.rieke.bmore.catan.base.resources.Brick"/>
+    <bean id="sheep" class="com.rieke.bmore.catan.base.resources.Sheep"/>
+    <bean id="wheat" class="com.rieke.bmore.catan.base.resources.Wheat"/>
+    <bean id="wood" class="com.rieke.bmore.catan.base.resources.Wood"/>
+
+    <bean id="resourceService" class="com.rieke.bmore.catan.base.resources.ResourceService"
+          scope="singleton">
+    </bean>
+
+    <bean id="boardFactory" class="com.rieke.bmore.catan.base.board.BasicBoardFactory"
+          scope="singleton">
+    </bean>
+
+</beans>

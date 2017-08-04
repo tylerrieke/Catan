@@ -1,0 +1,201 @@
+.squares-container {
+    line-height: initial;
+}
+
+.teamX {
+    transform: rotate(-90deg);
+    font-size: 70px;
+    margin-top: 400px;
+    float: left;
+    margin-right: -70px;
+    margin-left: -70px;
+}
+
+.teamY {
+    text-align: center;
+    font-size: 70px;
+}
+
+.squares-section {
+    background: none repeat scroll 0 0 #f3df8d;
+    border: 1px double;
+    border-radius: 10px;
+    border-collapse: initial;
+    padding: 10px;
+}
+
+.square-row {
+    margin-left: -15px;
+    padding-bottom: 5px;
+}
+
+.square {
+    color: black;
+    text-align: center;
+    border: medium solid black;
+    width: 120px;
+    line-height: 1;
+    font-family: 'Arial Rounded MT Bold', 'Helvetica Rounded', Arial, sans-serif;
+    font-size: 36px;
+}
+
+.square-lg {
+    font-size: 24px;
+}
+
+.square-xl {
+    font-size: 18px;
+}
+
+.square-filled {
+    background:#dfa757
+}
+
+.player-registration-row {
+    border: white solid;
+    border-radius: 10px;
+    margin-left: 0px;
+    font-size: 50px;
+    background: lightgrey;
+}
+
+.player-display {
+
+}
+
+.no-rotate{
+    display: block;
+    position: absolute;
+}
+
+.top-right-road{
+    -moz-transform: rotate(-29deg);
+    -ms-transform: rotate(-29deg);
+    -o-transform: rotate(-29deg);
+    -webkit-transform: rotate(-29deg);
+    transform: rotate(-29deg);
+    display: block;
+    position: absolute;
+    color: black;
+    left: 85px;
+    top: -26px;
+    font-size: 55px;
+}
+
+.top-left-road{
+    -moz-transform: rotate(29deg);
+    -ms-transform: rotate(29deg);
+    -o-transform: rotate(29deg);
+    -webkit-transform: rotate(29deg);
+    transform: rotate(29deg);
+    display: block;
+    position: absolute;
+    color: black;
+    left: 15px;
+    font-size: 55px;
+    top: -26px;
+}
+
+.bottom-left-road{
+    -moz-transform: rotate(-29deg);
+    -ms-transform: rotate(-29deg);
+    -o-transform: rotate(-29deg);
+    -webkit-transform: rotate(-29deg);
+    transform: rotate(-29deg);
+    display: block;
+    position: absolute;
+    color: black;
+    left: 10px;
+    top: 18px;
+    font-size: 55px;
+}
+
+.bottom-right-road{
+   -moz-transform: rotate(29deg);
+   -ms-transform: rotate(29deg);
+   -o-transform: rotate(29deg);
+   -webkit-transform: rotate(29deg);
+   transform: rotate(29deg);
+   display: block;
+   position: absolute;
+   color: black;
+   left: 90px;
+   font-size: 55px;
+   top: 18px;
+}
+
+.rotate--90{
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    display: block;
+    position: absolute;
+}
+
+.bottom-road{
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    display: block;
+    position: absolute;
+    color: black;
+    font-size: 55px;
+    left: 46px;
+    top: 41px;
+    z-index: 100;
+}
+
+.top-road{
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    display: block;
+    position: absolute;
+    color: black;
+    font-size: 55px;
+    left: 45px;
+    top: -43px;
+}
+
+.centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform: -webkit-translate(-50%, -50%);
+  transform: -moz-translate(-50%, -50%);
+  transform: -ms-translate(-50%, -50%);
+}
+
+.tile-chip {
+    position: absolute;
+    top: -39px;
+    left: 8px;
+    z-index: 99;
+}
+
+.tile-chip-number {
+    left:53px;
+    top:0px;
+    position:absolute;
+    color: black;
+    font-size: 16px;
+    z-index: 100;
+}
+
+.tile-chip-hot-number {
+    color:red;
+}
+.tile-chip-big-number {
+    left:47px;
+}
+
+.player-name {
+
+}

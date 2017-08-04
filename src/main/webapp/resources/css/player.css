@@ -1,0 +1,71 @@
+.field-editing {
+    background: lightskyblue;
+}
+
+.player-details-container {
+    text-align: center;
+    padding-top: 30px;
+}
+
+.player-details-text {
+    font-size: 30px;
+    border-radius: 50px;
+}
+
+.player-display-field {
+    font-size: 30px;
+    height: 40px;
+    width: 70px
+}
+
+.player-name-field {
+    font-size: 30px;
+    height: 40px;
+    width: 200px
+}
+
+.player-field-error {
+    padding-bottom: 10px;
+}
+
+.team-name {
+    font-size: 30px;
+}
+
+.team-cell {
+    font-size: 40px;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 15px;
+}
+
+.team-menu-selected {
+    font-size: 100px;
+    line-height: 1;
+}
+
+.team-menu-option {
+    font-size: 50px;
+    height: 40px;
+    padding-top: 15px;
+}
+
+.mark-button {
+    font-size: 60px;
+    text-align: center;
+    margin-left: 10px;
+    margin-top: 30px;
+    height: 80px;
+    width: 300px;
+    background: green;
+}
+
+.pass-button {
+    font-size: 60px;
+    text-align: center;
+    margin-left: 10px;
+    margin-top: 30px;
+    height: 80px;
+    width: 300px;
+}

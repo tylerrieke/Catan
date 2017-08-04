@@ -1,0 +1,33 @@
+/* Additions */
+body {
+    background: #b0d3ea
+}
+
+.picking {
+    background: lightgreen !important;
+}
+
+.ng-invalid-maxlength {
+    background: pink;
+}
+
+.ng-invalid {
+    background: pink;
+}
+
+.player-section {
+    background: none repeat scroll 0 0 #3498db;
+    border: 1px solid;
+    border-radius: 10px;
+    padding: 5px 5px 5px 5px;
+    margin-left: 103px;
+}
+
+.player-row {
+    border: white solid;
+    border-radius: 10px;
+    margin-left: 0px;
+    font-size: 30px;
+    background: lightgrey;
+    line-height: initial;
+}

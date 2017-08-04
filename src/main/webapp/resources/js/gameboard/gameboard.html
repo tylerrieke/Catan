@@ -1,0 +1,56 @@
+<span id="site" class="ng-cloak">
+    <!--<div ng-show="gameboard">-->
+        <!--{{gameboard[0][0].resourceName}}-->
+    <!--</div>-->
+    <div class="centered">
+        <div ng-hide="!tile" ng-style="{'position': 'absolute','top':(tile.y*yDiff).toString()+'px','left':(tile.x*xDiff).toString()+'px'}" ng-repeat="tile in gameboard">
+            <span class="rotate--90" ng-style="{'color':getColor(tile), 'font-size': '135px'}">&#x2B22;</span>
+            <span class="top-right-road" ng-show="!!tile && tile.edges[0].tileIds[0]==tile.id">|</span>
+            <svg class="tile-chip" height="20" width="20" ng-show="!!tile && tile.edges[0].resourceRatio" style="top: -30px;left: 101px; ">
+              <circle cx="10" cy="10" r="10" stroke="#000000" stroke-width=".5" fill="{{getHarborColor(tile.edges[0].resourceRatio)}}"></circle>
+            </svg>
+            <span class="top-left-road" ng-show="!!tile && tile.edges[4].tileIds[0]==tile.id">|</span>
+            <svg class="tile-chip" height="20" width="20" ng-show="!!tile && tile.edges[4].resourceRatio" style="top: -30px;left: -5px; ">
+              <circle cx="10" cy="10" r="10" stroke="#000000" stroke-width=".5" fill="{{getHarborColor(tile.edges[4].resourceRatio)}}"></circle>
+            </svg>
+            <span class="top-road" ng-show="!!tile && tile.edges[5].tileIds[0]==tile.id">|</span>
+            <svg class="tile-chip" height="20" width="20" ng-show="!!tile && tile.edges[5].resourceRatio" style="top: -60px;left: 49px; ">
+              <circle cx="10" cy="10" r="10" stroke="#000000" stroke-width=".5" fill="{{getHarborColor(tile.edges[5].resourceRatio)}}"></circle>
+            </svg>
+            <span class="bottom-road" ng-show="!!tile && tile.edges[2].tileIds[0]==tile.id">|</span>
+            <svg class="tile-chip" height="20" width="20" ng-show="!!tile && tile.edges[2].resourceRatio" style="top: 60px;left: 49px; ">
+              <circle cx="10" cy="10" r="10" stroke="#000000" stroke-width=".5" fill="{{getHarborColor(tile.edges[2].resourceRatio)}}"></circle>
+            </svg>
+            <span class="bottom-right-road" ng-show="!!tile && tile.edges[1].tileIds[0]==tile.id">|</span>
+            <svg class="tile-chip" height="20" width="20" ng-show="!!tile && tile.edges[1].resourceRatio" style="top: -30px;left: 101px; ">
+              <circle cx="10" cy="10" r="10" stroke="#000000" stroke-width=".5" fill="{{getHarborColor(tile.edges[1].resourceRatio)}}"></circle>
+            </svg>
+            <span class="bottom-left-road" ng-show="!!tile && tile.edges[3].tileIds[0]==tile.id">|</span>
+            <svg class="tile-chip" height="20" width="20" ng-show="!!tile && tile.edges[3].resourceRatio" style="top: 30px;left: -5px; ">
+              <circle cx="10" cy="10" r="10" stroke="#000000" stroke-width=".5" fill="{{getHarborColor(tile.edges[3].resourceRatio)}}"></circle>
+            </svg>
+            <svg class="tile-chip" height="100" width="100" ng-show="!!tile.value">
+              <circle cx="50" cy="50" r="15" stroke="#e2dcba" stroke-width=".5" fill="#f4eecb" />
+            </svg>
+            <svg class="tile-chip" height="20" width="20" ng-show="!!tile && tile.corners[3].tileIds[0]==tile.id" style="top: 0px;left: -2px; ">
+              <circle cx="10" cy="10" r="10" stroke="#000000" stroke-width=".5" fill="{{getColor(tile)}}"></circle>
+            </svg>
+            <svg class="tile-chip" height="20" width="20" ng-show="!!tile && tile.corners[4].tileIds[0]==tile.id" style="top: -42px;left: 22px; ">
+              <circle cx="10" cy="10" r="10" stroke="#000000" stroke-width=".5" fill="{{getColor(tile)}}"></circle>
+            </svg>
+            <svg class="tile-chip" height="20" width="20" ng-show="!!tile && tile.corners[5].tileIds[0]==tile.id" style="top: -42px;left: 74px; ">
+              <circle cx="10" cy="10" r="10" stroke="#000000" stroke-width=".5" fill="{{getColor(tile)}}"></circle>
+            </svg>
+            <svg class="tile-chip" height="20" width="20" ng-show="!!tile && tile.corners[0].tileIds[0]==tile.id" style="top: 0px;left: 97px; ">
+              <circle cx="10" cy="10" r="10" stroke="#000000" stroke-width=".5" fill="{{getColor(tile)}}"></circle>
+            </svg>
+            <svg class="tile-chip" height="20" width="20" ng-show="!!tile && tile.corners[2].tileIds[0]==tile.id" style="top: 42px;left: 22px; ">
+              <circle cx="10" cy="10" r="10" stroke="#000000" stroke-width=".5" fill="{{getColor(tile)}}"></circle>
+            </svg>
+            <svg class="tile-chip" height="20" width="20" ng-show="!!tile && tile.corners[1].tileIds[0]==tile.id" style="top: 42px;left: 74px; ">
+              <circle cx="10" cy="10" r="10" stroke="#000000" stroke-width=".5" fill="{{getColor(tile)}}"></circle>
+            </svg>
+            <span ng-class="{'tile-chip-number':true, 'tile-chip-big-number':tile.value>=10, 'tile-chip-hot-number':tile.value==6 || tile.value==8}" ng-show="!!tile.value">{{tile.value}}</span>
+        </div>
+    </div>
+</span>
