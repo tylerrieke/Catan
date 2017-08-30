@@ -2,13 +2,14 @@ package com.rieke.bmore.catan.base.board.item.tile;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.rieke.bmore.catan.base.board.item.BoardItem;
+import com.rieke.bmore.catan.base.board.item.SelectableBoardItem;
 import com.rieke.bmore.catan.base.board.item.corner.Corner;
 import com.rieke.bmore.catan.base.board.item.edge.Edge;
 
 import javax.persistence.criteria.CriteriaBuilder;
 import java.util.*;
 
-public abstract class Tile extends BoardItem {
+public abstract class Tile extends SelectableBoardItem {
     private static final int MAX_NUM_EDGES = 6;
     private static final int MAX_NUM_CORNERS = 6;
 

@@ -80,6 +80,7 @@
     left: 85px;
     top: -26px;
     font-size: 55px;
+    z-index: 100;
 }
 
 .top-left-road{
@@ -94,6 +95,7 @@
     left: 15px;
     font-size: 55px;
     top: -26px;
+    z-index: 100;
 }
 
 .bottom-left-road{
@@ -108,6 +110,7 @@
     left: 10px;
     top: 18px;
     font-size: 55px;
+    z-index: 100;
 }
 
 .bottom-right-road{
@@ -122,6 +125,7 @@
    left: 90px;
    font-size: 55px;
    top: 18px;
+   z-index: 100;
 }
 
 .rotate--90{
@@ -132,6 +136,7 @@
     transform: rotate(-90deg);
     display: block;
     position: absolute;
+    z-index: 98;
 }
 
 .bottom-road{
@@ -161,6 +166,7 @@
     font-size: 55px;
     left: 45px;
     top: -43px;
+    z-index: 100;
 }
 
 .centered {
@@ -196,6 +202,29 @@
     left:47px;
 }
 
+.corner-piece {
+    z-index: 110;
+}
+
 .player-name {
 
+}
+
+.player-column {
+    margin-left: 10px;
+    float: left;
+    width: 20px;
+    font-size: 15px;
+}
+
+.player-column-medium {
+    width: 40px;
+}
+
+.player-column-large {
+    width: 90px;
+}
+
+.player-column-xlarge {
+    width: 140px;
 }

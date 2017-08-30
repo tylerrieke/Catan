@@ -2,6 +2,7 @@ package com.rieke.bmore.catan.base.board.item.tile;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.rieke.bmore.catan.base.board.item.corner.Corner;
+import com.rieke.bmore.catan.base.pieces.Piece;
 import com.rieke.bmore.catan.base.resources.Resource;
 public class ResourceTile extends Tile {
     private Class<? extends Resource> resource;
@@ -49,5 +50,8 @@ public class ResourceTile extends Tile {
         }
     }
 
-
+    @Override
+    public Class<? extends Piece> getPieceType() {
+        return null;
+    }
 }

@@ -1,56 +1,119 @@
 <span id="site" class="ng-cloak">
-    <!--<div ng-show="gameboard">-->
-        <!--{{gameboard[0][0].resourceName}}-->
-    <!--</div>-->
     <div class="centered">
-        <div ng-hide="!tile" ng-style="{'position': 'absolute','top':(tile.y*yDiff).toString()+'px','left':(tile.x*xDiff).toString()+'px'}" ng-repeat="tile in gameboard">
-            <span class="rotate--90" ng-style="{'color':getColor(tile), 'font-size': '135px'}">&#x2B22;</span>
-            <span class="top-right-road" ng-show="!!tile && tile.edges[0].tileIds[0]==tile.id">|</span>
-            <svg class="tile-chip" height="20" width="20" ng-show="!!tile && tile.edges[0].resourceRatio" style="top: -30px;left: 101px; ">
-              <circle cx="10" cy="10" r="10" stroke="#000000" stroke-width=".5" fill="{{getHarborColor(tile.edges[0].resourceRatio)}}"></circle>
-            </svg>
-            <span class="top-left-road" ng-show="!!tile && tile.edges[4].tileIds[0]==tile.id">|</span>
-            <svg class="tile-chip" height="20" width="20" ng-show="!!tile && tile.edges[4].resourceRatio" style="top: -30px;left: -5px; ">
-              <circle cx="10" cy="10" r="10" stroke="#000000" stroke-width=".5" fill="{{getHarborColor(tile.edges[4].resourceRatio)}}"></circle>
-            </svg>
-            <span class="top-road" ng-show="!!tile && tile.edges[5].tileIds[0]==tile.id">|</span>
-            <svg class="tile-chip" height="20" width="20" ng-show="!!tile && tile.edges[5].resourceRatio" style="top: -60px;left: 49px; ">
-              <circle cx="10" cy="10" r="10" stroke="#000000" stroke-width=".5" fill="{{getHarborColor(tile.edges[5].resourceRatio)}}"></circle>
-            </svg>
-            <span class="bottom-road" ng-show="!!tile && tile.edges[2].tileIds[0]==tile.id">|</span>
-            <svg class="tile-chip" height="20" width="20" ng-show="!!tile && tile.edges[2].resourceRatio" style="top: 60px;left: 49px; ">
-              <circle cx="10" cy="10" r="10" stroke="#000000" stroke-width=".5" fill="{{getHarborColor(tile.edges[2].resourceRatio)}}"></circle>
-            </svg>
-            <span class="bottom-right-road" ng-show="!!tile && tile.edges[1].tileIds[0]==tile.id">|</span>
-            <svg class="tile-chip" height="20" width="20" ng-show="!!tile && tile.edges[1].resourceRatio" style="top: -30px;left: 101px; ">
-              <circle cx="10" cy="10" r="10" stroke="#000000" stroke-width=".5" fill="{{getHarborColor(tile.edges[1].resourceRatio)}}"></circle>
-            </svg>
-            <span class="bottom-left-road" ng-show="!!tile && tile.edges[3].tileIds[0]==tile.id">|</span>
-            <svg class="tile-chip" height="20" width="20" ng-show="!!tile && tile.edges[3].resourceRatio" style="top: 30px;left: -5px; ">
-              <circle cx="10" cy="10" r="10" stroke="#000000" stroke-width=".5" fill="{{getHarborColor(tile.edges[3].resourceRatio)}}"></circle>
-            </svg>
-            <svg class="tile-chip" height="100" width="100" ng-show="!!tile.value">
-              <circle cx="50" cy="50" r="15" stroke="#e2dcba" stroke-width=".5" fill="#f4eecb" />
-            </svg>
-            <svg class="tile-chip" height="20" width="20" ng-show="!!tile && tile.corners[3].tileIds[0]==tile.id" style="top: 0px;left: -2px; ">
-              <circle cx="10" cy="10" r="10" stroke="#000000" stroke-width=".5" fill="{{getColor(tile)}}"></circle>
-            </svg>
-            <svg class="tile-chip" height="20" width="20" ng-show="!!tile && tile.corners[4].tileIds[0]==tile.id" style="top: -42px;left: 22px; ">
-              <circle cx="10" cy="10" r="10" stroke="#000000" stroke-width=".5" fill="{{getColor(tile)}}"></circle>
-            </svg>
-            <svg class="tile-chip" height="20" width="20" ng-show="!!tile && tile.corners[5].tileIds[0]==tile.id" style="top: -42px;left: 74px; ">
-              <circle cx="10" cy="10" r="10" stroke="#000000" stroke-width=".5" fill="{{getColor(tile)}}"></circle>
-            </svg>
-            <svg class="tile-chip" height="20" width="20" ng-show="!!tile && tile.corners[0].tileIds[0]==tile.id" style="top: 0px;left: 97px; ">
-              <circle cx="10" cy="10" r="10" stroke="#000000" stroke-width=".5" fill="{{getColor(tile)}}"></circle>
-            </svg>
-            <svg class="tile-chip" height="20" width="20" ng-show="!!tile && tile.corners[2].tileIds[0]==tile.id" style="top: 42px;left: 22px; ">
-              <circle cx="10" cy="10" r="10" stroke="#000000" stroke-width=".5" fill="{{getColor(tile)}}"></circle>
-            </svg>
-            <svg class="tile-chip" height="20" width="20" ng-show="!!tile && tile.corners[1].tileIds[0]==tile.id" style="top: 42px;left: 74px; ">
-              <circle cx="10" cy="10" r="10" stroke="#000000" stroke-width=".5" fill="{{getColor(tile)}}"></circle>
-            </svg>
-            <span ng-class="{'tile-chip-number':true, 'tile-chip-big-number':tile.value>=10, 'tile-chip-hot-number':tile.value==6 || tile.value==8}" ng-show="!!tile.value">{{tile.value}}</span>
+        <div ng-if="state=='OPEN'">
+            <h2 style="text-align:center">Game ID: {{gameId}}</h2>
+            <div class="player-section span10">
+                <div ng-if="players.length==0" class="row player-row picking">
+                     <row class="span10">
+                        <div class="span7 player-name">Waiting for players</div>
+                    </row>
+                </div>
+                <div ng-class="{'span10':true,'row':true,'player-row':true,'picking':player.active==true}" ng-repeat="player in players">
+                    <row>
+                        <div class="span2 player-display">{{player.display}}</div>
+                        <div class="span7 player-name">{{player.name}}</div>
+                    </row>
+                </div>
+            </div>
+            <div style="text-align:center">
+                <button type="button" ng-click="startGame()" class="btn btn-medium btn-success mark-button" style="text-align:center">
+                    Start Game
+                </button>
+            </div>
+
+        </div>
+        <div ng-if="state=='SETUP' || state=='ACTIVE'">
+            <div ng-hide="!tile" ng-style="{'position': 'absolute','top':(tile.y*yDiff).toString()+'px','left':(tile.x*xDiff).toString()+'px'}" ng-repeat="tile in gameboard">
+                <span class="rotate--90" ng-style="{'color':getColor(tile), 'font-size': '135px'}">&#x2B22;</span>
+                <span class="top-right-road" ng-show="showEdge(tile,0)" ng-style="{'color': getEdgeColor(tile,0)}" ng-click="onEdgeClick(tile,0)">|</span>
+                <svg class="tile-chip" height="20" width="20" ng-show="!!tile && tile.edges[0].resourceRatio" style="top: -30px;left: 101px; ">
+                  <circle cx="10" cy="10" r="10" stroke="#000000" stroke-width=".5" fill="{{getHarborColor(tile.edges[0].resourceRatio)}}"></circle>
+                </svg>
+                <span class="top-left-road" ng-show="showEdge(tile,4)" ng-style="{'color': getEdgeColor(tile,4)}" ng-click="onEdgeClick(tile,4)">|</span>
+                <svg class="tile-chip" height="20" width="20" ng-show="!!tile && tile.edges[4].resourceRatio" style="top: -30px;left: -5px; ">
+                  <circle cx="10" cy="10" r="10" stroke="#000000" stroke-width=".5" fill="{{getHarborColor(tile.edges[4].resourceRatio)}}"></circle>
+                </svg>
+                <span class="top-road" ng-show="showEdge(tile,5)" ng-style="{'color': getEdgeColor(tile,5)}" ng-click="onEdgeClick(tile,5)">|</span>
+                <svg class="tile-chip" height="20" width="20" ng-show="!!tile && tile.edges[5].resourceRatio" style="top: -60px;left: 49px; ">
+                  <circle cx="10" cy="10" r="10" stroke="#000000" stroke-width=".5" fill="{{getHarborColor(tile.edges[5].resourceRatio)}}"></circle>
+                </svg>
+                <span class="bottom-road" ng-show="showEdge(tile,2)" ng-style="{'color': getEdgeColor(tile,2)}" ng-click="onEdgeClick(tile,2)">|</span>
+                <svg class="tile-chip" height="20" width="20" ng-show="!!tile && tile.edges[2].resourceRatio" style="top: 60px;left: 49px; ">
+                  <circle cx="10" cy="10" r="10" stroke="#000000" stroke-width=".5" fill="{{getHarborColor(tile.edges[2].resourceRatio)}}"></circle>
+                </svg>
+                <span class="bottom-right-road" ng-show="showEdge(tile,1)" ng-style="{'color': getEdgeColor(tile,1)}" ng-click="onEdgeClick(tile,1)">|</span>
+                <svg class="tile-chip" height="20" width="20" ng-show="!!tile && tile.edges[1].resourceRatio" style="top: -30px;left: 101px; ">
+                  <circle cx="10" cy="10" r="10" stroke="#000000" stroke-width=".5" fill="{{getHarborColor(tile.edges[1].resourceRatio)}}"></circle>
+                </svg>
+                <span class="bottom-left-road" ng-show="showEdge(tile,3)" ng-style="{'color': getEdgeColor(tile,3)}" ng-click="onEdgeClick(tile,3)">|</span>
+                <svg class="tile-chip" height="20" width="20" ng-show="!!tile && tile.edges[3].resourceRatio" style="top: 30px;left: -5px; ">
+                  <circle cx="10" cy="10" r="10" stroke="#000000" stroke-width=".5" fill="{{getHarborColor(tile.edges[3].resourceRatio)}}"></circle>
+                </svg>
+                <svg class="tile-chip" height="100" width="100" ng-show="!!tile.value || tile.id == robberId || tile.selectable">
+                  <circle cx="50" cy="50" r="15" stroke="#e2dcba" stroke-width=".5" fill="{{getNumberPieceColor(tile)}}" ng-click="onNumberClick(tile)" />
+                </svg>
+                <svg class="tile-chip corner-piece" height="20" width="20" ng-show="showCorner(tile,3)" style="top: 0px;left: -2px; ">
+                  <circle cx="10" cy="10" r="10" stroke="#000000" stroke-width=".5" fill="{{getCornerColor(tile,3)}}" ng-click="onCornerClick(tile,3)"></circle>
+                </svg>
+                <svg class="tile-chip corner-piece" height="20" width="20" ng-show="showCorner(tile,4)" style="top: -42px;left: 22px; ">
+                  <circle cx="10" cy="10" r="10" stroke="#000000" stroke-width=".5" fill="{{getCornerColor(tile,4)}}" ng-click="onCornerClick(tile,4)"></circle>
+                </svg>
+                <svg class="tile-chip corner-piece" height="20" width="20" ng-show="showCorner(tile,5)" style="top: -42px;left: 74px; ">
+                  <circle cx="10" cy="10" r="10" stroke="#000000" stroke-width=".5" fill="{{getCornerColor(tile,5)}}" ng-click="onCornerClick(tile,5)"></circle>
+                </svg>
+                <svg class="tile-chip corner-piece" height="20" width="20" ng-show="showCorner(tile,0)" style="top: 0px;left: 97px; ">
+                  <circle cx="10" cy="10" r="10" stroke="#000000" stroke-width=".5" fill="{{getCornerColor(tile,0)}}" ng-click="onCornerClick(tile,0)"></circle>
+                </svg>
+                <svg class="tile-chip corner-piece" height="20" width="20" ng-show="showCorner(tile,2)" style="top: 42px;left: 22px; ">
+                  <circle cx="10" cy="10" r="10" stroke="#000000" stroke-width=".5" fill="{{getCornerColor(tile,2)}}" ng-click="onCornerClick(tile,2)"></circle>
+                </svg>
+                <svg class="tile-chip corner-piece" height="20" width="20" ng-show="showCorner(tile,1)" style="top: 42px;left: 74px; ">
+                  <circle cx="10" cy="10" r="10" stroke="#000000" stroke-width=".5" fill="{{getCornerColor(tile,1)}}" ng-click="onCornerClick(tile,1)"></circle>
+                </svg>
+                <span ng-class="{'tile-chip-number':true, 'tile-chip-big-number':tile.value>=10, 'tile-chip-hot-number':tile.value==6 || tile.value==8}" ng-show="!!tile.value" ng-click="onNumberClick(tile)">{{tile.value}}</span>
+            </div>
+        </div>
+        <div ng-if="state=='MENU'">
+            <form>
+                <b>Load:</b> <input type="text" ng-model="gameId" ng-maxlength="4">
+                <button type="button" ng-click="getGameboard(gameId)" class="btn btn-medium btn-success mark-button">
+                    Load
+                </button>
+            </form>
+            <h3>OR</h3>
+            <button type="button" ng-click="createGameboard()" class="btn btn-medium btn-success mark-button">
+                Create New
+            </button>
         </div>
     </div>
 </span>
+<div ng-if="state=='SETUP' || state=='ACTIVE'">
+    <div class="player-section span4" style="float:left; margin-left:4px;padding-right:9px;">
+        <div ng-class="{'row':true,'player-row':true}" style="font-size:15px;font-weight:bold;width:300px;">
+            <row>
+                <div class="player-column player-column-xlarge">Player</div>
+                <div class="player-column player-column-medium">Color</div>
+                <div class="player-column">RC</div>
+                <div class="player-column">DC</div>
+                <div class="player-column">VP</div>
+            </row>
+        </div>
+        <div ng-class="{'row':true,'player-row':true,'picking':player.active==true}" ng-repeat="player in players" style="font-size:15px;width:300px;">
+            <row>
+                <div class="player-column player-column-medium">{{player.display}}</div>
+                <div class="player-column player-column-large">{{player.name}}</div>
+                <div class="player-column player-column-medium" ng-style="{'background':player.color}">&nbsp</div>
+                <div class="player-column">{{player.numCards}}</div>
+                <div class="player-column">{{player.dcCount}}</div>
+                <div class="player-column" style="color:red;">{{player.victoryPoints}}</div>
+            </row>
+        </div>
+    </div>
+    <div class="player-section span2" ng-style="{'float':'right', 'margin-left':'4px', 'background':getDiceBackground()}">
+        <rect height="50" width="100" ng-style="{'stroke-width':3,'stroke':'black'}"></rect>
+        <div style="font-size:3em;text-align:center;">
+            <span ng-class="{'dice':true, 'dice-1':dice1==1, 'dice-2':dice1==2, 'dice-3':dice1==3, 'dice-4':dice1==4, 'dice-5':dice1==5, 'dice-6':dice1==6}" title="Dice 1"></span>
+            <span ng-class="{'dice':true, 'dice-1':dice2==1, 'dice-2':dice2==2, 'dice-3':dice2==3, 'dice-4':dice2==4, 'dice-5':dice2==5, 'dice-6':dice2==6}" title="Dice 2"></span>
+        </div>
+    </div>
+</div>

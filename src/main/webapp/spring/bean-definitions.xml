@@ -18,4 +18,36 @@
           scope="singleton">
     </bean>
 
+    <bean id="connectionFactory" class="com.rieke.bmore.common.connection.ConnectionFactory"
+          scope="singleton">
+    </bean>
+
+    <!--<bean id="playerFactory" class="com.rieke.bmore.catan.player.CatanPlayerFactory"-->
+    <!--scope="singleton">-->
+    <!--<constructor-arg index="0" ref="connectionFactory"/>-->
+    <!--</bean>-->
+
+    <!--<bean id="playerService" class="com.rieke.bmore.catan.player.CatanPlayerService"-->
+    <!--scope="singleton">-->
+    <!--<constructor-arg index="0" ref="playerFactory"/>-->
+    <!--<constructor-arg index="1" ref="connectionFactory"/>-->
+    <!--</bean>-->
+
+    <bean id="gameFactory" class="com.rieke.bmore.catan.base.game.GameFactory"
+          scope="singleton">
+        <constructor-arg index="0" ref="connectionFactory"/>
+        <constructor-arg index="1" ref="resourceService"/>
+    </bean>
+
+    <bean id="gameService" class="com.rieke.bmore.catan.base.game.GameService"
+          scope="singleton">
+        <constructor-arg index="0" ref="gameFactory"/>
+    </bean>
+
+    <bean id="boardController" class="com.rieke.bmore.catan.base.board.BoardController"
+          scope="singleton">
+        <constructor-arg index="0" ref="boardFactory"/>
+        <constructor-arg index="1" ref="gameService"/>
+    </bean>
+
 </beans>

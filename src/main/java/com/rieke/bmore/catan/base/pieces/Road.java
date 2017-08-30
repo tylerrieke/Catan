@@ -1,7 +1,8 @@
 package com.rieke.bmore.catan.base.pieces;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.google.common.collect.ImmutableMap;
-import com.rieke.bmore.catan.base.Player;
+import com.rieke.bmore.catan.player.CatanPlayer;
 import com.rieke.bmore.catan.base.board.item.edge.Edge;
 import com.rieke.bmore.catan.base.resources.Brick;
 import com.rieke.bmore.catan.base.resources.Resource;
@@ -10,7 +11,7 @@ import com.rieke.bmore.catan.base.resources.Wood;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Road extends Piece {
+public class Road extends Piece<Edge> {
     private static final Map<Class<? extends Resource>, Integer> cost;
 
     static {
@@ -19,22 +20,12 @@ public class Road extends Piece {
         cost.put(Brick.class,1);
     }
 
-    private Edge edge;
-
-    public Road(Player player) {
+    public Road(CatanPlayer player) {
         super(player);
-        edge = null;
-    }
-
-    public void setEdge(Edge edge) {
-        this.edge = edge;
-    }
-
-    public Edge getEdge() {
-        return edge;
     }
 
     @Override
+    @JsonIgnore
     public Map<Class<? extends Resource>, Integer> getCost() {
         return ImmutableMap.copyOf(cost);
     }

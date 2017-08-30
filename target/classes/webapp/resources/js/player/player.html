@@ -1,0 +1,115 @@
+<span id="site" class="ng-cloak">
+    <div style="text-align:center;">
+        <div class="player-section">
+            <div ng-class="{'row':true,'player-row':true,'picking':active==true}">
+                <row>
+                    <span class="player-display-column"><b>{{gameId}}</b></span>
+                    <span class="player-display-column">{{player.display}}</span>
+                    <span class="player-display-column">{{player.name}}</span>
+                    <span class="player-display-column" style="color:red;">{{player.totalVictoryPoints}}</span>
+                </row>
+            </div>
+        </div>
+        <div ng-if="confirm">
+            <button type="button" ng-click="ok(false)" class="btn btn-medium btn-danger mark-button">
+                Cancel
+            </button>
+            <button type="button" ng-click="ok(true)" class="btn btn-medium btn-success mark-button">
+                OK
+            </button>
+        </div>
+        <div ng-if="active && canCancel && !confirm">
+            <button type="button" ng-click="cancelTurn()" class="btn btn-medium btn-danger mark-button">
+                Cancel
+            </button>
+        </div>
+        <div style="position:absolute;top:70px;">
+            <div ng-if="!active || (!confirm && !canCancel && (robbable.length == 0 && !isBuilding() && !isPlayingDC()))">
+                <div ng-style="{'position': 'absolute', 'top': '0px', 'left': ''+(($index+1)*110)+'px'}" ng-repeat="(resource, count) in player.resourceCounts">
+                    <svg class="" height="200" width="100"
+                         ng-style="{'position': 'absolute', 'top': '0px', 'left': '0px'}">
+                        <rect height="200" width="100" ng-style="{'fill':$root.getResourceColor(resource),'stroke-width':3,'stroke':'black'}"></rect>
+                    </svg>
+                    <span ng-style="{'position': 'absolute', 'top': '30px', 'left': '0px', 'font-size':'50px', 'color':'white', 'width':'100px'}">{{count}}</span>
+                    <button ng-if="showMinusResource(resource)" type="button" class="btn btn-small btn-success"
+                            ng-style="{'position': 'absolute', 'top': '130px', 'left': '5px','z-index':100}"
+                            ng-click="changeDiscardCount(resource,-1)">-</button>
+                    <span ng-if="!!discards[resource]" ng-style="{'position': 'absolute', 'top': '131px', 'left': '0px', 'font-size':'30px', 'color':'white', 'width':'100px'}">{{discards[resource]}}</span>
+                    <button ng-if="showPlusResource(resource)" type="button" class="btn btn-small btn-success"
+                            ng-style="{'position': 'absolute', 'top': '130px', 'left': '63px','z-index':100}"
+                            ng-click="changeDiscardCount(resource,1)">+</button>
+                </div>
+
+                <h3 ng-if="!isTrading() && discardCount && discardCount != getCountDiscarded()" ng-style="{'position':'absolute','font-size':'40px','top':'220px','left':'220px','width':'400px'}">Cards to Discard: {{discardCount - getCountDiscarded()}}</h3>
+                <h3 ng-if="isTrading()" ng-style="{'position':'absolute','font-size':'40px','top':'220px','left':'220px','width':'400px'}">Cards to Trade: {{availableTrades}}</h3>
+                <button ng-if="!isTrading() && discardCount > 0 && discardCount == getCountDiscarded()" type="button" ng-click="submitDiscards()"
+                        class="btn btn-large btn-danger" ng-style="{'position':'absolute','top':'220px', 'left':'110px'}">Discard</button>
+                <button ng-if="isTrading() && availableTrades == 0 && getCountDiscarded() > 0" type="button" ng-click="submitDiscards()"
+                        class="btn btn-large btn-danger" ng-style="{'position':'absolute', 'top':'220px', 'left':'110px'}">Discard</button>
+
+                <button ng-if="active && actions.indexOf('ROLL')>=0" type="button" ng-click="roll()"
+                        class="btn btn-medium btn-success" ng-style="{'position':'absolute', 'top':'0px', 'left':'10px'}">ROLL</button>
+
+                <button ng-if="active && actions.indexOf('BUILD')>=0 && !isActing()" type="button" ng-click="getBuildable()"
+                        class="btn btn-medium btn-primary" ng-style="{'position':'absolute', 'top':'0px', 'left':'10px'}">BUILD</button>
+
+                <button ng-if="active && actions.indexOf('TRADE')>=0 && !isActing()" type="button" ng-click="getTradeable()"
+                        class="btn btn-medium btn-warning" ng-style="{'position':'absolute', 'top':'50px', 'left':'10px'}">TRADE</button>
+
+                <button ng-if="active && actions.indexOf('DC')>=0 && !isActing() && player.dcCount > 0" type="button" ng-click="getDCs()"
+                        class="btn btn-medium btn-normal" ng-style="{'position':'absolute', 'top':'100px', 'left':'10px'}">DCs</button>
+
+                <button ng-if="active && actions.indexOf('END')>=0 && !isActing()" type="button" ng-click="endTurn()"
+                        class="btn btn-medium btn-danger" ng-style="{'position':'absolute', 'top':'150px', 'left':'10px'}">END TURN</button>
+
+                <div ng-if="isTrading()" ng-style="{'position': 'absolute', 'top': '320px', 'left': '0px'}" ng-repeat="(resource, count) in tradeable">
+                    <svg class="" height="200" width="100"
+                         ng-style="{'position': 'absolute', 'top':'0px', 'left': ''+(($index+1)*110)+'px'}">
+                        <rect height="200" width="100" ng-style="{'fill':$root.getResourceColor(resource),'stroke-width':3,'stroke':'black'}"></rect>
+                    </svg>
+                    <button ng-if="!!exchanges[resource]" type="button" class="btn btn-small btn-success"
+                            ng-style="{'position': 'absolute', 'top':'60px', 'left': ''+($index*110+115)+'px','z-index':100}"
+                            ng-click="changeExchangeCount(resource,-1)">-</button>
+                    <span ng-if="!!exchanges[resource]" ng-style="{'position': 'absolute', 'top':'61px', 'left': ''+($index*110+149)+'px', 'font-size':'30px', 'color':'white'}">{{exchanges[resource]}}</span>
+                    <button ng-if="availableTrades > 0" type="button" class="btn btn-small btn-success"
+                            ng-style="{'position': 'absolute', 'top':'60px', 'left': ''+($index*110+173)+'px','z-index':100}"
+                            ng-click="changeExchangeCount(resource,1)">+</button>
+                </div>
+            </div>
+            <button ng-if="active && isActing()" type="button" class="btn btn-medium btn-danger"
+                    ng-style="{'position': 'absolute', 'top':'-10px', 'left': '10px'}"
+                    ng-click="cancelAction()">Cancel</button>
+            <div ng-if="active && isBuilding()">
+                <h3 style="position:absolute;font-size:40px;top:0px;left:110px;width:450px">Choose a piece to build:</h3>
+                <div ng-style="{'position': 'absolute', 'top':'80px', 'left': ''+($index*130+115)+'px'}" ng-repeat="piece in buildable">
+                    <button ng-if="piece.buildable" type="button" class="btn btn-medium btn-success"
+                            ng-style="{'position': 'absolute', 'top':'0px', 'left':'0px'}"
+                            ng-click="getBuildSelection(piece.type)">{{piece.type}}</button>
+                    <span ng-if="!piece.buildable"
+                          ng-style="{'position': 'absolute', 'top':'0px', 'left': '5px', 'font-size':'20px', 'color':'red'}">{{piece.type}}</span>
+                    <span ng-style="{'position': 'absolute', 'top':'51px', 'left': '5px', 'font-size':'20px', 'color':'black'}">{{piece.count}} left</span>
+                </div>
+            </div>
+            <div ng-if="active && isPlayingDC()">
+                <h3 style="position:absolute;font-size:40px;top:0px;left:110px;width:450px">Choose a dc to play:</h3>
+                <div ng-style="{'position': 'absolute', 'top':'80px', 'left': ''+($index*130+115)+'px'}" ng-repeat="dc in dcs">
+                    <button ng-if="dc.playable" type="button" class="btn btn-medium btn-success"
+                            ng-style="{'position': 'absolute', 'top':'0px', 'left':'0px'}"
+                            ng-click="playDC(dc.type)">{{dc.type}}</button>
+                    <span ng-if="!dc.playable"
+                          ng-style="{'position': 'absolute', 'top':'0px', 'left': '5px', 'font-size':'20px', 'color':'red'}">{{dc.type}}</span>
+                    <span ng-style="{'position': 'absolute', 'top':'51px', 'left': '5px', 'font-size':'20px', 'color':'black'}">{{dc.count}} left</span>
+                </div>
+            </div>
+            <div ng-if="active && robbable.length > 0">
+                <h3 style="position:absolute;font-size:40px;top:0px;left:110px; width:550px">Choose a player to steal from:</h3>
+                <div ng-repeat="robPlayer in robbable" ng-style="{'position': 'absolute', 'top':'80px', 'left': '0px'}">
+                    <button type="button" class="btn btn-medium btn-success"
+                            ng-style="{'position': 'absolute', 'top':'0px', 'left': ''+($index*110+115)+'px'}"
+                            ng-click="rob(robPlayer)">{{robPlayer.name}}</button>
+                    <span ng-style="{'position': 'absolute', 'top':'51px', 'left': ''+($index*110+120)+'px', 'font-size':'20px', 'color':'black'}">{{robPlayer.numCards}} cards</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</span>

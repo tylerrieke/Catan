@@ -1,7 +1,9 @@
 package com.rieke.bmore.catan.base.pieces;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.google.common.collect.ImmutableMap;
-import com.rieke.bmore.catan.base.Player;
+import com.rieke.bmore.catan.base.board.item.corner.Corner;
+import com.rieke.bmore.catan.player.CatanPlayer;
 import com.rieke.bmore.catan.base.resources.*;
 
 import java.util.HashMap;
@@ -16,8 +18,13 @@ public class City extends Settlement {
         cost.put(Wheat.class,2);
     }
 
-    public City(Player player) {
+    public City(CatanPlayer player) {
         super(player);
+    }
+
+    @Override
+    public int getVictoryPoints() {
+        return 2;
     }
 
     @Override
@@ -26,7 +33,13 @@ public class City extends Settlement {
     }
 
     @Override
+    @JsonIgnore
     public Map<Class<? extends Resource>, Integer> getCost() {
         return ImmutableMap.copyOf(cost);
+    }
+
+    @Override
+    protected void afterSetBoardItem(Corner boardItem) {
+
     }
 }

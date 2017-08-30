@@ -2,116 +2,91 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="01996ec9-23a1-4dbb-b7ca-213d87ef1201" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/font-awesome/font/FontAwesome.otf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/font-awesome/font/fontawesome-webfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/font-awesome/font/fontawesome-webfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/font-awesome/font/fontawesome-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/fonts/LatoBold.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/fonts/LatoItalic.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/fonts/LatoRegular.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/fonts/rounded_led_board-7.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_19_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/Player.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/board/BasicBoardFactory.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/board/Board.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/board/BoardController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/board/item/BoardItem.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/board/item/corner/Corner.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/board/item/edge/Edge.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/board/item/edge/HarborEdge.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/board/item/tile/ResourceTile.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/board/item/tile/Tile.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/board/item/tile/TileNumber.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/pieces/City.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/pieces/Piece.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/pieces/Road.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/pieces/Settlement.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/resources/Brick.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/resources/Ore.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/resources/Resource.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/resources/ResourceService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/resources/Sheep.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/resources/Wheat.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/resources/Wood.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/gui/CatanStartup.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/jetty/CatanJettyRunner.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/user/User.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/user/UserController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/mvc-context.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/spring/application-context.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/spring/bean-definitions.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/spring/properties-context.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/spring/security-context.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/bmore-catan-servlet.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/json-servlet.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/webdefault.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/mvc-context.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/bootstrap-responsive.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/bootstrap.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/bootstrap3-panel.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/chardinjs.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/fastmoney.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/flatybootstrap-old.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/flatybootstrap.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/font-awesome/css/font-awesome-ie7.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/font-awesome/css/font-awesome-ie7.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/font-awesome/css/font-awesome.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/font-awesome/css/font-awesome.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/font-awesome/font/fontawesome-webfont.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/font-awesome/less/bootstrap.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/font-awesome/less/core.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/font-awesome/less/extras.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/font-awesome/less/font-awesome-ie7.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/font-awesome/less/font-awesome.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/font-awesome/less/icons.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/font-awesome/less/mixins.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/font-awesome/less/path.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/font-awesome/less/variables.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/font-awesome/scss/_bootstrap.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/font-awesome/scss/_core.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/font-awesome/scss/_extras.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/font-awesome/scss/_icons.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/font-awesome/scss/_mixins.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/font-awesome/scss/_path.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/font-awesome/scss/_variables.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/font-awesome/scss/font-awesome-ie7.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/font-awesome/scss/font-awesome.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/gameboard-windows-overrides.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/gameboard.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/host.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/main.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/player.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/controller.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/gameboard/gameboard.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/gameboard/gameboard.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/globals.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/tcrieke/detect-os.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/thirdparty/angular-cookies.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/thirdparty/angular-css.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/thirdparty/angular-route.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/thirdparty/angular.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/thirdparty/angular.min.js.backup" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/thirdparty/bootstrap.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/thirdparty/chardinjs.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/thirdparty/jquery.fileupload.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/thirdparty/jquery.iframe-transport.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/thirdparty/jquery.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/thirdparty/jquery.ui.widget.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/thirdparty/json3.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/thirdparty/soundmanager2-jsmin.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/thirdparty/spin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/spring/application-context.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/spring/bean-definitions.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/spring/properties-context.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/spring/security-context.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/BasicBoardFactoryTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__tcrieke_tcrieke_common_1_0_SNAPSHOT.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/Catan.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/board/item/SelectableBoardItem.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/game/Die.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/game/Game.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/game/GameFactory.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/game/GameService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/game/LargestArmy.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/game/LongestRoad.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/game/Special.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/pieces/dc/DevelopmentCard.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/pieces/dc/Knight.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/pieces/dc/RoadBuilding.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/pieces/dc/VictoryPoint.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/player/CardExchange.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/player/CatanPlayerFactory.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/player/CatanPlayerService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/player/DevelopmentCardSummary.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/player/PieceSummary.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/player/PlayerController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/player/SimplePlayer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/turn/BuildTurn.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/turn/NormalTurn.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/turn/SetupTurn.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/turn/Turn.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/dice-1.0.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/player/player-registration.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/player/player-registration.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/player/player.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/player/player.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/Player.class" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/Player.java" afterPath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/player/CatanPlayer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/catan-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/target/catan-1.0-SNAPSHOT.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/board/BasicBoardFactory$CornerOrder.class" afterPath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/board/BasicBoardFactory$CornerOrder.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/board/BasicBoardFactory.class" afterPath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/board/BasicBoardFactory.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/board/Board.class" afterPath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/board/Board.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/board/BoardController.class" afterPath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/board/BoardController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/board/item/corner/Corner.class" afterPath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/board/item/corner/Corner.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/board/item/edge/Edge.class" afterPath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/board/item/edge/Edge.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/board/item/tile/ResourceTile.class" afterPath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/board/item/tile/ResourceTile.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/board/item/tile/Tile$1.class" afterPath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/board/item/tile/Tile$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/board/item/tile/Tile.class" afterPath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/board/item/tile/Tile.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/pieces/City.class" afterPath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/pieces/City.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/pieces/Piece.class" afterPath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/pieces/Piece.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/pieces/Road.class" afterPath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/pieces/Road.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/pieces/Settlement.class" afterPath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/pieces/Settlement.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/original-catan-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/target/original-catan-1.0-SNAPSHOT.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Catan.iml" afterPath="$PROJECT_DIR$/.idea/Catan.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/board/BasicBoardFactory.java" afterPath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/board/BasicBoardFactory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/board/Board.java" afterPath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/board/Board.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/board/BoardController.java" afterPath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/board/BoardController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/board/item/corner/Corner.java" afterPath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/board/item/corner/Corner.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/board/item/edge/Edge.java" afterPath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/board/item/edge/Edge.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/board/item/tile/ResourceTile.java" afterPath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/board/item/tile/ResourceTile.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/board/item/tile/Tile.java" afterPath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/board/item/tile/Tile.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/pieces/City.java" afterPath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/pieces/City.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/pieces/Piece.java" afterPath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/pieces/Piece.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/pieces/Road.java" afterPath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/pieces/Road.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/pieces/Settlement.java" afterPath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/pieces/Settlement.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/spring/bean-definitions.xml" afterPath="$PROJECT_DIR$/src/main/resources/spring/bean-definitions.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/index.html" afterPath="$PROJECT_DIR$/src/main/webapp/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/gameboard.css" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/gameboard.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/main.css" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/main.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/player.css" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/player.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/controller.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/gameboard/gameboard.html" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/gameboard/gameboard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/gameboard/gameboard.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/gameboard/gameboard.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/spring/bean-definitions.xml" afterPath="$PROJECT_DIR$/src/main/webapp/spring/bean-definitions.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/spring/bean-definitions.xml" afterPath="$PROJECT_DIR$/target/classes/spring/bean-definitions.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/webapp/index.html" afterPath="$PROJECT_DIR$/target/classes/webapp/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/webapp/resources/css/gameboard.css" afterPath="$PROJECT_DIR$/target/classes/webapp/resources/css/gameboard.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/webapp/resources/css/main.css" afterPath="$PROJECT_DIR$/target/classes/webapp/resources/css/main.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/webapp/resources/css/player.css" afterPath="$PROJECT_DIR$/target/classes/webapp/resources/css/player.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/webapp/resources/js/controller.js" afterPath="$PROJECT_DIR$/target/classes/webapp/resources/js/controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/webapp/resources/js/gameboard/gameboard.html" afterPath="$PROJECT_DIR$/target/classes/webapp/resources/js/gameboard/gameboard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/webapp/resources/js/gameboard/gameboard.js" afterPath="$PROJECT_DIR$/target/classes/webapp/resources/js/gameboard/gameboard.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/webapp/spring/bean-definitions.xml" afterPath="$PROJECT_DIR$/target/classes/webapp/spring/bean-definitions.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/BasicBoardFactoryTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/BasicBoardFactoryTest.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-BasicBoardFactoryTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-BasicBoardFactoryTest.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -127,103 +102,128 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="BasicBoardFactory.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/board/BasicBoardFactory.java">
+      <file leaf-file-name="DevelopmentCard.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/pieces/dc/DevelopmentCard.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="112">
-              <caret line="195" column="85" lean-forward="true" selection-start-line="195" selection-start-column="85" selection-end-line="195" selection-end-column="85" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ResourceService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/resources/ResourceService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="32" column="36" lean-forward="false" selection-start-line="32" selection-start-column="36" selection-end-line="32" selection-end-column="36" />
+            <state relative-caret-position="151">
+              <caret line="49" column="16" lean-forward="false" selection-start-line="49" selection-start-column="16" selection-end-line="49" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#824#825#0" expanded="true" />
-                <element signature="e#867#868#0" expanded="true" />
+                <element signature="e#906#907#0" expanded="true" />
+                <element signature="e#952#953#0" expanded="true" />
+                <element signature="e#988#989#0" expanded="true" />
+                <element signature="e#1019#1020#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="gameboard.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/gameboard/gameboard.html">
+      <file leaf-file-name="NormalTurn.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/turn/NormalTurn.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="212">
-              <caret line="25" column="115" lean-forward="false" selection-start-line="25" selection-start-column="115" selection-end-line="25" selection-end-column="115" />
-              <folding>
-                <element signature="n#style#0;n#svg#0;n#div#0;n#div#0;n#span#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#svg#1;n#div#0;n#div#0;n#span#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#svg#2;n#div#0;n#div#0;n#span#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#svg#3;n#div#0;n#div#0;n#span#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#svg#4;n#div#0;n#div#0;n#span#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#svg#5;n#div#0;n#div#0;n#span#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#svg#7;n#div#0;n#div#0;n#span#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#svg#8;n#div#0;n#div#0;n#span#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#svg#9;n#div#0;n#div#0;n#span#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#svg#10;n#div#0;n#div#0;n#span#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#svg#11;n#div#0;n#div#0;n#span#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#svg#12;n#div#0;n#div#0;n#span#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="gameboard.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/gameboard/gameboard.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="33" column="31" lean-forward="true" selection-start-line="33" selection-start-column="31" selection-end-line="33" selection-end-column="31" />
+            <state relative-caret-position="151">
+              <caret line="104" column="16" lean-forward="false" selection-start-line="104" selection-start-column="16" selection-end-line="104" selection-end-column="16" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HarborEdge.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/board/item/edge/HarborEdge.java">
+      <file leaf-file-name="Game.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/game/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-147">
-              <caret line="7" column="38" lean-forward="false" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Tile.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/board/item/tile/Tile.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="45" column="22" lean-forward="true" selection-start-line="45" selection-start-column="22" selection-end-line="45" selection-end-column="22" />
+            <state relative-caret-position="362">
+              <caret line="329" column="17" lean-forward="false" selection-start-line="329" selection-start-column="17" selection-end-line="329" selection-end-column="17" />
               <folding>
-                <element signature="e#1038#1209#0" expanded="true" />
-                <element signature="e#1208#1209#0" expanded="true" />
-                <element signature="e#3448#3449#0" expanded="true" />
-                <element signature="e#3478#3479#0" expanded="true" />
-                <element signature="e#4045#4046#0" expanded="true" />
-                <element signature="e#4106#4107#0" expanded="true" />
+                <element signature="e#3398#3399#0" expanded="true" />
+                <element signature="e#3482#3483#0" expanded="true" />
+                <element signature="e#14228#14229#0" expanded="true" />
+                <element signature="e#14261#14262#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Edge.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/board/item/edge/Edge.java">
+      <file leaf-file-name="Knight.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/pieces/dc/Knight.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+            <state relative-caret-position="400">
+              <caret line="16" column="26" lean-forward="false" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
               <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#605#606#0" expanded="false" />
-                <element signature="e#630#631#0" expanded="false" />
-                <element signature="e#1151#1152#0" expanded="false" />
-                <element signature="e#1179#1180#0" expanded="false" />
-                <element signature="e#1474#1475#0" expanded="false" />
-                <element signature="e#1504#1505#0" expanded="false" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#257#258#0" expanded="true" />
+                <element signature="e#290#291#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Special.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/game/Special.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="700">
+              <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#856#857#0" expanded="true" />
+                <element signature="e#883#884#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LongestRoad.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/game/LongestRoad.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="25">
+              <caret line="10" column="42" lean-forward="false" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RoadBuilding.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/pieces/dc/RoadBuilding.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="475">
+              <caret line="31" column="48" lean-forward="true" selection-start-line="31" selection-start-column="48" selection-end-line="31" selection-end-column="48" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#360#361#0" expanded="true" />
+                <element signature="e#393#394#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="player.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/player/player.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="350">
+              <caret line="27" column="44" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="44" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LargestArmy.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/game/LargestArmy.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="600">
+              <caret line="26" column="21" lean-forward="false" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="21" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="player.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/player/player.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="58" column="102" lean-forward="false" selection-start-line="58" selection-start-column="102" selection-end-line="58" selection-end-column="102" />
+              <folding>
+                <element signature="n#style#0;n#span#3;n#row#0;n#div#0;n#div#0;n#div#0;n#span#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -240,19 +240,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>sup</find>
-      <find>sup.</find>
-      <find>setTileFields</find>
-      <find>annotate.Json</find>
-      <find>import org\.codehaus\.jackson\.annotate\.JsonIgnore\;\n</find>
-      <find>TreeSet</find>
-      <find>SortedSet</find>
-      <find>prepareLayers</find>
-      <find>resources</find>
-      <find>new Edge</find>
-      <find>int</find>
-      <find>corner.add</find>
-      <find>previousDownEdge</find>
+      <find>z-index</find>
+      <find>onNumberClick</find>
+      <find>resourceService</find>
+      <find>populateDiscardMap</find>
+      <find>discards</find>
+      <find>in</find>
+      <find>tradin</find>
+      <find>getTra</find>
+      <find>isTrading</find>
+      <find>cancel</find>
+      <find>ROB_PLAYER</find>
+      <find>ROBBER</find>
+      <find>250px</find>
+      <find>=</find>
+      <find>940</find>
+      <find>Cancel</find>
+      <find>topoff</find>
+      <find>exchanges</find>
+      <find>cards to dis</find>
+      <find>calc</find>
+      <find>pieces</find>
+      <find>ConnectionFactory</find>
+      <find>canBuildPiece</find>
+      <find>.class</find>
+      <find>start</find>
+      <find>num</find>
+      <find>dcc</find>
+      <find>totalV</find>
+      <find>discard</find>
+      <find>DC</find>
     </findStrings>
     <replaceStrings>
       <replace>setCornderFields</replace>
@@ -262,6 +279,8 @@
       <replace>Set</replace>
       <replace>hex</replace>
       <replace>Integer</replace>
+      <replace>showEdge</replace>
+      <replace>$scope.isTrading</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -275,64 +294,64 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/webapp/spring/application-context.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/user/User.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/spring/application-context.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/jetty/CatanJettyRunner.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/Board.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/Tile.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/Corner.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/Edge.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/resources/Resource.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/resources/Sheep.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/resources/Brick.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/resources/Wood.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/resources/Ore.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/resources/Wheat.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/pieces/Piece.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/pieces/Road.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/Player.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/board/TileValue.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/pieces/Settlement.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/pieces/City.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/board/TileNumber.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/board/BoardItem.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/board/Corner.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/board/HarborEdge.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/board/ResourceTile.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/board/Tile.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/board/Edge.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/board/item/Tile.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/board/item/tile/TileNumber.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/board/item/BoardItem.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/board/BoardController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/spring/bean-definitions.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/spring/bean-definitions.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/board/item/tile/ResourceTile.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/board/item/edge/Edge.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/js/controller.js" />
-        <option value="$PROJECT_DIR$/src/main/resources/js/gameboard/gameboard.js" />
-        <option value="$PROJECT_DIR$/src/main/resources/js/gameboard/gameboard.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/index.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/board/Board.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/resources/css/gameboard.css" />
-        <option value="$PROJECT_DIR$/src/test/java/BasicBoardFactoryTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/resources/ResourceService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/board/item/corner/Corner.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/board/item/edge/HarborEdge.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/board/item/tile/Tile.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/board/BasicBoardFactory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/game/GameService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/player/Turn.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/js/player/player-registration.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/js/controller.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/index.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/game/Die.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/board/BoardController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/board/item/tile/Tile.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/spring/bean-definitions.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/player/RobbablePlayer.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/js/gameboard/gameboard.js" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/pieces/Road.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/board/item/edge/Edge.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/board/item/tile/ResourceTile.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/board/item/SelectableBoardItem.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/player/PieceSummary.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/turn/Turn.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/turn/SetupTurn.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/board/Board.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/board/item/corner/Corner.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/pieces/City.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/pieces/Settlement.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/player/CardExchange.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/css/gameboard.css" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/js/player/player-registration.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/css/player.css" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/css/main.css" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/game/dc/VictoryPoint.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/game/dc/DevelopmentCard.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/pieces/dc/VictoryPoint.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/pieces/Piece.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/turn/BuildTurn.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/game/GameFactory.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/spring/bean-definitions.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/player/CatanPlayerFactory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/player/SimplePlayer.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/js/gameboard/gameboard.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/player/DevelopmentCardSummary.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/pieces/dc/DevelopmentCard.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/player/PlayerController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/player/CatanPlayer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/turn/NormalTurn.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/pieces/dc/Knight.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/js/player/player.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/js/player/player.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/game/LongestRoad.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/game/Special.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/game/LargestArmy.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/pieces/dc/RoadBuilding.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/game/Game.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-11" />
     <option name="y" value="-11" />
-    <option name="width" value="1942" />
+    <option name="width" value="1934" />
     <option name="height" value="1042" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -400,12 +419,26 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
+              <option name="myItemId" value="Catan" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Catan" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -428,6 +461,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spring" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -458,6 +495,40 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Catan" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Catan" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="player" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -538,6 +609,66 @@
               <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Catan" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Catan" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Catan" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Catan" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spring" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -591,7 +722,37 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="base" />
+              <option name="myItemId" value="turn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Catan" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Catan" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="catan" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="player" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -659,6 +820,112 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="pieces" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Catan" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Catan" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="catan" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="base" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pieces" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Catan" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Catan" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="catan" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="base" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="game" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Catan" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Catan" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="catan" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="base" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="board" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -698,6 +965,48 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="item" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Catan" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Catan" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="catan" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="base" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="board" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="item" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tile" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -743,17 +1052,60 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Catan" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Catan" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="catan" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="base" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="board" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="item" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="corner" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../SuperBowlSquares" />
-    <property name="SearchEverywhereHistoryKey" value="tile&#9;FILE&#9;file://C:/apps/Github/Catan/src/main/java/com/rieke/bmore/catan/base/board/item/tile/Tile.java" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="SearchEverywhereHistoryKey" value="cata&#9;FILE&#9;file://C:/apps/Github/Catan/src/main/java/com/rieke/bmore/catan/player/CatanPlayer.java&#10;set&#9;FILE&#9;file://C:/apps/Github/Catan/src/main/java/com/rieke/bmore/catan/base/pieces/Settlement.java&#10;corn&#9;FILE&#9;file://C:/apps/Github/Catan/src/main/java/com/rieke/bmore/catan/base/board/item/corner/Corner.java&#10;build&#9;FILE&#9;file://C:/apps/Github/Catan/src/main/java/com/rieke/bmore/catan/turn/BuildTurn.java&#10;boar&#9;FILE&#9;file://C:/apps/Github/Catan/src/main/java/com/rieke/bmore/catan/base/board/Board.java&#10;B&#9;FILE&#9;file://C:/apps/Github/Catan/src/main/java/com/rieke/bmore/catan/base/board/Board.java&#10;Norm&#9;PSI&#9;JAVA://com.rieke.bmore.catan.turn.NormalTurn&#10;Game&#9;FILE&#9;file://C:/apps/Github/Catan/src/main/java/com/rieke/bmore/catan/base/game/Game.java&#10;tile&#9;FILE&#9;file://C:/apps/Github/Catan/src/main/java/com/rieke/bmore/catan/base/board/item/tile/Tile.java&#10;edge&#9;FILE&#9;file://C:/apps/Github/Catan/src/main/java/com/rieke/bmore/catan/base/board/item/edge/Edge.java" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/player" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -765,6 +1117,7 @@
       <recent name="" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.rieke.bmore.catan.player" />
       <recent name="com.rieke.bmore.catan.jetty" />
       <recent name="com.rieke.bmore.catan.gui" />
     </key>
@@ -1051,7 +1404,7 @@
             <option name="threads" />
             <option name="usePluginRegistry" value="false" />
             <option name="userSettingsFile" value="" />
-            <option name="workOffline" value="false" />
+            <option name="workOffline" value="true" />
           </MavenGeneralSettings>
         </option>
         <option name="myRunnerSettings">
@@ -1135,7 +1488,7 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
+    <frame x="-11" y="-11" width="1934" height="1042" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1147,26 +1500,56 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31170663" sideWeight="0.3041715" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34363854" sideWeight="0.6958285" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30915576" sideWeight="0.6958285" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293124" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17513514" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2709012" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20927468" sideWeight="0.48869884" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24972972" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37336504" sideWeight="0.6442642" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="combo" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32818073" sideWeight="0.48869884" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31170663" sideWeight="0.3041715" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24972972" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37336504" sideWeight="0.6442642" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30915576" sideWeight="0.6958285" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293124" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2709012" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20927468" sideWeight="0.48869884" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -1181,876 +1564,521 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/board/BasicBoardFactory.java</url>
-          <line>309</line>
+          <line>334</line>
           <properties />
           <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <condition expression="finalizedEdges.size()!=6" language="JAVA" />
           <url>file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/board/item/tile/Tile.java</url>
-          <line>78</line>
+          <line>79</line>
           <properties />
           <option name="timeStamp" value="14" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/game/LongestRoad.java</url>
+          <line>57</line>
+          <properties />
+          <option name="timeStamp" value="40" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="20" />
+      <option name="time" value="46" />
     </breakpoint-manager>
-    <watches-manager />
+    <watches-manager>
+      <configuration name="JarApplication">
+        <watch expression="((NormalTurn) turn).getRobberDiscardMap().get(player)" language="JAVA" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/json-servlet.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/bmore-catan-servlet.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/mvc-context.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/webdefault.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="71" column="43" lean-forward="false" selection-start-line="71" selection-start-column="40" selection-end-line="71" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1258">
-          <caret line="5" column="23" lean-forward="false" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/gui/CatanStartup.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/board/item/tile/Tile.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
-          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/jetty/CatanJettyRunner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="7" column="30" lean-forward="false" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/resources/Sheep.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="7" column="1" lean-forward="false" selection-start-line="2" selection-start-column="19" selection-end-line="7" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/resources/Wood.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="5" column="20" lean-forward="false" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/resources/Wheat.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="5" column="21" lean-forward="false" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/pieces/Road.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="625">
-          <caret line="38" column="34" lean-forward="false" selection-start-line="38" selection-start-column="15" selection-end-line="38" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/pieces/Piece.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="18" column="11" lean-forward="false" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/Player.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="31" column="5" lean-forward="false" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/pieces/Settlement.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="650">
-          <caret line="37" column="17" lean-forward="false" selection-start-line="37" selection-start-column="17" selection-end-line="37" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/pieces/City.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="22" column="13" lean-forward="false" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/resources/Brick.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="5" column="21" lean-forward="false" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/resources/Ore.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="5" column="19" lean-forward="false" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/user/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="25" column="5" lean-forward="true" selection-start-line="17" selection-start-column="4" selection-end-line="25" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/spring/bean-definitions.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="14" column="11" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="20" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/spring/bean-definitions.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="20" column="8" lean-forward="false" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/resources/Resource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="2" column="16" lean-forward="false" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="16" />
+          <caret line="11" column="50" lean-forward="false" selection-start-line="11" selection-start-column="50" selection-end-line="11" selection-end-column="50" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/board/item/tile/TileNumber.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+        <state relative-caret-position="100">
+          <caret line="5" column="12" lean-forward="false" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/board/item/tile/ResourceTile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="13" column="5" lean-forward="true" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/host.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/globals.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/thirdparty/spin.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/tcrieke/detect-os.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/gameboard-windows-overrides.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/bootstrap3-panel.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/bootstrap.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7325">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/fastmoney.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2599">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="101">
-          <caret line="9" column="38" lean-forward="true" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/board/Board.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="36" column="29" lean-forward="false" selection-start-line="36" selection-start-column="29" selection-end-line="36" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1205#1206#0" expanded="false" />
-            <element signature="e#1233#1234#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/board/BoardController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="28" column="33" lean-forward="false" selection-start-line="28" selection-start-column="33" selection-end-line="28" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/gameboard.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1947">
-          <caret line="146" column="15" lean-forward="false" selection-start-line="146" selection-start-column="15" selection-end-line="146" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/BasicBoardFactoryTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="12" column="37" lean-forward="false" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#293#294#0" expanded="false" />
-            <element signature="e#347#348#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/board/item/BoardItem.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+        <state relative-caret-position="50">
+          <caret line="2" column="22" lean-forward="false" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/../../Java/jdk1.8.0_112/src.zip!/java/util/List.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/game/Die.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="599" column="6" lean-forward="false" selection-start-line="599" selection-start-column="6" selection-end-line="599" selection-end-column="6" />
+        <state relative-caret-position="450">
+          <caret line="22" column="33" lean-forward="false" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/../../Java/jdk1.8.0_112/src.zip!/java/util/Collections.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/game/GameService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3400">
-          <caret line="173" column="27" lean-forward="false" selection-start-line="173" selection-start-column="27" selection-end-line="173" selection-end-column="27" />
-          <folding>
-            <element signature="e#0#216107#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-            <element signature="e#5644#5645#0" expanded="false" />
-            <element signature="e#5675#5676#0" expanded="false" />
-            <element signature="e#44246#44247#0" expanded="false" />
-            <element signature="e#44327#44328#0" expanded="false" />
-            <element signature="e#44608#44609#0" expanded="false" />
-            <element signature="e#44673#44674#0" expanded="false" />
-            <element signature="e#44715#44716#0" expanded="false" />
-            <element signature="e#44780#44781#0" expanded="false" />
-            <element signature="e#44838#44839#0" expanded="false" />
-            <element signature="e#44888#44889#0" expanded="false" />
-            <element signature="e#44950#44951#0" expanded="false" />
-            <element signature="e#45015#45016#0" expanded="false" />
-            <element signature="e#45070#45071#0" expanded="false" />
-            <element signature="e#45135#45136#0" expanded="false" />
-            <element signature="e#45190#45191#0" expanded="false" />
-            <element signature="e#45255#45256#0" expanded="false" />
-            <element signature="e#45285#45286#0" expanded="false" />
-            <element signature="e#45350#45351#0" expanded="false" />
-            <element signature="e#45477#45478#0" expanded="false" />
-            <element signature="e#45518#45519#0" expanded="false" />
-            <element signature="e#45599#45600#0" expanded="false" />
-            <element signature="e#45664#45665#0" expanded="false" />
-            <element signature="e#45767#45768#0" expanded="false" />
-            <element signature="e#45829#45830#0" expanded="false" />
-            <element signature="e#45922#45923#0" expanded="false" />
-            <element signature="e#45974#45975#0" expanded="false" />
-            <element signature="e#46075#46076#0" expanded="false" />
-            <element signature="e#46135#46136#0" expanded="false" />
-            <element signature="e#46897#46898#0" expanded="false" />
-            <element signature="e#46944#46945#0" expanded="false" />
-            <element signature="e#48325#48326#0" expanded="false" />
-            <element signature="e#48378#48379#0" expanded="false" />
-            <element signature="e#49053#49054#0" expanded="false" />
-            <element signature="e#49134#49135#0" expanded="false" />
-            <element signature="e#49187#49188#0" expanded="false" />
-            <element signature="e#49270#49271#0" expanded="false" />
-            <element signature="e#51301#51302#0" expanded="false" />
-            <element signature="e#51356#51357#0" expanded="false" />
-            <element signature="e#54847#54848#0" expanded="false" />
-            <element signature="e#54912#54913#0" expanded="false" />
-            <element signature="e#54960#54961#0" expanded="false" />
-            <element signature="e#55025#55026#0" expanded="false" />
-            <element signature="e#55062#55063#0" expanded="false" />
-            <element signature="e#55127#55128#0" expanded="false" />
-            <element signature="e#55349#55350#0" expanded="false" />
-            <element signature="e#55414#55415#0" expanded="false" />
-            <element signature="e#55493#55494#0" expanded="false" />
-            <element signature="e#55558#55559#0" expanded="false" />
-            <element signature="e#55628#55629#0" expanded="false" />
-            <element signature="e#55693#55694#0" expanded="false" />
-            <element signature="e#56434#56435#0" expanded="false" />
-            <element signature="e#56515#56516#0" expanded="false" />
-            <element signature="e#56554#56555#0" expanded="false" />
-            <element signature="e#56635#56636#0" expanded="false" />
-            <element signature="e#56674#56675#0" expanded="false" />
-            <element signature="e#56755#56756#0" expanded="false" />
-            <element signature="e#56857#56858#0" expanded="false" />
-            <element signature="e#56923#56924#0" expanded="false" />
-            <element signature="e#58225#58226#0" expanded="false" />
-            <element signature="e#58260#58261#0" expanded="false" />
-            <element signature="e#58824#58825#0" expanded="false" />
-            <element signature="e#58883#58884#0" expanded="false" />
-            <element signature="e#59713#59714#0" expanded="false" />
-            <element signature="e#59760#59761#0" expanded="false" />
-            <element signature="e#60591#60592#0" expanded="false" />
-            <element signature="e#60656#60657#0" expanded="false" />
-            <element signature="e#60694#60695#0" expanded="false" />
-            <element signature="e#60759#60760#0" expanded="false" />
-            <element signature="e#60821#60822#0" expanded="false" />
-            <element signature="e#60886#60887#0" expanded="false" />
-            <element signature="e#60916#60917#0" expanded="false" />
-            <element signature="e#60981#60982#0" expanded="false" />
-            <element signature="e#62220#62221#0" expanded="false" />
-            <element signature="e#62261#62262#0" expanded="false" />
-            <element signature="e#62500#62501#0" expanded="false" />
-            <element signature="e#62565#62566#0" expanded="false" />
-            <element signature="e#62642#62643#0" expanded="false" />
-            <element signature="e#62707#62708#0" expanded="false" />
-            <element signature="e#62790#62791#0" expanded="false" />
-            <element signature="e#62855#62856#0" expanded="false" />
-            <element signature="e#62917#62918#0" expanded="false" />
-            <element signature="e#62982#62983#0" expanded="false" />
-            <element signature="e#65205#65206#0" expanded="false" />
-            <element signature="e#65255#65256#0" expanded="false" />
-            <element signature="e#66138#66139#0" expanded="false" />
-            <element signature="e#66201#66202#0" expanded="false" />
-            <element signature="e#66280#66281#0" expanded="false" />
-            <element signature="e#66350#66351#0" expanded="false" />
-            <element signature="e#66424#66425#0" expanded="false" />
-            <element signature="e#66490#66491#0" expanded="false" />
-            <element signature="e#66590#66591#0" expanded="false" />
-            <element signature="e#66674#66675#0" expanded="false" />
-            <element signature="e#66774#66775#0" expanded="false" />
-            <element signature="e#66838#66839#0" expanded="false" />
-            <element signature="e#67176#67177#0" expanded="false" />
-            <element signature="e#67257#67258#0" expanded="false" />
-            <element signature="e#67337#67338#0" expanded="false" />
-            <element signature="e#67417#67418#0" expanded="false" />
-            <element signature="e#67687#67688#0" expanded="false" />
-            <element signature="e#67753#67754#0" expanded="false" />
-            <element signature="e#67804#67805#0" expanded="false" />
-            <element signature="e#67892#67893#0" expanded="false" />
-            <element signature="e#67935#67936#0" expanded="false" />
-            <element signature="e#68024#68025#0" expanded="false" />
-            <element signature="e#71443#71444#0" expanded="false" />
-            <element signature="e#71524#71525#0" expanded="false" />
-            <element signature="e#81688#81689#0" expanded="false" />
-            <element signature="e#81742#81743#0" expanded="false" />
-            <element signature="e#82552#82553#0" expanded="false" />
-            <element signature="e#82614#82615#0" expanded="false" />
-            <element signature="e#82649#82650#0" expanded="false" />
-            <element signature="e#82714#82715#0" expanded="false" />
-            <element signature="e#82758#82759#0" expanded="false" />
-            <element signature="e#82825#82826#0" expanded="false" />
-            <element signature="e#82861#82862#0" expanded="false" />
-            <element signature="e#82926#82927#0" expanded="false" />
-            <element signature="e#82966#82967#0" expanded="false" />
-            <element signature="e#83032#83033#0" expanded="false" />
-            <element signature="e#83073#83074#0" expanded="false" />
-            <element signature="e#83153#83154#0" expanded="false" />
-            <element signature="e#83188#83189#0" expanded="false" />
-            <element signature="e#83250#83251#0" expanded="false" />
-            <element signature="e#83292#83293#0" expanded="false" />
-            <element signature="e#83357#83358#0" expanded="false" />
-            <element signature="e#83415#83416#0" expanded="false" />
-            <element signature="e#83488#83489#0" expanded="false" />
-            <element signature="e#83550#83551#0" expanded="false" />
-            <element signature="e#83618#83619#0" expanded="false" />
-            <element signature="e#83673#83674#0" expanded="false" />
-            <element signature="e#83744#83745#0" expanded="false" />
-            <element signature="e#83799#83800#0" expanded="false" />
-            <element signature="e#83870#83871#0" expanded="false" />
-            <element signature="e#83900#83901#0" expanded="false" />
-            <element signature="e#83956#83957#0" expanded="false" />
-            <element signature="e#83991#83992#0" expanded="false" />
-            <element signature="e#84057#84058#0" expanded="false" />
-            <element signature="e#84185#84186#0" expanded="false" />
-            <element signature="e#84251#84252#0" expanded="false" />
-            <element signature="e#84332#84333#0" expanded="false" />
-            <element signature="e#84404#84405#0" expanded="false" />
-            <element signature="e#84468#84469#0" expanded="false" />
-            <element signature="e#84551#84552#0" expanded="false" />
-            <element signature="e#84605#84606#0" expanded="false" />
-            <element signature="e#84683#84684#0" expanded="false" />
-            <element signature="e#84745#84746#0" expanded="false" />
-            <element signature="e#84831#84832#0" expanded="false" />
-            <element signature="e#86062#86063#0" expanded="false" />
-            <element signature="e#86109#86110#0" expanded="false" />
-            <element signature="e#86174#86175#0" expanded="false" />
-            <element signature="e#86228#86229#0" expanded="false" />
-            <element signature="e#86489#86490#0" expanded="false" />
-            <element signature="e#86521#86522#0" expanded="false" />
-            <element signature="e#86571#86572#0" expanded="false" />
-            <element signature="e#86610#86611#0" expanded="false" />
-            <element signature="e#86806#86807#0" expanded="false" />
-            <element signature="e#86872#86873#0" expanded="false" />
-            <element signature="e#88520#88521#0" expanded="false" />
-            <element signature="e#88573#88574#0" expanded="false" />
-            <element signature="e#89118#89119#0" expanded="false" />
-            <element signature="e#89187#89188#0" expanded="false" />
-            <element signature="e#89841#89842#0" expanded="false" />
-            <element signature="e#89905#89906#0" expanded="false" />
-            <element signature="e#89931#89932#0" expanded="false" />
-            <element signature="e#89994#89995#0" expanded="false" />
-            <element signature="e#96714#96715#0" expanded="false" />
-            <element signature="e#96783#96784#0" expanded="false" />
-            <element signature="e#96818#96819#0" expanded="false" />
-            <element signature="e#96887#96888#0" expanded="false" />
-            <element signature="e#96932#96933#0" expanded="false" />
-            <element signature="e#97010#97011#0" expanded="false" />
-            <element signature="e#97058#97059#0" expanded="false" />
-            <element signature="e#97129#97130#0" expanded="false" />
-            <element signature="e#97166#97167#0" expanded="false" />
-            <element signature="e#97238#97239#0" expanded="false" />
-            <element signature="e#97278#97279#0" expanded="false" />
-            <element signature="e#97347#97348#0" expanded="false" />
-            <element signature="e#97390#97391#0" expanded="false" />
-            <element signature="e#97463#97464#0" expanded="false" />
-            <element signature="e#97658#97659#0" expanded="false" />
-            <element signature="e#97744#97745#0" expanded="false" />
-            <element signature="e#98225#98226#0" expanded="false" />
-            <element signature="e#98297#98298#0" expanded="false" />
-            <element signature="e#98367#98368#0" expanded="false" />
-            <element signature="e#98426#98427#0" expanded="false" />
-            <element signature="e#99511#99512#0" expanded="false" />
-            <element signature="e#99546#99547#0" expanded="false" />
-            <element signature="e#99614#99615#0" expanded="false" />
-            <element signature="e#99656#99657#0" expanded="false" />
-            <element signature="e#100283#100284#0" expanded="false" />
-            <element signature="e#100342#100343#0" expanded="false" />
-            <element signature="e#101602#101603#0" expanded="false" />
-            <element signature="e#101649#101650#0" expanded="false" />
-            <element signature="e#102253#102254#0" expanded="false" />
-            <element signature="e#102315#102316#0" expanded="false" />
-            <element signature="e#102350#102351#0" expanded="false" />
-            <element signature="e#102415#102416#0" expanded="false" />
-            <element signature="e#102464#102465#0" expanded="false" />
-            <element signature="e#102536#102537#0" expanded="false" />
-            <element signature="e#102589#102590#0" expanded="false" />
-            <element signature="e#102665#102666#0" expanded="false" />
-            <element signature="e#102700#102701#0" expanded="false" />
-            <element signature="e#102764#102765#0" expanded="false" />
-            <element signature="e#102804#102805#0" expanded="false" />
-            <element signature="e#102875#102876#0" expanded="false" />
-            <element signature="e#102913#102914#0" expanded="false" />
-            <element signature="e#102980#102981#0" expanded="false" />
-            <element signature="e#103044#103045#0" expanded="false" />
-            <element signature="e#103104#103105#0" expanded="false" />
-            <element signature="e#103134#103135#0" expanded="false" />
-            <element signature="e#103190#103191#0" expanded="false" />
-            <element signature="e#104256#104257#0" expanded="false" />
-            <element signature="e#104322#104323#0" expanded="false" />
-            <element signature="e#104357#104358#0" expanded="false" />
-            <element signature="e#104423#104424#0" expanded="false" />
-            <element signature="e#104717#104718#0" expanded="false" />
-            <element signature="e#104781#104782#0" expanded="false" />
-            <element signature="e#105022#105023#0" expanded="false" />
-            <element signature="e#105101#105102#0" expanded="false" />
-            <element signature="e#105177#105178#0" expanded="false" />
-            <element signature="e#105251#105252#0" expanded="false" />
-            <element signature="e#105482#105483#0" expanded="false" />
-            <element signature="e#105557#105558#0" expanded="false" />
-            <element signature="e#109174#109175#0" expanded="false" />
-            <element signature="e#109243#109244#0" expanded="false" />
-            <element signature="e#109874#109875#0" expanded="false" />
-            <element signature="e#109941#109942#0" expanded="false" />
-            <element signature="e#109970#109971#0" expanded="false" />
-            <element signature="e#110036#110037#0" expanded="false" />
-            <element signature="e#114419#114420#0" expanded="false" />
-            <element signature="e#114467#114468#0" expanded="false" />
-            <element signature="e#119978#119979#0" expanded="false" />
-            <element signature="e#120033#120034#0" expanded="false" />
-            <element signature="e#121469#121470#0" expanded="false" />
-            <element signature="e#121519#121520#0" expanded="false" />
-            <element signature="e#121574#121575#0" expanded="false" />
-            <element signature="e#121622#121623#0" expanded="false" />
-            <element signature="e#121677#121678#0" expanded="false" />
-            <element signature="e#121725#121726#0" expanded="false" />
-            <element signature="e#124180#124181#0" expanded="false" />
-            <element signature="e#124229#124230#0" expanded="false" />
-            <element signature="e#125893#125894#0" expanded="false" />
-            <element signature="e#125947#125948#0" expanded="false" />
-            <element signature="e#128176#128177#0" expanded="false" />
-            <element signature="e#128224#128225#0" expanded="false" />
-            <element signature="e#131041#131042#0" expanded="false" />
-            <element signature="e#131117#131118#0" expanded="false" />
-            <element signature="e#131170#131171#0" expanded="false" />
-            <element signature="e#131248#131249#0" expanded="false" />
-            <element signature="e#134205#134206#0" expanded="false" />
-            <element signature="e#134291#134292#0" expanded="false" />
-            <element signature="e#137382#137383#0" expanded="false" />
-            <element signature="e#137448#137449#0" expanded="false" />
-            <element signature="e#137497#137498#0" expanded="false" />
-            <element signature="e#137556#137557#0" expanded="false" />
-            <element signature="e#137627#137628#0" expanded="false" />
-            <element signature="e#137694#137695#0" expanded="false" />
-            <element signature="e#138474#138475#0" expanded="false" />
-            <element signature="e#138533#138534#0" expanded="false" />
-            <element signature="e#138573#138574#0" expanded="false" />
-            <element signature="e#138632#138633#0" expanded="false" />
-            <element signature="e#138734#138735#0" expanded="false" />
-            <element signature="e#138800#138801#0" expanded="false" />
-            <element signature="e#139589#139590#0" expanded="false" />
-            <element signature="e#139625#139626#0" expanded="false" />
-            <element signature="e#139951#139952#0" expanded="false" />
-            <element signature="e#139992#139993#0" expanded="false" />
-            <element signature="e#146154#146155#0" expanded="false" />
-            <element signature="e#146195#146196#0" expanded="false" />
-            <element signature="e#146594#146595#0" expanded="false" />
-            <element signature="e#146645#146646#0" expanded="false" />
-            <element signature="e#149201#149202#0" expanded="false" />
-            <element signature="e#149274#149275#0" expanded="false" />
-            <element signature="e#149849#149850#0" expanded="false" />
-            <element signature="e#149937#149938#0" expanded="false" />
-            <element signature="e#152952#152953#0" expanded="false" />
-            <element signature="e#153012#153013#0" expanded="false" />
-            <element signature="e#153068#153069#0" expanded="false" />
-            <element signature="e#153127#153128#0" expanded="false" />
-            <element signature="e#159181#159182#0" expanded="false" />
-            <element signature="e#159267#159268#0" expanded="false" />
-            <element signature="e#159318#159319#0" expanded="false" />
-            <element signature="e#159406#159407#0" expanded="false" />
-            <element signature="e#164752#164753#0" expanded="false" />
-            <element signature="e#164800#164801#0" expanded="false" />
-            <element signature="e#164852#164853#0" expanded="false" />
-            <element signature="e#164933#164934#0" expanded="false" />
-            <element signature="e#164986#164987#0" expanded="false" />
-            <element signature="e#165068#165069#0" expanded="false" />
-            <element signature="e#167000#167001#0" expanded="false" />
-            <element signature="e#167065#167066#0" expanded="false" />
-            <element signature="e#167497#167498#0" expanded="false" />
-            <element signature="e#167551#167552#0" expanded="false" />
-            <element signature="e#168750#168751#0" expanded="false" />
-            <element signature="e#168823#168824#0" expanded="false" />
-            <element signature="e#170115#170116#0" expanded="false" />
-            <element signature="e#170189#170190#0" expanded="false" />
-            <element signature="e#171523#171524#0" expanded="false" />
-            <element signature="e#171564#171565#0" expanded="false" />
-            <element signature="e#172396#172397#0" expanded="false" />
-            <element signature="e#172450#172451#0" expanded="false" />
-            <element signature="e#172797#172798#0" expanded="false" />
-            <element signature="e#172837#172838#0" expanded="false" />
-            <element signature="e#175306#175307#0" expanded="false" />
-            <element signature="e#175349#175350#0" expanded="false" />
-            <element signature="e#175623#175624#0" expanded="false" />
-            <element signature="e#175669#175670#0" expanded="false" />
-            <element signature="e#175717#175718#0" expanded="false" />
-            <element signature="e#175767#175768#0" expanded="false" />
-            <element signature="e#176219#176220#0" expanded="false" />
-            <element signature="e#176295#176296#0" expanded="false" />
-            <element signature="e#176338#176339#0" expanded="false" />
-            <element signature="e#176414#176415#0" expanded="false" />
-            <element signature="e#176699#176700#0" expanded="false" />
-            <element signature="e#176755#176756#0" expanded="false" />
-            <element signature="e#176962#176963#0" expanded="false" />
-            <element signature="e#177016#177017#0" expanded="false" />
-            <element signature="e#177203#177204#0" expanded="false" />
-            <element signature="e#177244#177245#0" expanded="false" />
-            <element signature="e#178258#178259#0" expanded="false" />
-            <element signature="e#178301#178302#0" expanded="false" />
-            <element signature="e#180623#180624#0" expanded="false" />
-            <element signature="e#180699#180700#0" expanded="false" />
-            <element signature="e#180922#180923#0" expanded="false" />
-            <element signature="e#180965#180966#0" expanded="false" />
-            <element signature="e#181055#181056#0" expanded="false" />
-            <element signature="e#181109#181110#0" expanded="false" />
-            <element signature="e#181339#181340#0" expanded="false" />
-            <element signature="e#181404#181405#0" expanded="false" />
-            <element signature="e#181481#181482#0" expanded="false" />
-            <element signature="e#181546#181547#0" expanded="false" />
-            <element signature="e#181629#181630#0" expanded="false" />
-            <element signature="e#181694#181695#0" expanded="false" />
-            <element signature="e#181756#181757#0" expanded="false" />
-            <element signature="e#181821#181822#0" expanded="false" />
-            <element signature="e#182706#182707#0" expanded="false" />
-            <element signature="e#182746#182747#0" expanded="false" />
-            <element signature="e#183154#183155#0" expanded="false" />
-            <element signature="e#183198#183199#0" expanded="false" />
-            <element signature="e#183375#183376#0" expanded="false" />
-            <element signature="e#183421#183422#0" expanded="false" />
-            <element signature="e#183668#183669#0" expanded="false" />
-            <element signature="e#183741#183742#0" expanded="false" />
-            <element signature="e#184416#184417#0" expanded="false" />
-            <element signature="e#184459#184460#0" expanded="false" />
-            <element signature="e#184897#184898#0" expanded="false" />
-            <element signature="e#184949#184950#0" expanded="false" />
-            <element signature="e#185013#185014#0" expanded="false" />
-            <element signature="e#185055#185056#0" expanded="false" />
-            <element signature="e#185733#185734#0" expanded="false" />
-            <element signature="e#185790#185791#0" expanded="false" />
-            <element signature="e#186025#186026#0" expanded="false" />
-            <element signature="e#186071#186072#0" expanded="false" />
-            <element signature="e#186135#186136#0" expanded="false" />
-            <element signature="e#186195#186196#0" expanded="false" />
-            <element signature="e#186276#186277#0" expanded="false" />
-            <element signature="e#186341#186342#0" expanded="false" />
-            <element signature="e#186747#186748#0" expanded="false" />
-            <element signature="e#186792#186793#0" expanded="false" />
-            <element signature="e#187167#187168#0" expanded="false" />
-            <element signature="e#187224#187225#0" expanded="false" />
-            <element signature="e#187662#187663#0" expanded="false" />
-            <element signature="e#187708#187709#0" expanded="false" />
-            <element signature="e#187789#187790#0" expanded="false" />
-            <element signature="e#187854#187855#0" expanded="false" />
-            <element signature="e#187932#187933#0" expanded="false" />
-            <element signature="e#187997#187998#0" expanded="false" />
-            <element signature="e#188141#188142#0" expanded="false" />
-            <element signature="e#188201#188202#0" expanded="false" />
-            <element signature="e#188769#188770#0" expanded="false" />
-            <element signature="e#188822#188823#0" expanded="false" />
-            <element signature="e#190398#190399#0" expanded="false" />
-            <element signature="e#190458#190459#0" expanded="false" />
-            <element signature="e#190548#190549#0" expanded="false" />
-            <element signature="e#190591#190592#0" expanded="false" />
-            <element signature="e#190830#190831#0" expanded="false" />
-            <element signature="e#190895#190896#0" expanded="false" />
-            <element signature="e#190972#190973#0" expanded="false" />
-            <element signature="e#191037#191038#0" expanded="false" />
-            <element signature="e#191120#191121#0" expanded="false" />
-            <element signature="e#191185#191186#0" expanded="false" />
-            <element signature="e#191247#191248#0" expanded="false" />
-            <element signature="e#191312#191313#0" expanded="false" />
-            <element signature="e#193612#193613#0" expanded="false" />
-            <element signature="e#193644#193645#0" expanded="false" />
-            <element signature="e#193691#193692#0" expanded="false" />
-            <element signature="e#193748#193749#0" expanded="false" />
-            <element signature="e#193788#193789#0" expanded="false" />
-            <element signature="e#193839#193840#0" expanded="false" />
-            <element signature="e#193883#193884#0" expanded="false" />
-            <element signature="e#193938#193939#0" expanded="false" />
-            <element signature="e#195578#195579#0" expanded="false" />
-            <element signature="e#195653#195654#0" expanded="false" />
-            <element signature="e#195716#195717#0" expanded="false" />
-            <element signature="e#195802#195803#0" expanded="false" />
-            <element signature="e#195867#195868#0" expanded="false" />
-            <element signature="e#195920#195921#0" expanded="false" />
-            <element signature="e#197058#197059#0" expanded="false" />
-            <element signature="e#197128#197129#0" expanded="false" />
-            <element signature="e#197522#197523#0" expanded="false" />
-            <element signature="e#197569#197570#0" expanded="false" />
-            <element signature="e#197724#197725#0" expanded="false" />
-            <element signature="e#197780#197781#0" expanded="false" />
-            <element signature="e#199575#199576#0" expanded="false" />
-            <element signature="e#199625#199626#0" expanded="false" />
-            <element signature="e#199856#199857#0" expanded="false" />
-            <element signature="e#199921#199922#0" expanded="false" />
-            <element signature="e#199982#199983#0" expanded="false" />
-            <element signature="e#200016#200017#0" expanded="false" />
-            <element signature="e#200646#200647#0" expanded="false" />
-            <element signature="e#200696#200697#0" expanded="false" />
-            <element signature="e#200734#200735#0" expanded="false" />
-            <element signature="e#200781#200782#0" expanded="false" />
-            <element signature="e#201866#201867#0" expanded="false" />
-            <element signature="e#201924#201925#0" expanded="false" />
-            <element signature="e#210534#210535#0" expanded="false" />
-            <element signature="e#210578#210579#0" expanded="false" />
-            <element signature="e#212293#212294#0" expanded="false" />
-            <element signature="e#212334#212335#0" expanded="false" />
-            <element signature="e#212415#212416#0" expanded="false" />
-            <element signature="e#212464#212465#0" expanded="false" />
-            <element signature="e#213891#213892#0" expanded="false" />
-            <element signature="e#213938#213939#0" expanded="false" />
-            <element signature="e#215786#215787#0" expanded="false" />
-            <element signature="e#215835#215836#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/board/item/edge/Edge.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#605#606#0" expanded="false" />
-            <element signature="e#630#631#0" expanded="false" />
-            <element signature="e#1151#1152#0" expanded="false" />
-            <element signature="e#1179#1180#0" expanded="false" />
-            <element signature="e#1474#1475#0" expanded="false" />
-            <element signature="e#1504#1505#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../Java/jdk1.8.0_112/src.zip!/java/util/LinkedHashSet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3125">
-          <caret line="152" column="11" lean-forward="false" selection-start-line="152" selection-start-column="11" selection-end-line="152" selection-end-column="11" />
-          <folding>
-            <element signature="e#6162#6163#0" expanded="true" />
-            <element signature="e#6199#6200#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../Java/jdk1.8.0_112/jre/lib/rt.jar!/sun/reflect/DelegatingMethodAccessorImpl.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+        <state relative-caret-position="269">
+          <caret line="32" column="38" lean-forward="false" selection-start-line="32" selection-start-column="38" selection-end-line="32" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/board/item/corner/Corner.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/Catan.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="22" column="18" lean-forward="false" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
+        <state relative-caret-position="75">
+          <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/board/BoardController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="166" column="57" lean-forward="false" selection-start-line="166" selection-start-column="57" selection-end-line="166" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/board/item/tile/Tile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="45" column="22" lean-forward="true" selection-start-line="45" selection-start-column="22" selection-end-line="45" selection-end-column="22" />
-          <folding>
-            <element signature="e#1038#1209#0" expanded="true" />
-            <element signature="e#1208#1209#0" expanded="true" />
-            <element signature="e#3448#3449#0" expanded="true" />
-            <element signature="e#3478#3479#0" expanded="true" />
-            <element signature="e#4045#4046#0" expanded="true" />
-            <element signature="e#4106#4107#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/resources/ResourceService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="32" column="36" lean-forward="false" selection-start-line="32" selection-start-column="36" selection-end-line="32" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#824#825#0" expanded="true" />
-            <element signature="e#867#868#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/board/item/edge/HarborEdge.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-147">
-          <caret line="7" column="38" lean-forward="false" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/board/BasicBoardFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="195" column="85" lean-forward="true" selection-start-line="195" selection-start-column="85" selection-end-line="195" selection-end-column="85" />
+        <state relative-caret-position="146">
+          <caret line="46" column="49" lean-forward="false" selection-start-line="46" selection-start-column="49" selection-end-line="46" selection-end-column="49" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/gameboard/gameboard.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="33" column="31" lean-forward="true" selection-start-line="33" selection-start-column="31" selection-end-line="33" selection-end-column="31" />
+        <state relative-caret-position="1875">
+          <caret line="75" column="0" lean-forward="true" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/board/item/corner/Corner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1650">
+          <caret line="84" column="30" lean-forward="false" selection-start-line="84" selection-start-column="30" selection-end-line="84" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#1368#1369#0" expanded="false" />
+            <element signature="e#1396#1397#0" expanded="false" />
+            <element signature="e#1677#1678#0" expanded="false" />
+            <element signature="e#1710#1711#0" expanded="false" />
+            <element signature="e#1761#1762#0" expanded="false" />
+            <element signature="e#1789#1790#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/board/item/edge/HarborEdge.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="20" column="31" lean-forward="false" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#573#574#0" expanded="false" />
+            <element signature="e#612#613#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../Java/jdk1.8.0_112/src.zip!/java/util/Map.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="271" column="6" lean-forward="false" selection-start-line="271" selection-start-column="6" selection-end-line="271" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/pieces/City.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+          <folding>
+            <element signature="e#770#771#0" expanded="false" />
+            <element signature="e#794#795#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/player/CardExchange.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="11" column="27" lean-forward="false" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/flatybootstrap-old.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="8" column="3213" lean-forward="false" selection-start-line="8" selection-start-column="3210" selection-end-line="8" selection-end-column="3213" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/gameboard.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5350">
+          <caret line="214" column="16" lean-forward="false" selection-start-line="214" selection-start-column="16" selection-end-line="214" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/board/item/edge/Edge.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="875">
+          <caret line="45" column="18" lean-forward="false" selection-start-line="45" selection-start-column="18" selection-end-line="45" selection-end-column="18" />
+          <folding>
+            <element signature="e#1350#1351#0" expanded="false" />
+            <element signature="e#1383#1384#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/board/item/SelectableBoardItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="26" column="21" lean-forward="false" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="21" />
+          <folding>
+            <element signature="e#631#632#0" expanded="false" />
+            <element signature="e#659#660#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/player/player-registration.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="4" column="43" lean-forward="false" selection-start-line="4" selection-start-column="43" selection-end-line="4" selection-end-column="43" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#form#0;n#div#0;n#div#0;n#span#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/player.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="344">
+          <caret line="76" column="0" lean-forward="false" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="244">
+          <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/turn/SetupTurn.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="832">
+          <caret line="77" column="28" lean-forward="false" selection-start-line="77" selection-start-column="28" selection-end-line="77" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/pieces/Settlement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="20" column="5" lean-forward="true" selection-start-line="14" selection-start-column="4" selection-end-line="20" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/board/BasicBoardFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="67" column="76" lean-forward="true" selection-start-line="67" selection-start-column="8" selection-end-line="67" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/pieces/dc/VictoryPoint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="14" column="16" lean-forward="false" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
+          <folding>
+            <element signature="e#222#223#0" expanded="true" />
+            <element signature="e#256#257#0" expanded="true" />
+            <element signature="e#307#308#0" expanded="true" />
+            <element signature="e#331#332#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/resources/ResourceService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="23" column="30" lean-forward="true" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/board/Board.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2750">
+          <caret line="137" column="98" lean-forward="false" selection-start-line="137" selection-start-column="98" selection-end-line="137" selection-end-column="98" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/turn/BuildTurn.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="23" column="51" lean-forward="false" selection-start-line="23" selection-start-column="51" selection-end-line="23" selection-end-column="51" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/tcrieke/tcrieke-common/1.0-SNAPSHOT/tcrieke-common-1.0-SNAPSHOT.jar!/com/rieke/bmore/common/connection/ConnectionFactory.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/spring/bean-definitions.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="875">
+          <caret line="37" column="33" lean-forward="false" selection-start-line="37" selection-start-column="33" selection-end-line="37" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/game/GameFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="355">
+          <caret line="19" column="51" lean-forward="false" selection-start-line="19" selection-start-column="51" selection-end-line="19" selection-end-column="51" />
+          <folding>
+            <element signature="e#437#438#0" expanded="true" />
+            <element signature="e#491#492#0" expanded="true" />
+            <element signature="e#541#542#0" expanded="true" />
+            <element signature="e#625#626#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/player/CatanPlayerFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="22" column="43" lean-forward="false" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/player/CatanPlayerService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="8" column="22" lean-forward="false" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/gameboard/gameboard.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="25" column="115" lean-forward="false" selection-start-line="25" selection-start-column="115" selection-end-line="25" selection-end-column="115" />
+        <state relative-caret-position="2650">
+          <caret line="106" column="61" lean-forward="false" selection-start-line="106" selection-start-column="61" selection-end-line="106" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/player/SimplePlayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="46" column="29" lean-forward="false" selection-start-line="46" selection-start-column="29" selection-end-line="46" selection-end-column="29" />
           <folding>
-            <element signature="n#style#0;n#svg#0;n#div#0;n#div#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#svg#1;n#div#0;n#div#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#svg#2;n#div#0;n#div#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#svg#3;n#div#0;n#div#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#svg#4;n#div#0;n#div#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#svg#5;n#div#0;n#div#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#svg#7;n#div#0;n#div#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#svg#8;n#div#0;n#div#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#svg#9;n#div#0;n#div#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#svg#10;n#div#0;n#div#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#svg#11;n#div#0;n#div#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#svg#12;n#div#0;n#div#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="e#1048#1049#0" expanded="true" />
+            <element signature="e#1145#1146#0" expanded="true" />
+            <element signature="e#1181#1182#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/player/PieceSummary.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-50">
+          <caret line="10" column="30" lean-forward="true" selection-start-line="8" selection-start-column="4" selection-end-line="10" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/player/DevelopmentCardSummary.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="382">
+          <caret line="31" column="16" lean-forward="false" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="16" />
+          <folding>
+            <element signature="e#513#514#0" expanded="true" />
+            <element signature="e#556#557#0" expanded="true" />
+            <element signature="e#585#586#0" expanded="true" />
+            <element signature="e#613#614#0" expanded="true" />
+            <element signature="e#648#649#0" expanded="true" />
+            <element signature="e#679#680#0" expanded="true" />
+            <element signature="e#715#716#0" expanded="true" />
+            <element signature="e#738#739#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/pieces/Piece.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="750">
+          <caret line="46" column="26" lean-forward="false" selection-start-line="46" selection-start-column="26" selection-end-line="46" selection-end-column="26" />
+          <folding>
+            <element signature="e#930#931#0" expanded="true" />
+            <element signature="e#954#955#0" expanded="true" />
+            <element signature="e#1068#1069#0" expanded="true" />
+            <element signature="e#1095#1096#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../Java/jdk1.8.0_112/src.zip!/java/util/AbstractList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="481">
+          <caret line="107" column="0" lean-forward="false" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/player/CatanPlayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="105" column="0" lean-forward="false" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
+          <folding>
+            <element signature="e#9405#9406#0" expanded="true" />
+            <element signature="e#9458#9459#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/player/PlayerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="133" column="0" lean-forward="false" selection-start-line="133" selection-start-column="0" selection-end-line="133" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/turn/Turn.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="88" column="16" lean-forward="false" selection-start-line="88" selection-start-column="16" selection-end-line="88" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/pieces/dc/DevelopmentCard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="49" column="16" lean-forward="false" selection-start-line="49" selection-start-column="16" selection-end-line="49" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#906#907#0" expanded="true" />
+            <element signature="e#952#953#0" expanded="true" />
+            <element signature="e#988#989#0" expanded="true" />
+            <element signature="e#1019#1020#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/turn/NormalTurn.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="104" column="16" lean-forward="false" selection-start-line="104" selection-start-column="16" selection-end-line="104" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/player/player.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="58" column="102" lean-forward="false" selection-start-line="58" selection-start-column="102" selection-end-line="58" selection-end-column="102" />
+          <folding>
+            <element signature="n#style#0;n#span#3;n#row#0;n#div#0;n#div#0;n#div#0;n#span#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/player/player.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="27" column="44" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/game/LongestRoad.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="10" column="42" lean-forward="false" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/pieces/dc/Knight.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="16" column="26" lean-forward="false" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#257#258#0" expanded="true" />
+            <element signature="e#290#291#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/game/LargestArmy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="26" column="21" lean-forward="false" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/game/Special.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="700">
+          <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#856#857#0" expanded="true" />
+            <element signature="e#883#884#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/pieces/dc/RoadBuilding.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="31" column="48" lean-forward="true" selection-start-line="31" selection-start-column="48" selection-end-line="31" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#360#361#0" expanded="true" />
+            <element signature="e#393#394#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/game/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="362">
+          <caret line="329" column="17" lean-forward="false" selection-start-line="329" selection-start-column="17" selection-end-line="329" selection-end-column="17" />
+          <folding>
+            <element signature="e#3398#3399#0" expanded="true" />
+            <element signature="e#3482#3483#0" expanded="true" />
+            <element signature="e#14228#14229#0" expanded="true" />
+            <element signature="e#14261#14262#0" expanded="true" />
           </folding>
         </state>
       </provider>

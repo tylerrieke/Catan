@@ -2,14 +2,16 @@ package com.rieke.bmore.catan.base.board.item.corner;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.rieke.bmore.catan.base.board.item.BoardItem;
+import com.rieke.bmore.catan.base.board.item.SelectableBoardItem;
 import com.rieke.bmore.catan.base.board.item.edge.Edge;
 import com.rieke.bmore.catan.base.board.item.tile.Tile;
+import com.rieke.bmore.catan.base.pieces.Piece;
 import com.rieke.bmore.catan.base.pieces.Settlement;
 
 import java.util.Set;
 import java.util.LinkedHashSet;
 
-public class Corner extends BoardItem {
+public class Corner extends SelectableBoardItem<Settlement> {
     public static final int MAX_NUM_EDGES = 3;
     private Set<Edge> edges = new LinkedHashSet<>();
     private Set<Tile> tiles = new LinkedHashSet<>();
@@ -55,11 +57,7 @@ public class Corner extends BoardItem {
     }
 
     public Settlement getSettlement() {
-        return settlement;
-    }
-
-    public void setSettlement(Settlement settlement) {
-        this.settlement = settlement;
+        return getPiece();
     }
 
     @JsonIgnore
@@ -75,5 +73,15 @@ public class Corner extends BoardItem {
             }
         }
         return ids;
+    }
+
+    @Override
+    public Class<? extends Piece> getPieceType() {
+        return Settlement.class;
+    }
+
+    @Override
+    public void setPiece(Settlement piece) {
+        super.setPiece(piece);
     }
 }

@@ -14,6 +14,7 @@ import java.util.*;
 
 @Service
 public class BasicBoardFactory {
+
     private enum CornerOrder {
         N(new Integer[]{3,2,1,4,5,6}),S(new Integer[]{6,5,1,2,3,4}),E(new Integer[]{5,4,3,6,1,2}),W(new Integer[]{2,1,6,3,4,5}),
         C_NE(new Integer[]{4,3,5,6,1,2}),C_SE(new Integer[]{5,4,6,1,2,3}),C_SW(new Integer[]{1,6,2,3,4,5}),C_NW(new Integer[]{2,1,3,4,5,6}),
@@ -29,7 +30,7 @@ public class BasicBoardFactory {
         }
     }
 
-    private static final TileNumber[] tileNumbers = new TileNumber[] {
+    private final TileNumber[] tileNumbers = new TileNumber[] {
             TileNumber.FIVE, TileNumber.TWO, TileNumber.SIX,
             TileNumber.THREE, TileNumber.EIGHT, TileNumber.TEN,
             TileNumber.NINE, TileNumber.TWELVE, TileNumber.ELEVEN,
@@ -38,18 +39,18 @@ public class BasicBoardFactory {
             TileNumber.SIX, TileNumber.THREE, TileNumber.ELEVEN
     };
 
-    private static final List<Class<? extends Resource>> harbors =  Arrays.asList(
+    private final List<Class<? extends Resource>> harbors =  Arrays.asList(
             Wood.class, Sheep.class, Wheat.class, Ore.class, Brick.class,
             null, null, null, null
     );
 
     private List<Class<? extends Resource>> shuffledHarbors;
 
-    private static final List<Integer> harborIds = Arrays.asList(
+    private final List<Integer> harborIds = Arrays.asList(
             27,31,34,37,41,44,47,51,54
     );
 
-    private static final List<Class<? extends Resource>> resources = Arrays.asList(
+    private final List<Class<? extends Resource>> resources = Arrays.asList(
             Wood.class, Wood.class, Wood.class, Wood.class,
             Sheep.class, Sheep.class, Sheep.class, Sheep.class,
             Wheat.class, Wheat.class, Wheat.class, Wheat.class,
@@ -61,9 +62,9 @@ public class BasicBoardFactory {
     @Autowired
     private ResourceService resourceService;
 
-    public Board create() {
+    public synchronized Board create() {
         shuffledHarbors = new ArrayList<>();
-        shuffledHarbors.addAll(harbors);
+        shuffledHarbors.addAll(getHarbors());
         Collections.shuffle(shuffledHarbors, new Random(System.nanoTime()));
 
         Map<Integer, Edge> idToEdgeMap = new HashMap<>();
@@ -72,15 +73,15 @@ public class BasicBoardFactory {
         List<ResourceTile> tiles = new ArrayList<>();
 
         List<Class<? extends Resource>> resourcesCopy = new ArrayList<>();
-        resourcesCopy.addAll(resources);
+        resourcesCopy.addAll(getResources());
         Collections.shuffle(resourcesCopy, new Random(System.nanoTime()));
 
-        int numberIndex = tileNumbers.length-1;
-        for(int i = 1; i <= resources.size(); i++) {
+        int numberIndex = getTileNumbers().length-1;
+        for(int i = 1; i <= getResources().size(); i++) {
             ResourceTile resourceTile = new ResourceTile(i);
             resourceTile.setResource(resourcesCopy.get(i-1));
             if(resourceTile.getResource() != null) {
-                resourceTile.setTileNumber(tileNumbers[numberIndex--]);
+                resourceTile.setTileNumber(getTileNumbers()[numberIndex--]);
             }
             idToTileMap.put(i, resourceTile);
             tiles.add(resourceTile);
@@ -153,11 +154,35 @@ public class BasicBoardFactory {
                 tile.finalize();
             }
         }
-        return new Board(idToEdgeMap,idToTileMap,idToCornerMap,tiles);
+        return new Board(idToEdgeMap,idToTileMap,idToCornerMap,tiles,getMaxPlayers(),getResourceSet());
+    }
+
+    private int getMaxPlayers() {
+        return 4;
+    }
+
+    protected TileNumber[] getTileNumbers() {
+        return tileNumbers;
+    }
+
+    protected List<Class<? extends Resource>> getHarbors() {
+        return harbors;
+    }
+
+    protected List<Integer> getHarborIds() {
+        return harborIds;
+    }
+
+    protected List<Class<? extends Resource>> getResources() {
+        return resources;
+    }
+
+    protected Set<Class<? extends Resource>> getResourceSet() {
+        return new HashSet<>(Arrays.asList(Sheep.class,Wood.class,Brick.class,Wheat.class,Ore.class));
     }
 
     private Edge createEdge(int id) {
-        if(harborIds.contains(id)) {
+        if(getHarborIds().contains(id)) {
             Class<? extends Resource> harbor = shuffledHarbors.remove(0);
             Map<Class<? extends Resource>,Integer> tradeMap = new HashMap<>();
             if(harbor!=null) {
