@@ -1,6 +1,7 @@
 package com.rieke.bmore.catan.base.board.item.tile;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.google.common.collect.Lists;
 import com.rieke.bmore.catan.base.board.item.BoardItem;
 import com.rieke.bmore.catan.base.board.item.SelectableBoardItem;
 import com.rieke.bmore.catan.base.board.item.corner.Corner;
@@ -100,6 +101,11 @@ public abstract class Tile extends SelectableBoardItem {
         return this;
     }
 
+    public void removeEdge(Edge edge) {
+        edges.remove(edge);
+        edge.removeTile(this);
+    }
+
     public LinkedHashSet<Corner> getCorners() {
         return corners;
     }
@@ -135,6 +141,11 @@ public abstract class Tile extends SelectableBoardItem {
     @JsonIgnore
     public List<Integer> getCornerOrder() {
         return cornerOrder;
+    }
+
+    @JsonIgnore
+    public Edge getTopEdge() {
+        return Lists.newArrayList(edges).get(edges.size()-1);
     }
 
     public void setCornerOrder(Integer[] cornerOrder) {

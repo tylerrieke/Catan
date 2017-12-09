@@ -12,8 +12,8 @@ import java.util.Set;
 import java.util.LinkedHashSet;
 
 public class Edge extends SelectableBoardItem<Road> {
-    private static final int MAX_NUM_TILES = 2;
-    private static final int MAX_NUM_CORNERS = 2;
+    public static final int MAX_NUM_TILES = 2;
+    public static final int MAX_NUM_CORNERS = 2;
 
     private Set<Tile> tiles = new LinkedHashSet<>();
     private Set<Corner> corners = new LinkedHashSet<>();
@@ -33,6 +33,10 @@ public class Edge extends SelectableBoardItem<Road> {
         return this;
     }
 
+    public void removeTile(Tile tile) {
+        tiles.remove(tile);
+    }
+
     public Edge addCorner(Corner corner) {
         if(corners.size() == MAX_NUM_CORNERS && !corners.contains(corner)) {
             //TODO: Throw exception
@@ -40,6 +44,10 @@ public class Edge extends SelectableBoardItem<Road> {
             corners.add(corner);
         }
         return this;
+    }
+
+    public void removeCorner(Corner corner) {
+        corners.remove(corner);
     }
 
     public Road getRoad() {

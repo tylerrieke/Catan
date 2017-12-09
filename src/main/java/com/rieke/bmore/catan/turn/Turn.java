@@ -10,11 +10,17 @@ import java.util.List;
  * Created by tcrie on 8/13/2017.
  */
 public abstract class Turn {
+
+    public enum State {
+        ROLL, ROBBER_DISCARD, ROBBER, ROB_PLAYER, TRADE, BUILDING, BUILD, DC, END, SELECT_CARDS
+    }
+
     private CatanPlayer player;
     private boolean confirmPrompt = false;
     private Boolean confirmation = null;
     private Turn childTurn = null;
     private boolean canCancel = false;
+    private boolean done = false;
 
     public Turn(CatanPlayer player, boolean canCancel) {
         this.player = player;
@@ -84,7 +90,9 @@ public abstract class Turn {
         }
     }
 
-    protected abstract boolean applyState();
+    protected boolean applyState() {
+        return isDone();
+    }
 
     public void activate() {
         if(childTurn != null) {
@@ -121,5 +129,13 @@ public abstract class Turn {
 
     public Turn getChildTurn() {
         return childTurn;
+    }
+
+    public boolean isDone() {
+        return done;
+    }
+
+    public void setDone(boolean done) {
+        this.done = done;
     }
 }

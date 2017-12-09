@@ -2,6 +2,8 @@ package com.rieke.bmore.catan.player;
 
 import com.rieke.bmore.catan.base.game.Game;
 import com.rieke.bmore.catan.base.game.GameService;
+import com.rieke.bmore.catan.base.resources.ResourceSelection;
+import com.rieke.bmore.catan.gui.CatanStartup;
 import com.rieke.bmore.catan.turn.Turn;
 import com.rieke.bmore.common.player.InvalidPlayerException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import javax.annotation.PostConstruct;
 import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
 import java.util.Map;
@@ -31,17 +34,25 @@ public class PlayerController {
             HttpServletRequest request) {
         Map<String, Object> responseMap = new HashMap<>();
         Game game = gameService.getGame(gameId);
-        Turn turn = game.getCurrentTurn();
-        CatanPlayer player = game.getPlayer(getIpAddr(request));
-        responseMap.put("player", player);
-        responseMap.put("active", player.equals(game.getActivePlayer()));
-        responseMap.put("state", game.getState());
-        responseMap.put("confirm", player.equals(game.getActivePlayer()) && turn.isConfirmPrompt());
-        responseMap.put("actions", game.getTurnActions());
-        responseMap.put("discardCount", game.getDiscardCount(player));
-        responseMap.put("canCancel", game.canCancel(player));
+        if (game != null) {
+            Turn turn = game.getCurrentTurn();
+            CatanPlayer player = game.getPlayer(getIpAddr(request));
+            if(player != null) {
+                responseMap.put("player", player);
+                responseMap.put("active", player.equals(game.getActivePlayer()));
+                responseMap.put("state", game.getState());
+                responseMap.put("confirm", player.equals(game.getActivePlayer()) && turn.isConfirmPrompt());
+                responseMap.put("actions", game.getTurnActions());
+                responseMap.put("discardCount", game.getDiscardCount(player));
+                responseMap.put("tradeRequest", game.getTradeRequest(player));
+                responseMap.put("tradeResponses", game.getTradeResponses(player));
+                responseMap.put("canCancel", game.canCancel(player));
+                return new ResponseEntity<>(responseMap,
+                        HttpStatus.OK);
+            }
+        }
         return new ResponseEntity<>(responseMap,
-                HttpStatus.OK);
+                    HttpStatus.NOT_FOUND);
     }
 
     @RequestMapping(value = "/update", method = RequestMethod.GET, produces = { MediaType.APPLICATION_JSON_VALUE })
@@ -194,6 +205,29 @@ public class PlayerController {
                 HttpStatus.OK);
     }
 
+    @RequestMapping(value = "/card_selection", method = RequestMethod.GET, produces = { MediaType.APPLICATION_JSON_VALUE })
+    public ResponseEntity<Map<String, Object>> getCardSelection(
+            @RequestParam(value = "gameId") String gameId,
+            HttpServletRequest request) throws InvalidPlayerException {
+        Map<String, Object> responseMap = new HashMap<>();
+        Game game = gameService.getGame(gameId);
+        responseMap.put("selection", game.getResourceSelection(game.getPlayer(getIpAddr(request))));
+        return new ResponseEntity<>(responseMap,
+                HttpStatus.OK);
+    }
+
+    @RequestMapping(value = "/card_selection", method = RequestMethod.POST, produces = { MediaType.APPLICATION_JSON_VALUE })
+    public ResponseEntity<Map<String, Object>> playCards(
+            @RequestParam(value = "gameId") String gameId,
+            @RequestBody Map<String, Integer> selection,
+            HttpServletRequest request) throws InvalidPlayerException {
+        Map<String, Object> responseMap = new HashMap<>();
+        Game game = gameService.getGame(gameId);
+        game.playCardSelection(game.getPlayer(getIpAddr(request)),selection);
+        return new ResponseEntity<>(responseMap,
+                HttpStatus.OK);
+    }
+
     @RequestMapping(value = "/dcs", method = RequestMethod.GET, produces = { MediaType.APPLICATION_JSON_VALUE })
     public ResponseEntity<Map<String, Object>> getDCs(
             @RequestParam(value = "gameId") String gameId,
@@ -228,7 +262,6 @@ public class PlayerController {
                 HttpStatus.OK);
     }
 
-
     @RequestMapping(value = "/rob", method = RequestMethod.GET, produces = { MediaType.APPLICATION_JSON_VALUE })
     public ResponseEntity<Map<String, Object>> rob(
             @RequestParam(value = "gameId") String gameId,
@@ -241,7 +274,46 @@ public class PlayerController {
                 HttpStatus.OK);
     }
 
+    @RequestMapping(value = "/answer_trade", method = RequestMethod.GET, produces = { MediaType.APPLICATION_JSON_VALUE })
+    public ResponseEntity<Map<String, Object>> answer(
+            @RequestParam(value = "gameId") String gameId,
+            @RequestParam(value = "answer") boolean answer,
+            HttpServletRequest request) throws InvalidPlayerException {
+        Map<String, Object> responseMap = new HashMap<>();
+        Game game = gameService.getGame(gameId);
+        game.answerTradeRequest(game.getPlayer(getIpAddr(request)), answer);
+        return new ResponseEntity<>(responseMap,
+                HttpStatus.OK);
+    }
 
+    @RequestMapping(value = "/accept_trade", method = RequestMethod.GET, produces = { MediaType.APPLICATION_JSON_VALUE })
+    public ResponseEntity<Map<String, Object>> acceptTrade(
+            @RequestParam(value = "gameId") String gameId,
+            @RequestParam(value = "acceptedId", required = false) Integer accepted,
+            HttpServletRequest request) throws InvalidPlayerException {
+        Map<String, Object> responseMap = new HashMap<>();
+        Game game = gameService.getGame(gameId);
+        game.acceptPlayerTrade(game.getPlayer(getIpAddr(request)), accepted);
+        return new ResponseEntity<>(responseMap,
+                HttpStatus.OK);
+    }
+
+    @RequestMapping(value = "/init_trade", method = RequestMethod.POST, produces = { MediaType.APPLICATION_JSON_VALUE })
+    public ResponseEntity<Map<String, Object>> initTrade(
+            @RequestParam(value = "gameId") String gameId,
+            @RequestBody CardExchange exchange,
+            HttpServletRequest request) throws InvalidPlayerException {
+        Map<String, Object> responseMap = new HashMap<>();
+        Game game = gameService.getGame(gameId);
+        game.requestTrade(game.getPlayer(getIpAddr(request)),exchange);
+        return new ResponseEntity<>(responseMap,
+                HttpStatus.OK);
+    }
+
+    @PostConstruct
+    public void start() {
+        CatanStartup.jettyServer.afterDeployed();
+    }
 
     public static String getIpAddr(HttpServletRequest request) {
         String ip = request.getHeader("X-Real-IP");

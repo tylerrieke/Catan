@@ -16,12 +16,12 @@ public class GameService {
         gameMap = new HashMap<>();
     }
 
-    public synchronized Game createGame(Board board) {
-        return createGame(board,getSaltString());
+    public synchronized Game createGame(Board board, Settings settings) {
+        return createGame(board, settings, getSaltString());
     }
 
-    public synchronized Game createGame(Board board, String id) {
-        Game game = gameFactory.create(id, board);
+    public synchronized Game createGame(Board board, Settings settings, String id) {
+        Game game = gameFactory.create(id, settings, board);
         gameMap.put(id, game);
         return game;
     }

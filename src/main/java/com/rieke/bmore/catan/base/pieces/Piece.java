@@ -5,12 +5,18 @@ import com.rieke.bmore.catan.base.board.item.SelectableBoardItem;
 import com.rieke.bmore.catan.player.CatanPlayer;
 import com.rieke.bmore.catan.base.resources.Resource;
 
+import java.lang.invoke.MethodHandles;
 import java.lang.reflect.Method;
+import java.util.HashMap;
 import java.util.Map;
 
 public abstract class Piece<BoardItem extends SelectableBoardItem> {
+    public static final String DISPLAY_NAME_METHOD_NAME = "getDisplayName";
+
     private CatanPlayer player;
     private BoardItem boardItem;
+
+    protected Piece(){}
 
     public Piece(CatanPlayer player) {
         this.player = player;
@@ -51,5 +57,21 @@ public abstract class Piece<BoardItem extends SelectableBoardItem> {
             isPlaceable = (boolean) method.invoke(null);
         } catch (Exception e){}
         return isPlaceable;
+    }
+
+    public static String getDisplayName() {
+        return MethodHandles.lookup().lookupClass().getSimpleName();
+    }
+
+    public String getSpecificDisplayName() {
+        String typeName = "none";
+        try {
+            typeName = (String) this.getClass().getMethod(Piece.DISPLAY_NAME_METHOD_NAME).invoke(null);
+        } catch (Exception e) {}
+        return typeName;
+    }
+
+    public int getLegendSortValue() {
+        return 0;
     }
 }

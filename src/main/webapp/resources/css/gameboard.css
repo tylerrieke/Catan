@@ -228,3 +228,14 @@
 .player-column-xlarge {
     width: 140px;
 }
+
+.settings-label {
+    font-size: 25px;
+}
+
+.settings-number-input {
+    font-size: 70px !important;
+    padding: 20px !important;
+    width: 110px !important;
+    text-align: center !important;
+}

@@ -5,6 +5,7 @@ import com.rieke.bmore.catan.base.board.item.corner.Corner;
 import com.rieke.bmore.catan.base.board.item.edge.Edge;
 import com.rieke.bmore.catan.base.board.item.tile.ResourceTile;
 import com.rieke.bmore.catan.base.board.item.tile.Tile;
+import com.rieke.bmore.catan.base.game.Game;
 import com.rieke.bmore.catan.base.pieces.City;
 import com.rieke.bmore.catan.base.pieces.Piece;
 import com.rieke.bmore.catan.base.pieces.Road;
@@ -23,6 +24,7 @@ public class Board {
     private List<ResourceTile> tiles;
     private int maxPlayers;
     private Set<Class<? extends Resource>> resourceSet;
+    private Game game = null;
 
     public Board(Map<Integer, Edge> idToEdgeMap, Map<Integer, ResourceTile> idToTileMap, Map<Integer, Corner> idToCornerMap, List<ResourceTile> tiles, int maxPlayers, Set<Class<? extends Resource>> resourceSet) {
         this.idToEdgeMap = idToEdgeMap;
@@ -31,6 +33,14 @@ public class Board {
         this.tiles = tiles;
         this.maxPlayers = maxPlayers;
         this.resourceSet = resourceSet;
+    }
+
+    public Game getGame() {
+        return game;
+    }
+
+    public void setGame(Game game) {
+        this.game = game;
     }
 
     public Map<Integer, Edge> getIdToEdgeMap() {
@@ -135,7 +145,7 @@ public class Board {
                 tile.setSelectable(true);
                 for (Corner corner : tile.getCorners()) {
                     Settlement settlement = corner.getSettlement();
-                    if (settlement != null && settlement.getPlayer().getVisibleVictoryPoints() < 3) {
+                    if (settlement != null && game.isFriendlyRobber() && settlement.getPlayer().getVisibleVictoryPoints() < 3) {
                         tile.setSelectable(false);
                         break;
                     }

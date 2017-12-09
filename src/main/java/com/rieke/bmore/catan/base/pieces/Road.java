@@ -8,6 +8,7 @@ import com.rieke.bmore.catan.base.resources.Brick;
 import com.rieke.bmore.catan.base.resources.Resource;
 import com.rieke.bmore.catan.base.resources.Wood;
 
+import java.lang.invoke.MethodHandles;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -20,6 +21,8 @@ public class Road extends Piece<Edge> {
         cost.put(Brick.class,1);
     }
 
+    Road(){}
+
     public Road(CatanPlayer player) {
         super(player);
     }
@@ -28,5 +31,14 @@ public class Road extends Piece<Edge> {
     @JsonIgnore
     public Map<Class<? extends Resource>, Integer> getCost() {
         return ImmutableMap.copyOf(cost);
+    }
+
+    public static String getDisplayName() {
+        return MethodHandles.lookup().lookupClass().getSimpleName();
+    }
+
+    @Override
+    public int getLegendSortValue() {
+        return 1;
     }
 }

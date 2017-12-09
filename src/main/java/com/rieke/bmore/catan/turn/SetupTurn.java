@@ -21,6 +21,7 @@ public class SetupTurn extends Turn {
     private Corner corner;
     private Edge edge;
     private boolean collectResources;
+    private boolean alreadyCollected = false;
     private State state;
     private Board board;
 
@@ -49,7 +50,7 @@ public class SetupTurn extends Turn {
                         corner.setSelectable(true);
                         setConfirmPrompt(true);
                         break;
-                    } else if(getConfirmation() == true && getPlayer().playPiece(corner, Settlement.class)){
+                    } else if(Boolean.TRUE.equals(getConfirmation()) && getPlayer().playPiece(corner, Settlement.class)){
                         setUpEdgeChoice();
                     } else if(getConfirmation() != null) {
                         corner = null;
@@ -65,9 +66,10 @@ public class SetupTurn extends Turn {
                         edge.setSelectable(true);
                         setConfirmPrompt(true);
                         break;
-                    } else if(getConfirmation() == true && getPlayer().playPiece(edge, Road.class)){
+                    } else if(Boolean.TRUE.equals(getConfirmation()) && getPlayer().playPiece(edge, Road.class)){
                         return true;
                     } else if(getConfirmation() != null) {
+                        edge = null;
                         setUpEdgeChoice();
                     }
                 }
@@ -106,7 +108,8 @@ public class SetupTurn extends Turn {
     @Override
     public void endTurn() {
         board.clearSelection();
-        if(collectResources) {
+        if(collectResources && !alreadyCollected) {
+            alreadyCollected = true;
             for(Tile tile:corner.getTiles()) {
                 if(tile instanceof ResourceTile && ((ResourceTile) tile).getResource()!=null) {
                     getPlayer().addResource(((ResourceTile) tile).getResource(),1);

@@ -13,8 +13,12 @@ app.controller('Player', ['$scope', '$http', '$timeout', '$routeParams', functio
     $scope.dcs = [];
     $scope.tradeable = [];
     $scope.exchanges = {};
+    $scope.resourceSelection = {};
+    $scope.resourceSelectionCount = 0;
+    $scope.resourcesLeftToSelect = 0;
     $scope.availableTrades = 0;
-    $scope.trading = false;
+    $scope.exchanging = false;
+    $scope.playerTrading = false;
 
     var getPlayer = function() {
         $http.get("/catan/player?gameId="+$scope.gameId).success(function (response) {
@@ -27,29 +31,46 @@ app.controller('Player', ['$scope', '$http', '$timeout', '$routeParams', functio
             $scope.actions = response.actions;
             $scope.active = response.active;
             $scope.discardCount = response.discardCount;
+            $scope.tradeRequest = response.tradeRequest;
+            $scope.tradeResponses = response.tradeResponses;
             $scope.canCancel = response.canCancel;
             if($scope.actions.indexOf('TRADE') < 0) {
-                $scope.trading = false;
+                $scope.exchanging = false;
+                $scope.playerTrading = false;
             }
             if($scope.active && $scope.actions.indexOf('ROB_PLAYER') >= 0 && $scope.robbable.length == 0) {
                 $http.get("/catan/player/robbable?gameId="+$scope.gameId).success(function (response) {
                     $scope.robbable = response.robbable;
                 });
             }
+            if($scope.active && $scope.actions.indexOf('SELECT_CARDS') >= 0 && angular.equals($scope.resourceSelection,{})) {
+                $scope.getResourceSelectable();
+            }
         });
         $timeout(getPlayer,501);
     };
 
-    $scope.getTradeable = function() {
+    getPlayer($scope.gameId);
+
+    $scope.getTradeable = function(withPlayer) {
         $http.get("/catan/player/tradeable?gameId="+$scope.gameId).success(function (response) {
             $scope.tradeable = response.tradeable;
-            $scope.trading = true;
+            $scope.exchanging = !withPlayer;
+            $scope.playerTrading = !!withPlayer;
         });
     }
 
     $scope.getBuildable = function() {
         $http.get("/catan/player/buildable?gameId="+$scope.gameId).success(function (response) {
             $scope.buildable = response.buildable;
+        });
+    }
+
+    $scope.getResourceSelectable = function() {
+        $http.get("/catan/player/card_selection?gameId="+$scope.gameId).success(function (response) {
+            $scope.resourceSelection = response.selection.resourceSelection;
+            $scope.resourceSelectionCount = response.selection.count;
+            $scope.resourcesLeftToSelect = response.selection.count;
         });
     }
 
@@ -86,9 +107,14 @@ app.controller('Player', ['$scope', '$http', '$timeout', '$routeParams', functio
         $scope.dcs = [];
         $scope.discards = {};
         $scope.exchanges = {};
+        $scope.resourceSelection = {};
+        $scope.resourceSelectionCount = 0;
         $scope.availableTrades = 0;
-        $scope.trading = false;
+        $scope.exchanging = false;
+        $scope.playerTrading = false;
         $scope.discardCount = 0;
+        $scope.tradeResponses = null;
+        $scope.tradeRequest = null;
     }
 
     $scope.cancelTurn = function(ok) {
@@ -124,13 +150,13 @@ app.controller('Player', ['$scope', '$http', '$timeout', '$routeParams', functio
     }
 
     $scope.changeDiscardCount = function(resourceName, delta) {
-        var multiple = ($scope.isTrading() ? $scope.tradeable[resourceName] : 1);
+        var multiple = ($scope.exchanging ? $scope.tradeable[resourceName] : 1);
         if($scope.discards[resourceName]==undefined) {
             $scope.discards[resourceName] =(delta*multiple);
         } else {
             $scope.discards[resourceName] +=(delta*multiple);
         }
-        if($scope.isTrading()) {
+        if($scope.exchanging) {
             if(delta > 0) {
                 $scope.availableTrades++;
             } else {
@@ -140,7 +166,7 @@ app.controller('Player', ['$scope', '$http', '$timeout', '$routeParams', functio
     }
 
     $scope.changeExchangeCount = function(resourceName, delta) {
-        if(delta > 0) {
+        if(delta > 0 && !$scope.playerTrading) {
             $scope.availableTrades--;
         } else {
             $scope.availableTrades++;
@@ -159,6 +185,49 @@ app.controller('Player', ['$scope', '$http', '$timeout', '$routeParams', functio
         });
     }
 
+    $scope.submitTradeRequest = function() {
+        $http.post("/catan/player/init_trade?gameId="+$scope.gameId,
+                {discard:$scope.discards,receive:$scope.exchanges}).success(function (response) {
+            $scope.cancelAction();
+        });
+    }
+
+    $scope.answerTrade = function(answer) {
+        $scope.active = false;
+        $http.get("/catan/player/answer_trade?gameId="+$scope.gameId+"&answer="+answer).success(function (response) {
+
+        });
+    }
+    $scope.acceptPlayerTrade = function(player) {
+        $scope.cancelAction();
+        $http.get("/catan/player/accept_trade?gameId="+$scope.gameId+"&acceptedId="+player.id).success(function (response) {
+
+        });
+    }
+
+    $scope.changeCardSelectionCount = function(resourceName, delta) {
+        if(delta > 0) {
+            $scope.resourcesLeftToSelect--;
+        } else {
+            $scope.resourcesLeftToSelect++;
+        }
+        if($scope.resourceSelection[resourceName]==undefined) {
+            $scope.resourceSelection[resourceName] = delta;
+        } else {
+            $scope.resourceSelection[resourceName] += delta;
+        }
+    }
+
+    $scope.submitCardSelection = function(resource) {
+        if(resource) {
+            $scope.changeCardSelectionCount(resource, 1);
+        }
+        $http.post("/catan/player/card_selection?gameId="+$scope.gameId,
+                $scope.resourceSelection).success(function (response) {
+            $scope.cancelAction();
+        });
+    }
+
     $scope.getCountDiscarded = function() {
         var count = 0;
         for(var prop in $scope.discards) {
@@ -170,22 +239,28 @@ app.controller('Player', ['$scope', '$http', '$timeout', '$routeParams', functio
     }
 
     $scope.showMinusResource = function(resource) {
-        return !!$scope.discards[resource] && ($scope.isTrading()?$scope.availableTrades>0:true);
+        return !!$scope.discards[resource] && ($scope.exchanging?$scope.availableTrades>0:true);
     }
 
     $scope.showPlusResource = function(resource) {
         if($scope.isTrading()) {
-            return $scope.player.resourceCounts[resource] - (!!$scope.discards[resource]?$scope.discards[resource]:0) - $scope.tradeable[resource] >=0;
+            return $scope.player.resourceCounts[resource] - (!!$scope.discards[resource]?$scope.discards[resource]:0) - ($scope.exchanging?$scope.tradeable[resource]:1) >=0;
         } else {
             return ($scope.discardCount - $scope.getCountDiscarded() > 0)
                     && !($scope.discards[resource] >= $scope.player.resourceCounts[resource]);
         }
     }
 
-    getPlayer($scope.gameId);
+    $scope.isAnsweringTrade = function() {
+        return !$scope.active && !$scope.tradeResponses && !!$scope.tradeRequest;
+    }
 
     $scope.isTrading = function() {
-        return $scope.trading;
+        return $scope.exchanging || $scope.playerTrading;
+    }
+
+    $scope.isSelectingCards = function() {
+        return !angular.equals($scope.resourceSelection,{});
     }
 
     $scope.isBuilding = function() {
@@ -196,8 +271,23 @@ app.controller('Player', ['$scope', '$http', '$timeout', '$routeParams', functio
         return $scope.dcs.length > 0;
     }
 
-    $scope.isActing = function() {
-        return $scope.isTrading() || $scope.isBuilding() || $scope.isPlayingDC();
+    $scope.isTradingPlayer = function() {
+        return $scope.tradeResponses && !angular.equals($scope.tradeResponses,{});
+    }
+
+    $scope.isActing = function(canCancel) {
+        return $scope.isTrading() || $scope.isBuilding() || $scope.isPlayingDC() || (!canCancel && $scope.isSelectingCards());
+    }
+
+    $scope.canAfford = function(resources) {
+        for(var resource in resources) {
+            if(resources.hasOwnProperty(resource)) {
+                if(!$scope.player.resourceCounts[resource] || $scope.player.resourceCounts[resource] < resources[resource]) {
+                    return false;
+                }
+            }
+        }
+        return true;
     }
 
 }]);

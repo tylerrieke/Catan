@@ -6,19 +6,24 @@ import com.rieke.bmore.catan.base.board.item.edge.HarborEdge;
 import com.rieke.bmore.catan.base.board.item.tile.ResourceTile;
 import com.rieke.bmore.catan.base.board.item.tile.Tile;
 import com.rieke.bmore.catan.base.board.item.tile.TileNumber;
+import com.rieke.bmore.catan.base.game.Settings;
 import com.rieke.bmore.catan.base.resources.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
 
+import static java.lang.Math.sqrt;
+
 @Service
 public class BasicBoardFactory {
+
+    public static final String NAME = "Basic";
 
     private enum CornerOrder {
         N(new Integer[]{3,2,1,4,5,6}),S(new Integer[]{6,5,1,2,3,4}),E(new Integer[]{5,4,3,6,1,2}),W(new Integer[]{2,1,6,3,4,5}),
         C_NE(new Integer[]{4,3,5,6,1,2}),C_SE(new Integer[]{5,4,6,1,2,3}),C_SW(new Integer[]{1,6,2,3,4,5}),C_NW(new Integer[]{2,1,3,4,5,6}),
-        NE_A(new Integer[]{3,2,4,5,6,1}),NE_B(new Integer[]{4,3,2,4,5,1}),SE(new Integer[]{6,5,4,1,2,3}),SW(new Integer[]{1,6,5,2,3,4}),NW(new Integer[]{3,2,1,4,5,6});
+        NE_A(new Integer[]{3,2,4,5,6,1}),NE_B(new Integer[]{4,3,2,5,6,1}),SE(new Integer[]{6,5,4,1,2,3}),SW(new Integer[]{1,6,5,2,3,4}),NW(new Integer[]{3,2,1,4,5,6});
         private Integer[] order;
 
         CornerOrder(Integer[] order) {
@@ -46,10 +51,6 @@ public class BasicBoardFactory {
 
     private List<Class<? extends Resource>> shuffledHarbors;
 
-    private final List<Integer> harborIds = Arrays.asList(
-            27,31,34,37,41,44,47,51,54
-    );
-
     private final List<Class<? extends Resource>> resources = Arrays.asList(
             Wood.class, Wood.class, Wood.class, Wood.class,
             Sheep.class, Sheep.class, Sheep.class, Sheep.class,
@@ -59,10 +60,13 @@ public class BasicBoardFactory {
             null
     );
 
-    @Autowired
     private ResourceService resourceService;
 
-    public synchronized Board create() {
+    public BasicBoardFactory(ResourceService resourceService) {
+        this.resourceService = resourceService;
+    }
+
+    public synchronized Board create(Settings settings) {
         shuffledHarbors = new ArrayList<>();
         shuffledHarbors.addAll(getHarbors());
         Collections.shuffle(shuffledHarbors, new Random(System.nanoTime()));
@@ -77,7 +81,14 @@ public class BasicBoardFactory {
         Collections.shuffle(resourcesCopy, new Random(System.nanoTime()));
 
         int numberIndex = getTileNumbers().length-1;
-        for(int i = 1; i <= getResources().size(); i++) {
+        for(int i = 1; i <= settings.getNumberOfTiles(); i++) {
+            if(numberIndex < 0) {numberIndex = getTileNumbers().length-1;}
+            if(i > resourcesCopy.size()) {
+                List<Class<? extends Resource>> tmpCopy = new ArrayList<>();
+                tmpCopy.addAll(getResources());
+                Collections.shuffle(tmpCopy, new Random(System.nanoTime()));
+                resourcesCopy.addAll(tmpCopy);
+            }
             ResourceTile resourceTile = new ResourceTile(i);
             resourceTile.setResource(resourcesCopy.get(i-1));
             if(resourceTile.getResource() != null) {
@@ -149,16 +160,15 @@ public class BasicBoardFactory {
             }
             previousCorner = corner;
         }
+
+        createHarbors(tiles.get(tiles.size()-1), idToEdgeMap);
+
         for(Tile tile:tiles) {
             if(tile!=null) {
                 tile.finalize();
             }
         }
-        return new Board(idToEdgeMap,idToTileMap,idToCornerMap,tiles,getMaxPlayers(),getResourceSet());
-    }
-
-    private int getMaxPlayers() {
-        return 4;
+        return new Board(idToEdgeMap,idToTileMap,idToCornerMap,tiles,settings.getMaxPlayers(),getResourceSet());
     }
 
     protected TileNumber[] getTileNumbers() {
@@ -169,33 +179,97 @@ public class BasicBoardFactory {
         return harbors;
     }
 
-    protected List<Integer> getHarborIds() {
-        return harborIds;
-    }
-
     protected List<Class<? extends Resource>> getResources() {
         return resources;
+    }
+
+    public int getMinPlayers() {
+        return 2;
+    }
+
+    public int getMaxPlayers() {
+        return 4;
+    }
+
+    public String getName() {
+        return NAME;
     }
 
     protected Set<Class<? extends Resource>> getResourceSet() {
         return new HashSet<>(Arrays.asList(Sheep.class,Wood.class,Brick.class,Wheat.class,Ore.class));
     }
 
-    private Edge createEdge(int id) {
-        if(getHarborIds().contains(id)) {
-            Class<? extends Resource> harbor = shuffledHarbors.remove(0);
-            Map<Class<? extends Resource>,Integer> tradeMap = new HashMap<>();
-            if(harbor!=null) {
-                tradeMap.put(harbor,2);
-            } else {
-                for(Class<? extends Resource> resource:resourceService.getResources()) {
-                    tradeMap.put(resource,3);
+    private void createHarbors(Tile tile, Map<Integer,Edge> idToEdgeMap) {
+        Edge startingEdge = tile.getTopEdge();
+        if(startingEdge.getTiles().size() != 1) {
+            for(Edge testEdge:tile.getEdges()) {
+                if(testEdge.getTiles().size()==1) {
+                    startingEdge = testEdge;
+                    break;
                 }
             }
-            return new HarborEdge(id,tradeMap);
-        } else {
-            return new Edge(id);
         }
+
+        Edge currentEdge = startingEdge;
+        int previousHarborHop = 3;
+        int currentHarborHop = 3;
+        Edge previousEdge = null;
+        while(true) {
+            currentEdge = new HarborEdge(currentEdge, getHarborTradeMap());
+            idToEdgeMap.put(currentEdge.getId(), currentEdge);
+            if(currentEdge.getId() == startingEdge.getId()) {
+                startingEdge = currentEdge;
+            }
+
+            for(int i = 0; i < currentHarborHop; i ++) {
+                boolean foundEdge = false;
+                for (Corner corner : currentEdge.getCorners()) {
+                    for (Edge nextEdge : corner.getEdges()) {
+                        if (nextEdge != previousEdge && nextEdge != currentEdge && nextEdge != startingEdge && nextEdge.getTiles().size() == 1) {
+                            previousEdge = currentEdge;
+                            currentEdge = nextEdge;
+                            foundEdge = true;
+                            break;
+                        }
+                    }
+                    if(foundEdge) {
+                        break;
+                    }
+                }
+                if (!foundEdge) {
+                    return;
+                }
+            }
+
+            if(!Collections.disjoint(currentEdge.getCorners(),(startingEdge.getCorners()))) {
+                return;
+            }
+
+            int newHarborHop = (previousHarborHop==currentHarborHop?4:3);
+            previousHarborHop=currentHarborHop;
+            currentHarborHop=newHarborHop;
+        }
+    }
+
+    private Edge createEdge(int id) {
+        return new Edge(id);
+    }
+
+    private Map<Class<? extends Resource>, Integer> getHarborTradeMap() {
+        if(shuffledHarbors.isEmpty()) {
+            shuffledHarbors.addAll(getHarbors());
+            Collections.shuffle(shuffledHarbors, new Random(System.nanoTime()));
+        }
+        Class<? extends Resource> harbor = shuffledHarbors.remove(0);
+        Map<Class<? extends Resource>, Integer> tradeMap = new HashMap<>();
+        if (harbor != null) {
+            tradeMap.put(harbor, 2);
+        } else {
+            for (Class<? extends Resource> resource : resourceService.getResources()) {
+                tradeMap.put(resource, 3);
+            }
+        }
+        return tradeMap;
     }
 
     protected int prepareLayers(List<? extends Tile> tiles) {
@@ -218,7 +292,7 @@ public class BasicBoardFactory {
         if (id<=1) {
             return 1.0;
         }
-        Double layer = Math.floor(Math.log10(Math.ceil((id-1)/6.0))/Math.log10(2))+2;
+        Double layer = Math.ceil((1/6.0)*(3+sqrt(3)*sqrt(-1+4*(id))));
         return (layer<0?2:layer);
     }
 
@@ -226,11 +300,7 @@ public class BasicBoardFactory {
         if (id<=1) {
             return 1;
         }
-        int sum = 0;
-        for(int i = 0;i<layer-2;i++) {
-            sum += (Math.pow(2,i)*6);
-        }
-        return id - (sum+1);
+        return id - ((6*(layer-2)*(layer-1))/2+1);
     }
 
     private int calculateX(int layer, int loc) {
@@ -337,14 +407,12 @@ public class BasicBoardFactory {
 
     public List<int[]> getLayerOfTilesForHosts(int layer) {
         if(layer == 1) {
-            return Arrays.asList(new int[][] {
-                    new int[]{1,2,3},
+            return Arrays.asList(new int[]{1,2,3},
                     new int[]{1,3,4},
                     new int[]{1,4,5},
                     new int[]{1,5,6},
                     new int[]{1,6,7},
-                    new int[]{1,2,7}
-            });
+                    new int[]{1,2,7});
         }
 
         List<int[]> hostTilesLists = new ArrayList<>();
@@ -375,4 +443,8 @@ public class BasicBoardFactory {
 
         return hostTilesLists;
     }
+
+
+
+
 }

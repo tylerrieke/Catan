@@ -73,5 +73,5 @@ public abstract class Special {
         }
     }
 
-    protected abstract int evaluateOne(CatanPlayer player);
+    public abstract int evaluateOne(CatanPlayer player);
 }

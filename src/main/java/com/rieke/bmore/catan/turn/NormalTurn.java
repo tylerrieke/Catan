@@ -4,7 +4,7 @@ import com.rieke.bmore.catan.base.board.item.SelectableBoardItem;
 import com.rieke.bmore.catan.base.board.item.corner.Corner;
 import com.rieke.bmore.catan.base.board.item.tile.Tile;
 import com.rieke.bmore.catan.base.game.Game;
-import com.rieke.bmore.catan.base.pieces.dc.DevelopmentCard;
+import com.rieke.bmore.catan.base.pieces.DevelopmentCard;
 import com.rieke.bmore.catan.base.pieces.Settlement;
 import com.rieke.bmore.catan.base.resources.Resource;
 import com.rieke.bmore.catan.player.CatanPlayer;
@@ -16,21 +16,20 @@ import java.util.*;
  * Created by tcrie on 8/18/2017.
  */
 public class NormalTurn extends Turn{
-    public enum State {
-        ROLL, ROBBER_DISCARD, ROBBER, ROB_PLAYER, TRADE, BUILDING, BUILD, DC, END
-    }
 
     private State state;
     private Game game;
     private int roll = 0;
     private boolean built = false;
-    private boolean done = false;
     private Map<CatanPlayer, Integer> robberDiscardMap;
     private Tile robberTile = null;
     private List<SimplePlayer> robbablePlayers;
     private CatanPlayer robbedPlayer = null;
     private SelectableBoardItem builder = null;
     private DevelopmentCard developmentCard = null;
+    private int cardSelectionCount = 0;
+    private Map<String, Integer> cardSelection;
+    private StringBuilder message = new StringBuilder();
 
     public NormalTurn(CatanPlayer player, Game game) {
         super(player, false);
@@ -42,7 +41,7 @@ public class NormalTurn extends Turn{
 
     @Override
     protected boolean applyState() {
-        if(done) {
+        if(super.applyState()) {
             return true;
         }
         switch(state) {
@@ -74,7 +73,11 @@ public class NormalTurn extends Turn{
                         game.setRobberId(robberTile.getId());
                         populateRobbablePlayers();
                         if(robbablePlayers.isEmpty()) {
-                            state = State.TRADE;
+                            if(roll > 0) {
+                                state = State.TRADE;
+                            } else {
+                                state = State.ROLL;
+                            }
                         } else {
                             state = State.ROB_PLAYER;
                         }
@@ -90,8 +93,13 @@ public class NormalTurn extends Turn{
                     if(resource != null) {
                         getPlayer().addResource(resource,1);
                     }
-                    state = State.TRADE;
+                    if(roll > 0) {
+                        state = State.TRADE;
+                    } else {
+                        state = State.ROLL;
+                    }
                 }
+                break;
             case TRADE:
                 if(built) {
                     state = State.BUILD;
@@ -103,6 +111,7 @@ public class NormalTurn extends Turn{
     }
 
     public void goToRobber() {
+        robbedPlayer = null;
         robberTile = null;
         state = State.ROBBER;
         activate();
@@ -125,23 +134,21 @@ public class NormalTurn extends Turn{
         this.built = built;
     }
 
-    public boolean isDone() {
-        return done;
-    }
-
-    public void setDone(boolean done) {
-        this.done = done;
-    }
-
     public DevelopmentCard getDevelopmentCard() {
         return developmentCard;
     }
 
     public void setDevelopmentCard(DevelopmentCard developmentCard) {
+        if(developmentCard != null) {
+            this.message = developmentCard.getMessage();
+        }
         this.developmentCard = developmentCard;
     }
 
     public void setRobbedPlayer(CatanPlayer robbedPlayer) {
+        if(robbedPlayer != null) {
+            this.message.append(getPlayer().getDisplay()+", robbed "+robbedPlayer.getDisplay());
+        }
         this.robbedPlayer = robbedPlayer;
     }
 
@@ -167,6 +174,7 @@ public class NormalTurn extends Turn{
     }
 
     public void populateRobbablePlayers() {
+        robbablePlayers = new ArrayList<>();
         for(Corner corner:robberTile.getCorners()) {
             Settlement settlement = corner.getSettlement();
             if(settlement != null) {
@@ -220,8 +228,11 @@ public class NormalTurn extends Turn{
             case ROB_PLAYER:
                 states = Arrays.asList(State.ROB_PLAYER.toString());
                 break;
+            case SELECT_CARDS:
+                states = Arrays.asList(State.SELECT_CARDS.toString());
+                break;
             default:
-                states = Arrays.asList(State.END.toString());
+                states = Arrays.asList();
         }
         return states;
     }
@@ -232,5 +243,29 @@ public class NormalTurn extends Turn{
 
     public void setState(State state) {
         this.state = state;
+    }
+
+    public int getCardSelectionCount() {
+        return cardSelectionCount;
+    }
+
+    public void setCardSelectionCount(int cardSelectionCount) {
+        this.cardSelectionCount = cardSelectionCount;
+    }
+
+    public Map<String, Integer> getCardSelection() {
+        return cardSelection;
+    }
+
+    public void setCardSelection(Map<String, Integer> cardSelection) {
+        this.cardSelection = cardSelection;
+    }
+
+    public CatanPlayer getRobbedPlayer() {
+        return robbedPlayer;
+    }
+
+    public String getMessage() {
+        return message.toString();
     }
 }

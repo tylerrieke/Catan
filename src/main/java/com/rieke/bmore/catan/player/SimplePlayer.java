@@ -12,6 +12,9 @@ public class SimplePlayer {
     private String color;
     private boolean active;
     private int victoryPoints;
+    private int longestRoad;
+    private int largestArmy;
+    private Boolean answer = null;
 
     public SimplePlayer(CatanPlayer player, boolean active) {
         id = player.getId();
@@ -21,7 +24,14 @@ public class SimplePlayer {
         numCards = player.getCardCount();
         dcCount = player.getDcCount();
         victoryPoints = player.getVisibleVictoryPoints();
+        longestRoad = player.getLongestRoad();
+        largestArmy = player.getLargestArmy();
         this.active = active;
+    }
+
+    public SimplePlayer(CatanPlayer player, boolean active, Boolean answer) {
+        this(player,active);
+        this.answer = answer;
     }
 
     public String getName() {
@@ -54,6 +64,18 @@ public class SimplePlayer {
 
     public int getVictoryPoints() {
         return victoryPoints;
+    }
+
+    public int getLongestRoad() {
+        return longestRoad;
+    }
+
+    public int getLargestArmy() {
+        return largestArmy;
+    }
+
+    public Boolean getAnswer() {
+        return answer;
     }
 
     @Override

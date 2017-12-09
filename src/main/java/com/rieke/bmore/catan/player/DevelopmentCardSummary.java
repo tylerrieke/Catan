@@ -1,6 +1,6 @@
 package com.rieke.bmore.catan.player;
 
-import com.rieke.bmore.catan.base.pieces.dc.DevelopmentCard;
+import com.rieke.bmore.catan.base.pieces.DevelopmentCard;
 
 /**
  * Created by tcrie on 8/29/2017.
@@ -17,7 +17,11 @@ public class DevelopmentCardSummary {
     }
 
     public String getType() {
-        return type.getSimpleName();
+        String typeName = "none";
+        try {
+            typeName = (String) type.getMethod(DevelopmentCard.DISPLAY_NAME_METHOD_NAME).invoke(null);
+        } catch (Exception e) {}
+        return typeName;
     }
 
     public int getCount() {
@@ -26,6 +30,10 @@ public class DevelopmentCardSummary {
 
     public boolean isPlayable() {
         return playable;
+    }
+
+    public void setPlayable(boolean playable) {
+        this.playable = playable;
     }
 
     public void incrementCount() {

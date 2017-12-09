@@ -1,10 +1,11 @@
-package com.rieke.bmore.catan.base.pieces.dc;
+package com.rieke.bmore.catan.base.pieces;
 
 import com.rieke.bmore.catan.base.game.Game;
 import com.rieke.bmore.catan.base.pieces.Piece;
 import com.rieke.bmore.catan.base.resources.*;
 import com.rieke.bmore.catan.player.CatanPlayer;
 import com.rieke.bmore.catan.turn.NormalTurn;
+import com.rieke.bmore.catan.turn.Turn;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -12,11 +13,13 @@ import java.util.Map;
 /**
  * Created by tcrie on 8/29/2017.
  */
-public abstract class DevelopmentCard extends Piece {
+public class DevelopmentCard extends Piece {
     private CatanPlayer player = null;
     private boolean played;
     private boolean playable;
     private Game game;
+    private Turn turn = null;
+    private StringBuilder message = new StringBuilder();
 
     private static Map cost;
 
@@ -26,6 +29,8 @@ public abstract class DevelopmentCard extends Piece {
         cost.put(Sheep.class,1);
         cost.put(Wheat.class,1);
     }
+
+    DevelopmentCard(){}
 
     public DevelopmentCard(boolean playable, Game game) {
         super(null);
@@ -37,8 +42,16 @@ public abstract class DevelopmentCard extends Piece {
         return playable && !isPlayed();
     }
 
-    public boolean getPlayable() {
-        return playable;
+    public void setTurn(Turn turn) {
+        this.turn = turn;
+    }
+
+    public boolean getPlayable(Turn turn) {
+        boolean hasPlayed = false;
+        if(turn instanceof NormalTurn) {
+            hasPlayed = ((NormalTurn) turn).getDevelopmentCard() != null;
+        }
+        return !turn.equals(this.turn) && !hasPlayed && playable;
     }
 
     public void play(NormalTurn turn) {
@@ -49,6 +62,8 @@ public abstract class DevelopmentCard extends Piece {
 
     public void action(NormalTurn turn) {
         setPlayed(true);
+        //To help with GC
+        setTurn(null);
         turn.setDevelopmentCard(this);
     }
 
@@ -62,6 +77,9 @@ public abstract class DevelopmentCard extends Piece {
 
     public void setPlayer(CatanPlayer player) {
         this.player = player;
+        if(player != null) {
+            message = new StringBuilder(player.getDisplay()+" played DC "+getClass().getSimpleName()+" ");
+        }
     }
 
     protected void setPlayed(boolean played) {
@@ -78,5 +96,18 @@ public abstract class DevelopmentCard extends Piece {
 
     public static boolean isPlaceable() {
         return false;
+    }
+
+    public StringBuilder getMessage() {
+        return message;
+    }
+
+    public static String getDisplayName() {
+        return "DC";
+    }
+
+    @Override
+    public int getLegendSortValue() {
+        return 4;
     }
 }

@@ -4,11 +4,16 @@ app.controller('Gameboard', ['$scope', '$http', '$timeout', '$location', '$rootS
     vm.xDiff = 77;
     vm.yDiff = 42;
     vm.state = "MENU";
-    vm.gameId = "b";
+    vm.gameId = "";
     vm.players = [];
     vm.dice1 = 0;
     vm.dice2 = 0;
     vm.robberId = -1;
+    vm.message = "";
+    vm.robberFriendly = true;
+
+    vm.cornerSvgSize = 30;
+    vm.cornerPoints = [[107,10],[84,52],[32,52],[8,10],[32,-32],[84,-32]];
 
     vm.getGameboard = function(gameId) {
         vm.gameId = gameId;
@@ -16,6 +21,9 @@ app.controller('Gameboard', ['$scope', '$http', '$timeout', '$location', '$rootS
         if(onPage) {
             $http.get("/catan/board?gameId="+gameId).success(function (response) {
                 vm.gameboard = response.board;
+                if(response.state == "OVER" && vm.state != "OVER") {
+                    alert(response.currentPlayer+" wins!!");
+                }
                 if(vm.state!="SETUP" || response.state != "OPEN") {
                     vm.state = response.state;
                 }
@@ -24,14 +32,23 @@ app.controller('Gameboard', ['$scope', '$http', '$timeout', '$location', '$rootS
                 vm.dice2 = response.dice2;
                 vm.actions = response.actions;
                 vm.robberId = response.robberId;
-                $timeout(function(){vm.getGameboard(gameId)}, (onPage?501:2000));
+                vm.robberFriendly = response.robberFriendly;
+                vm.message = decodeURIComponent(response.message);
+                vm.pieceCosts = response.pieceCosts;
+                if(vm.state != "OVER") {
+                    $timeout(function(){vm.getGameboard(gameId)}, (onPage?501:2000));
+                }
             });
         }
     };
 
+    vm.startCreatingGameboard = function() {
+        vm.settings = {maxPlayers:4,friendly:true,buildTurn:false,numberOfTiles:19,victoryPoints:10};
+        vm.state = "CREATING";
+    };
 
     vm.createGameboard = function() {
-        $http.get("/catan/board/new").success(function (response) {
+        $http.post("/catan/board/new", vm.settings).success(function (response) {
             vm.gameboard = response.board;
             if(vm.gameboard) {
                 vm.state = response.state;
@@ -47,6 +64,15 @@ app.controller('Gameboard', ['$scope', '$http', '$timeout', '$location', '$rootS
             $http.get("/catan/board/start?gameId="+vm.gameId).success(function (response) {
                 vm.gameboard = response.board;
                 vm.state = response.state;
+                vm.players = response.players;
+            });
+        }
+    };
+
+    vm.makeFirst = function(name) {
+        var onPage = ($location.path()=="/board");
+        if(onPage) {
+            $http.get("/catan/board/playerFirst?gameId="+vm.gameId+"&playerName="+name).success(function (response) {
                 vm.players = response.players;
             });
         }
@@ -131,7 +157,7 @@ app.controller('Gameboard', ['$scope', '$http', '$timeout', '$location', '$rootS
     }
 
     vm.onNumberClick = function(tile) {
-        if(vm.actions && vm.actions.indexOf('ROBBER') >= 0 && tile.id != vm.robberId) {
+        if(vm.actions && vm.actions.indexOf('ROBBER') >= 0 && tile.id != vm.robberId && tile.selectable) {
             $http.get("/catan/player/robber?gameId="+vm.gameId+"&tileId="+tile.id).success(function (response) {
 
             });

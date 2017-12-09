@@ -1,6 +1,6 @@
 package com.rieke.bmore.catan.base.game;
 
-import com.rieke.bmore.catan.base.pieces.dc.DevelopmentCard;
+import com.rieke.bmore.catan.base.pieces.DevelopmentCard;
 import com.rieke.bmore.catan.base.pieces.dc.Knight;
 import com.rieke.bmore.catan.player.CatanPlayer;
 
@@ -15,7 +15,7 @@ public class LargestArmy extends Special {
     }
 
     @Override
-    protected int evaluateOne(CatanPlayer player) {
+    public int evaluateOne(CatanPlayer player) {
         int count = 0;
 
         for(DevelopmentCard dc:player.getPiecesByType(DevelopmentCard.class)) {
@@ -23,7 +23,7 @@ public class LargestArmy extends Special {
                 count++;
             }
         }
-
+        player.setLargestArmy(count);
         return count;
     }
 }

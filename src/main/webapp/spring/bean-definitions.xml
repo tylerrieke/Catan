@@ -14,29 +14,33 @@
           scope="singleton">
     </bean>
 
-    <bean id="boardFactory" class="com.rieke.bmore.catan.base.board.BasicBoardFactory"
+    <bean id="road" class="com.rieke.bmore.catan.base.pieces.Road"/>
+    <bean id="settlement" class="com.rieke.bmore.catan.base.pieces.Settlement"/>
+    <bean id="city" class="com.rieke.bmore.catan.base.pieces.City"/>
+    <bean id="dc" class="com.rieke.bmore.catan.base.pieces.DevelopmentCard"/>
+
+    <bean id="pieceService" class="com.rieke.bmore.catan.base.pieces.PieceService"
           scope="singleton">
+    </bean>
+
+    <bean id="basicBoardFactory" class="com.rieke.bmore.catan.base.board.BasicBoardFactory"
+          scope="singleton">
+        <constructor-arg index="0" ref="resourceService"/>
+    </bean>
+
+    <bean id="expansionBoardFactory" class="com.rieke.bmore.catan.base.board.ExpansionBoardFactory"
+          scope="singleton">
+        <constructor-arg index="0" ref="resourceService"/>
     </bean>
 
     <bean id="connectionFactory" class="com.rieke.bmore.common.connection.ConnectionFactory"
           scope="singleton">
     </bean>
 
-    <!--<bean id="playerFactory" class="com.rieke.bmore.catan.player.CatanPlayerFactory"-->
-    <!--scope="singleton">-->
-    <!--<constructor-arg index="0" ref="connectionFactory"/>-->
-    <!--</bean>-->
-
-    <!--<bean id="playerService" class="com.rieke.bmore.catan.player.CatanPlayerService"-->
-    <!--scope="singleton">-->
-    <!--<constructor-arg index="0" ref="playerFactory"/>-->
-    <!--<constructor-arg index="1" ref="connectionFactory"/>-->
-    <!--</bean>-->
-
     <bean id="gameFactory" class="com.rieke.bmore.catan.base.game.GameFactory"
           scope="singleton">
-        <constructor-arg index="0" ref="connectionFactory"/>
-        <constructor-arg index="1" ref="resourceService"/>
+        <constructor-arg index="0" ref="resourceService"/>
+        <constructor-arg index="1" ref="pieceService"/>
     </bean>
 
     <bean id="gameService" class="com.rieke.bmore.catan.base.game.GameService"
@@ -46,8 +50,7 @@
 
     <bean id="boardController" class="com.rieke.bmore.catan.base.board.BoardController"
           scope="singleton">
-        <constructor-arg index="0" ref="boardFactory"/>
-        <constructor-arg index="1" ref="gameService"/>
+        <constructor-arg index="0" ref="gameService"/>
     </bean>
 
 </beans>

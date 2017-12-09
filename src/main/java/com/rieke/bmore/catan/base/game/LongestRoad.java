@@ -14,7 +14,7 @@ public class LongestRoad extends Special {
         super(game, name, points, MINIMUM_LENGTH);
     }
 
-    protected int evaluateOne(CatanPlayer player) {
+    public int evaluateOne(CatanPlayer player) {
         int maxLength = 0;
         List<Corner> ends = new ArrayList<>();
         List<Road> playerRoads = new ArrayList<>(player.getPiecesByType(Road.class));
@@ -55,6 +55,7 @@ public class LongestRoad extends Special {
                 }
             }
         }
+        player.setLongestRoad(maxLength);
         return maxLength;
     }
 

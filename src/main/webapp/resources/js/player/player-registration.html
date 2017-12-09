@@ -2,8 +2,8 @@
     <div class="player-details-container">
         <div ng-if="state=='MENU'">
             <form>
-                <span style="font-size:50px"><b>Game ID:</b></span> <input class="id-input-field" type="text" ng-model="gameId" ng-maxlength="4">
-                <button type="button" ng-click="getGameboard(gameId)" class="btn btn-medium btn-success mark-button">
+                <span class="id-input-label"><b>Game ID:</b></span> <input class="id-input-field" type="text" ng-model="gameId" ng-maxlength="4">
+                <button type="button" ng-click="getGameboard(gameId)" class="btn btn-medium btn-success mark-button id-input-button">
                     Join
                 </button>
             </form>

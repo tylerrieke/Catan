@@ -11,18 +11,17 @@ import com.rieke.bmore.catan.base.pieces.City;
 import com.rieke.bmore.catan.base.pieces.Piece;
 import com.rieke.bmore.catan.base.pieces.Road;
 import com.rieke.bmore.catan.base.pieces.Settlement;
-import com.rieke.bmore.catan.base.pieces.dc.DevelopmentCard;
+import com.rieke.bmore.catan.base.pieces.DevelopmentCard;
 import com.rieke.bmore.catan.base.resources.Resource;
 import com.rieke.bmore.common.connection.Connection;
 import com.rieke.bmore.common.player.Player;
 
-import javax.persistence.criteria.CriteriaBuilder;
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class CatanPlayer extends Player {
-    public static final int DEFAULT_ROAD_COUNT = 16;
+    public static final int DEFAULT_ROAD_COUNT = 15;
     public static final int DEFAULT_SETTLEMENT_COUNT = 5;
     public static final int DEFAULT_CITY_COUNT = 4;
 
@@ -33,7 +32,10 @@ public class CatanPlayer extends Player {
     private static int id_counter = 0;
     private int visibleVictoryPoints;
     private int totalVictoryPoints;
+    private int longestRoad = 0;
+    private int largestArmy = 0;
     private Game game;
+    private long order = 0;
 
     private Map<Class<? extends Resource>, Integer> tradeIns = new HashMap<>();
 
@@ -43,6 +45,7 @@ public class CatanPlayer extends Player {
         super(connection, name, display);
         this.game = game;
         id = id_counter++;
+        order = System.currentTimeMillis();
     }
 
     public void init(Set<Class<? extends Resource>> resourceSet, String color) {
@@ -201,24 +204,30 @@ public class CatanPlayer extends Player {
     public List<PieceSummary> getAvailablePieces() {
         List<PieceSummary> availablePiece = new ArrayList<>();
         for(Class<? extends Piece> type:pieces.keySet()) {
-            int count = 0;
-            boolean buildable;
-            if(Piece.canBePlaced(type)) {
-                Piece testPiece = null;
-                for(Piece piece:getPiecesByType(type)) {
-                    if(piece.getBoardItem() == null) {
-                        count++;
-                        testPiece = piece;
-                    }
-                }
-                buildable = canBuildPiece(testPiece);
-            } else {
-                count = game.getPieceCount(type);
-                buildable = game.canBuild(type, this);
-            }
-            availablePiece.add(new PieceSummary(type, count, buildable));
+            availablePiece.add(getAvailablePiecesByType(type));
         }
         return availablePiece;
+    }
+
+    public PieceSummary getAvailablePiecesByType(Class<? extends Piece> type) {
+        int count = 0;
+        boolean buildable;
+        if(Piece.canBePlaced(type)) {
+            Piece testPiece = null;
+            for(Piece piece:getPiecesByType(type)) {
+                if(piece.getBoardItem() == null) {
+                    count++;
+                    testPiece = piece;
+                }
+            }
+            buildable = canBuildPiece(testPiece);
+        } else {
+            count = game.getPieceCount(type);
+            buildable = game.canBuild(type, this);
+        }
+        PieceSummary pieceSummary = new PieceSummary(type, count, buildable);
+        pieceSummary.setCost(game.getPieceService().getPieceCosts().get(pieceSummary.getType()));
+        return pieceSummary;
     }
 
     public boolean canBuildPiece(Piece piece){
@@ -275,14 +284,20 @@ public class CatanPlayer extends Player {
 
     public List<DevelopmentCardSummary> getAvailableDCs() {
         Map<String,DevelopmentCardSummary> dcSummaryMap = new HashMap<>();
-        for(DevelopmentCard dc:getPiecesByType(DevelopmentCard.class)) {
-            if(dc.isPlayable() || !dc.getPlayable()) {
-                DevelopmentCardSummary summary = dcSummaryMap.get(dc.getClass().getSimpleName());
-                if (summary == null) {
-                    summary = new DevelopmentCardSummary(dc.getClass(), 0, dc.getPlayable());
-                    dcSummaryMap.put(dc.getClass().getSimpleName(),summary);
+        Set<DevelopmentCard> dcs = getPiecesByType(DevelopmentCard.class);
+        if(dcs != null) {
+            for (DevelopmentCard dc :dcs) {
+                if (dc.isPlayable() || !dc.getPlayable(game.getCurrentTurn())) {
+                    DevelopmentCardSummary summary = dcSummaryMap.get(dc.getSpecificDisplayName());
+                    if (summary == null) {
+                        summary = new DevelopmentCardSummary(dc.getClass(), 0, dc.getPlayable(game.getCurrentTurn()));
+                        dcSummaryMap.put(dc.getSpecificDisplayName(), summary);
+                    }
+                    if(!summary.isPlayable()) {
+                        summary.setPlayable(dc.getPlayable(game.getCurrentTurn()));
+                    }
+                    summary.incrementCount();
                 }
-                summary.incrementCount();
             }
         }
         return new ArrayList<>(dcSummaryMap.values());
@@ -290,10 +305,34 @@ public class CatanPlayer extends Player {
 
     public DevelopmentCard getOnePlayableDcByType(String dcType) {
         for(DevelopmentCard dc:getPiecesByType(DevelopmentCard.class)) {
-            if(dc.getClass().getSimpleName().equals(dcType) && dc.isPlayable()) {
+            if(dc.getSpecificDisplayName().equals(dcType) && dc.isPlayable()) {
                 return dc;
             }
         }
         return null;
+    }
+
+    public int getLongestRoad() {
+        return longestRoad;
+    }
+
+    public void setLongestRoad(int longestRoad) {
+        this.longestRoad = longestRoad;
+    }
+
+    public int getLargestArmy() {
+        return largestArmy;
+    }
+
+    public void setLargestArmy(int largestArmy) {
+        this.largestArmy = largestArmy;
+    }
+
+    public long getOrder() {
+        return order;
+    }
+
+    public void setOrder(long order) {
+        this.order = order;
     }
 }

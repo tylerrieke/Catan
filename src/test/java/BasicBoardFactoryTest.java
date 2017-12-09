@@ -1,6 +1,8 @@
 import com.rieke.bmore.catan.base.board.BasicBoardFactory;
+import com.rieke.bmore.catan.base.resources.ResourceService;
 import org.junit.Before;
 import org.junit.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
 
@@ -11,10 +13,12 @@ public class BasicBoardFactoryTest {
 
 
     private BasicBoardFactory boardFactory;
+    @Autowired
+    private ResourceService resourceService;
 
     @Before
     public void init() {
-        boardFactory = new BasicBoardFactory();
+        boardFactory = new BasicBoardFactory(resourceService);
     }
 
     @Test

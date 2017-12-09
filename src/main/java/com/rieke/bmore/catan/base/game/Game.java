@@ -1,32 +1,33 @@
 package com.rieke.bmore.catan.base.game;
 
 import com.rieke.bmore.catan.base.board.Board;
+import com.rieke.bmore.catan.base.board.LegendEntry;
 import com.rieke.bmore.catan.base.board.item.corner.Corner;
 import com.rieke.bmore.catan.base.board.item.tile.ResourceTile;
-import com.rieke.bmore.catan.base.pieces.City;
-import com.rieke.bmore.catan.base.pieces.Piece;
-import com.rieke.bmore.catan.base.pieces.Road;
-import com.rieke.bmore.catan.base.pieces.Settlement;
-import com.rieke.bmore.catan.base.pieces.dc.DevelopmentCard;
-import com.rieke.bmore.catan.base.pieces.dc.Knight;
-import com.rieke.bmore.catan.base.pieces.dc.RoadBuilding;
-import com.rieke.bmore.catan.base.pieces.dc.VictoryPoint;
+import com.rieke.bmore.catan.base.pieces.*;
+import com.rieke.bmore.catan.base.pieces.dc.*;
 import com.rieke.bmore.catan.base.resources.Resource;
+import com.rieke.bmore.catan.base.resources.ResourceSelection;
 import com.rieke.bmore.catan.base.resources.ResourceService;
 import com.rieke.bmore.catan.player.*;
-import com.rieke.bmore.catan.turn.BuildTurn;
-import com.rieke.bmore.catan.turn.NormalTurn;
-import com.rieke.bmore.catan.turn.SetupTurn;
-import com.rieke.bmore.catan.turn.Turn;
+import com.rieke.bmore.catan.turn.*;
 import com.rieke.bmore.common.connection.ConnectionFactory;
 
 import java.util.*;
 
 public class Game {
+
+    //Settings
+    protected static boolean FRIEDNLY_ROBBER_DEFAULT = true;
+    private boolean friendlyRobber;
+    private int maxVictoryPoints;
+    private boolean buildTurn;
+
     public static final String LONGEST_ROAD = "Longest Road";
     public static final String LARGEST_ARMY = "Largest Army";
 
     private ResourceService resourceService;
+    private PieceService pieceService;
 
     private String id;
     private List<CatanPlayer> players;
@@ -34,26 +35,35 @@ public class Game {
     private Board board;
     private State state;
     private List<SetupTurn> setupTurns;
+    private List<EndBuildTurn> buildTurns;
     private int turnCount = 0;
     private Turn currentTurn;
     private Die dice1;
     private Die dice2;
     private int robberId = -1;
     private List<DevelopmentCard> developmentCards = new ArrayList<>();
+    private List<LegendEntry> legendEntries = new ArrayList<>();
 
     private Map<String, Special> specialMap = new HashMap<>();
 
     private String[] colors = new String[]{"orange","blue","red","white","brown","green"};
 
-    public Game(String id, ConnectionFactory connectionFactory, Board board, ResourceService resourceService) {
+    public Game(String id, Settings settings, ConnectionFactory connectionFactory, Board board, ResourceService resourceService, PieceService pieceService) {
         this.id = id;
-        playerService = new CatanPlayerService(new CatanPlayerFactory(connectionFactory, board.getMaxPlayers(), this),connectionFactory);
+        playerService = new CatanPlayerService(new CatanPlayerFactory(connectionFactory, settings.getMaxPlayers(), this),connectionFactory);
         state = State.OPEN;
         this.board = board;
+        this.board.setGame(this);
         setupTurns = new ArrayList<>();
+        buildTurns = new ArrayList<>();
         dice1 = new Die();
         dice2 = new Die();
         this.resourceService = resourceService;
+        this.pieceService = pieceService;
+
+        maxVictoryPoints = settings.getVictoryPoints();
+        friendlyRobber = settings.isFriendly();
+        buildTurn = settings.isBuildTurn();
     }
 
     public void init() {
@@ -70,6 +80,10 @@ public class Game {
         for(int i = players.size()-1; i >= 0; i--) {
             setupTurns.add(new SetupTurn(players.get(i),true,board));
         }
+        for(Map.Entry<String,Map<String,Integer>> entries:pieceService.getPieceCosts().entrySet()) {
+            legendEntries.add(new LegendEntry(entries.getKey(),entries.getValue()));
+        }
+
         initDCs();
         shuffleDCs();
         state = State.SETUP;
@@ -85,6 +99,12 @@ public class Game {
         }
         for(int i = 0; i < 2; i++) {
             developmentCards.add(new RoadBuilding(this));
+        }
+        for(int i = 0; i < 2; i++) {
+            developmentCards.add(new YearOfPlenty(this));
+        }
+        for(int i = 0; i < 2; i++) {
+            developmentCards.add(new Monopoly(this));
         }
     }
 
@@ -130,7 +150,7 @@ public class Game {
     }
 
     public enum State {
-        OPEN, SETUP, ACTIVE
+        OPEN, SETUP, ACTIVE, OVER
     }
 
     public State getState() {
@@ -158,7 +178,12 @@ public class Game {
             if(currentTurn.getPlayer().equals(player)) {
                 return true;
             } else if(currentTurn instanceof NormalTurn) {
-                return ((NormalTurn) currentTurn).getRobberDiscardMap().keySet().contains(player);
+                Turn childTurn = currentTurn.getChildTurn();
+                if(childTurn instanceof TradeTurn) {
+                    return ((TradeTurn) childTurn).waitingPlayerResponse(player);
+                } else {
+                    return ((NormalTurn) currentTurn).getRobberDiscardMap().keySet().contains(player);
+                }
             } else {
                 return false;
             }
@@ -171,9 +196,15 @@ public class Game {
         return currentTurn;
     }
 
+    public void setCurrentTurn(Turn currentTurn) {
+        this.currentTurn = currentTurn;
+    }
+
     public Turn getNextTurn() {
         if(!setupTurns.isEmpty()) {
             currentTurn = setupTurns.remove(0);
+        } else if(!buildTurns.isEmpty()) {
+            currentTurn = buildTurns.remove(0);
         } else {
             calculatePlayerPoints(players);
             state = State.ACTIVE;
@@ -187,7 +218,7 @@ public class Game {
         Turn turn = getCurrentTurn();
         if(/*player.equals(turn.getPlayer()) &&*/ turn instanceof SetupTurn) {
             ((SetupTurn) turn).setCorner(getBoard().getIdToCornerMap().get(cornerId));
-        } else if(turn instanceof NormalTurn) {
+        } else if(turn instanceof NormalTurn || turn instanceof EndBuildTurn) {
             Turn childTurn = turn.getChildTurn();
             if(childTurn instanceof BuildTurn) {
                 ((BuildTurn) childTurn).setBoardItem(getBoard().getIdToCornerMap().get(cornerId));
@@ -200,7 +231,7 @@ public class Game {
         Turn turn = getCurrentTurn();
         if(/*player.equals(turn.getPlayer()) &&*/ turn instanceof SetupTurn) {
             ((SetupTurn) turn).setEdge(getBoard().getIdToEdgeMap().get(edgeId));
-        } else if(turn instanceof NormalTurn) {
+        } else if(turn instanceof NormalTurn || turn instanceof EndBuildTurn) {
             Turn childTurn = turn.getChildTurn();
             if(childTurn instanceof BuildTurn) {
                 ((BuildTurn) childTurn).setBoardItem(getBoard().getIdToEdgeMap().get(edgeId));
@@ -216,19 +247,36 @@ public class Game {
     }
 
     private void processState(Turn turn) {
-        if(!turn.nextState()) {
+        if(!turn.nextState() && turn instanceof NormalTurn && buildTurn) {
+            int turnCount = this.turnCount;
+            CatanPlayer buildPlayer;
+            buildTurns = new ArrayList<>();
+            while((buildPlayer = players.get(turnCount++%players.size())) != turn.getPlayer()) {
+                buildTurns.add(new EndBuildTurn(buildPlayer));
+            }
             getNextTurn();
+        } else if(!turn.nextState()) {
+            if(turn instanceof NormalTurn && turn.getPlayer().getTotalVictoryPoints() >= maxVictoryPoints) {
+                setState(State.OVER);
+            } else {
+                getNextTurn();
+            }
         }
     }
 
     public int roll(CatanPlayer player) {
         Turn turn = getCurrentTurn();
         int roll = dice1.roll() + dice2.roll();
-        if(turn instanceof NormalTurn) {
-            ((NormalTurn) turn).setRoll(roll);
-            payOutRoll(roll);
+        synchronized (getId()) {
+            if (turn instanceof NormalTurn) {
+                if(((NormalTurn) turn).getState().equals(NormalTurn.State.ROLL)) {
+                    ((NormalTurn) turn).setRoll(roll);
+                    payOutRoll(roll);
+                }
+                roll = ((NormalTurn) turn).getRoll();
+            }
+            processState(turn);
         }
-        processState(turn);
         return roll;
     }
 
@@ -272,10 +320,10 @@ public class Game {
         return new ArrayList<>();
     }
 
-    public void endTurn(CatanPlayer player) {
+    public synchronized void endTurn(CatanPlayer player) {
         Turn turn = getCurrentTurn();
-        if(turn instanceof NormalTurn) {
-            ((NormalTurn) turn).setDone(true);
+        if(turn.getPlayer().equals(player)) {
+            turn.setDone(true);
         }
         processState(turn);
     }
@@ -311,11 +359,11 @@ public class Game {
     public void startBuildSelection(final CatanPlayer player, String type) {
         final Turn turn = getCurrentTurn();
         Class<? extends Piece> pieceType;
-        if(Road.class.getSimpleName().equals(type)) {
+        if(Road.getDisplayName().equals(type)) {
             pieceType = Road.class;
-        } else if(Settlement.class.getSimpleName().equals(type)) {
+        } else if(Settlement.getDisplayName().equals(type)) {
             pieceType = Settlement.class;
-        } else if(City.class.getSimpleName().equals(type)){
+        } else if(City.getDisplayName().equals(type)){
             pieceType = City.class;
         } else {
             if(!developmentCards.isEmpty()) {
@@ -323,6 +371,7 @@ public class Game {
                 player.purchasePiece(dc);
                 player.addPiece(DevelopmentCard.class, dc);
                 dc.setPlayer(player);
+                dc.setTurn(turn);
                 calculatePlayerPoints(players);
                 if(turn instanceof NormalTurn) {
                     ((NormalTurn) turn).setBuilt(true);
@@ -342,15 +391,18 @@ public class Game {
             }
 
             @Override
-            protected void onSuccess() {
+            protected boolean onSuccess() {
                 getPlayer().purchasePiece(getBoardItem().getPiece());
                 getBoardItem().setSelectable(false);
-                if(turn instanceof NormalTurn) {
-                    ((NormalTurn) turn).setBuilt(true);
-                    ((NormalTurn) turn).setState(NormalTurn.State.BUILD);
+                if(turn instanceof NormalTurn || turn instanceof EndBuildTurn) {
+                    if (turn instanceof NormalTurn) {
+                        ((NormalTurn) turn).setBuilt(true);
+                        ((NormalTurn) turn).setState(NormalTurn.State.BUILD);
+                    }
                     specialMap.get(LONGEST_ROAD).evaluateAll();
                     calculatePlayerPoints(players);
                 }
+                return true;
             }
         });
 
@@ -361,16 +413,52 @@ public class Game {
         turn.activate();
     }
 
-    public void robPlayer(CatanPlayer player, int robbedId) {
-        CatanPlayer robbed = null;
+    public void requestTrade(CatanPlayer player, CardExchange exchange) {
+        Turn turn = getCurrentTurn();
+        List<CatanPlayer> tradeRecipients = new ArrayList<>(getPlayers());
+        tradeRecipients.remove(player);
+        turn.setChildTurn(new TradeTurn(player,tradeRecipients,exchange,this));
+
+        turn.activate();
+    }
+
+    public void answerTradeRequest(CatanPlayer player, boolean accept) {
+        Turn turn = getCurrentTurn().getChildTurn();
+        if(turn != null && turn instanceof TradeTurn) {
+            if(((TradeTurn) turn).getPlayerResponses().containsKey(player)) {
+                ((TradeTurn) turn).getPlayerResponses().put(player,accept);
+            }
+        }
+    }
+
+    private CatanPlayer getPlayerById(int id) {
+        CatanPlayer player = null;
         for(CatanPlayer p:players) {
-            if(p.getId() == robbedId) {
-                robbed = p;
+            if(p.getId() == id) {
+                player = p;
                 break;
             }
         }
-        if(robbed != null) {
-            Turn turn = getCurrentTurn();
+        return player;
+    }
+
+    public void acceptPlayerTrade(CatanPlayer player, Integer acceptedId) {
+        CatanPlayer accepted = (acceptedId!=null?getPlayerById(acceptedId):null);
+        Turn turn = getCurrentTurn().getChildTurn();
+        if (turn != null && turn instanceof TradeTurn && turn.getPlayer().equals(player)) {
+            if(accepted!=null) {
+                ((TradeTurn) turn).setAcceptedPlayer(accepted);
+            } else {
+                turn.cancel();
+            }
+            processState(getCurrentTurn());
+        }
+    }
+
+    public void robPlayer(CatanPlayer player, int robbedId) {
+        CatanPlayer robbed = getPlayerById(robbedId);
+        Turn turn = getCurrentTurn();
+        if(robbed != null && turn.getPlayer().equals(player)) {
             if(turn instanceof NormalTurn) {
                 ((NormalTurn) turn).setRobbedPlayer(robbed);
             }
@@ -452,5 +540,96 @@ public class Game {
                 calculatePlayerPoints(players);
             }
         }
+    }
+
+    public ResourceService getResourceService() {
+        return resourceService;
+    }
+
+    public PieceService getPieceService() {
+        return pieceService;
+    }
+
+    public void playCardSelection(CatanPlayer player, Map<String, Integer> cardSelection) {
+        Turn turn = getCurrentTurn();
+        if(turn instanceof NormalTurn) {
+            if(turn.getChildTurn() instanceof CardSelectionTurn) {
+                ((NormalTurn) turn).setCardSelection(cardSelection);
+            }
+        }
+        processState(turn);
+    }
+
+    public ResourceSelection getResourceSelection(CatanPlayer catanPlayer) {
+        Turn turn = getCurrentTurn();
+        Map<String, Integer> resourceMap = new HashMap<>();
+        int count = 0;
+        if(turn instanceof NormalTurn) {
+            if(turn.getChildTurn() instanceof CardSelectionTurn) {
+                count = ((NormalTurn) turn).getCardSelectionCount();
+                for(Class<? extends Resource> resource:resourceService.getResources()) {
+                    resourceMap.put(resource.getSimpleName(),0);
+                }
+            }
+        }
+        return new ResourceSelection(count, resourceMap);
+    }
+
+    public String getMessage() {
+        Turn turn = getCurrentTurn();
+        if(turn instanceof NormalTurn) {
+            return ((NormalTurn) turn).getMessage().toString();
+        }
+        return "";
+    }
+
+    public CardExchange getTradeRequest(CatanPlayer player) {
+        Turn turn = getCurrentTurn();
+        if(turn != null) {
+            turn = turn.getChildTurn();
+            if (turn != null && turn instanceof TradeTurn) {
+                if(turn.getPlayer().equals(player) || ((TradeTurn) turn).waitingPlayerResponse(player)) {
+                    return ((TradeTurn) turn).getTradeOffer();
+                }
+            }
+        }
+        return null;
+    }
+
+    public List<SimplePlayer> getTradeResponses(CatanPlayer player) {
+        Turn turn = getCurrentTurn();
+        if(turn != null) {
+            turn = turn.getChildTurn();
+            if (turn != null && turn instanceof TradeTurn && turn.getPlayer().equals(player)) {
+                List<SimplePlayer> tradeResponses = new ArrayList<>();
+                for (Map.Entry<CatanPlayer, Boolean> entry : ((TradeTurn) turn).getPlayerResponses().entrySet()) {
+                    tradeResponses.add(new SimplePlayer(entry.getKey(), Boolean.TRUE.equals(entry.getValue()),entry.getValue()));
+                }
+                return tradeResponses;
+            }
+        }
+        return null;
+    }
+
+    public boolean isFriendlyRobber() {
+        return friendlyRobber;
+    }
+
+    public void setFriendlyRobber(boolean friendlyRobber) {
+        if(state == State.OPEN) {
+            this.friendlyRobber = friendlyRobber;
+        }
+    }
+
+    public void makePlayerFirst(String name) {
+        for(CatanPlayer player:playerService.getAllPlayers()) {
+            if(player.getName().equals(name)) {
+                player.setOrder(System.currentTimeMillis());
+            }
+        }
+    }
+
+    public List<LegendEntry> getPieceCosts() {
+        return legendEntries;
     }
 }

@@ -32,6 +32,11 @@ public class Corner extends SelectableBoardItem<Settlement> {
         return this;
     }
 
+    public void removeEdge(Edge edge) {
+        edges.remove(edge);
+        edge.removeCorner(this);
+    }
+
     public Corner addTile(Tile tile) {
         if(tiles.size() == MAX_NUM_EDGES && !tiles.contains(tile)) {
             //TODO: Throw Exception

@@ -10,10 +10,9 @@ import java.lang.reflect.Method;
 /**
  * Created by tcrie on 8/21/2017.
  */
-public abstract class BuildTurn extends Turn {
+public abstract class BuildTurn extends CancellableTurn {
     private SelectableBoardItem boardItem = null;
     private Board board;
-    private boolean cancelled = false;
     private Class<? extends Piece> pieceType;
     private boolean isPlaceable = false;
 
@@ -31,38 +30,27 @@ public abstract class BuildTurn extends Turn {
         selection();
     }
 
+    @Override
     public boolean applyState() {
-        if(cancelled) {
-            onCancel();
+        if(super.applyState()) {
             return true;
         }
         if(!isPlaceable) {
-            onSuccess();
-            return true;
+            return onSuccess();
         }
         if(boardItem != null) {
             if (!isConfirmPrompt()) {
                 board.clearSelection();
                 boardItem.setSelectable(true);
                 setConfirmPrompt(true);
-            } else if (getConfirmation() == true && getPlayer().playPiece(boardItem, pieceType)) {
-                onSuccess();
-                return true;
+            } else if (Boolean.TRUE.equals(getConfirmation()) && getPlayer().playPiece(boardItem, pieceType)) {
+                return onSuccess();
             } else if (getConfirmation() != null) {
                 activate();
             }
         }
         return false;
     }
-
-    public void cancel() {
-        if(isCanCancel()) {
-            cancelled = true;
-        }
-    }
-
-    protected abstract void onCancel();
-    protected abstract void onSuccess();
 
     private void selection() {
         board.setSelectableBoardItems(getPlayer(),pieceType);
