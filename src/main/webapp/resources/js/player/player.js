@@ -21,7 +21,7 @@ app.controller('Player', ['$scope', '$http', '$timeout', '$routeParams', functio
     $scope.playerTrading = false;
 
     var getPlayer = function() {
-        $http.get("/catan/player?gameId="+$scope.gameId).success(function (response) {
+        $http.get("/player?gameId="+$scope.gameId).success(function (response) {
             var player = response.player;
             $scope.state = response.state;
             $scope.name = player.name;
@@ -39,7 +39,7 @@ app.controller('Player', ['$scope', '$http', '$timeout', '$routeParams', functio
                 $scope.playerTrading = false;
             }
             if($scope.active && $scope.actions.indexOf('ROB_PLAYER') >= 0 && $scope.robbable.length == 0) {
-                $http.get("/catan/player/robbable?gameId="+$scope.gameId).success(function (response) {
+                $http.get("/player/robbable?gameId="+$scope.gameId).success(function (response) {
                     $scope.robbable = response.robbable;
                 });
             }
@@ -53,7 +53,7 @@ app.controller('Player', ['$scope', '$http', '$timeout', '$routeParams', functio
     getPlayer($scope.gameId);
 
     $scope.getTradeable = function(withPlayer) {
-        $http.get("/catan/player/tradeable?gameId="+$scope.gameId).success(function (response) {
+        $http.get("/player/tradeable?gameId="+$scope.gameId).success(function (response) {
             $scope.tradeable = response.tradeable;
             $scope.exchanging = !withPlayer;
             $scope.playerTrading = !!withPlayer;
@@ -61,13 +61,13 @@ app.controller('Player', ['$scope', '$http', '$timeout', '$routeParams', functio
     }
 
     $scope.getBuildable = function() {
-        $http.get("/catan/player/buildable?gameId="+$scope.gameId).success(function (response) {
+        $http.get("/player/buildable?gameId="+$scope.gameId).success(function (response) {
             $scope.buildable = response.buildable;
         });
     }
 
     $scope.getResourceSelectable = function() {
-        $http.get("/catan/player/card_selection?gameId="+$scope.gameId).success(function (response) {
+        $http.get("/player/card_selection?gameId="+$scope.gameId).success(function (response) {
             $scope.resourceSelection = response.selection.resourceSelection;
             $scope.resourceSelectionCount = response.selection.count;
             $scope.resourcesLeftToSelect = response.selection.count;
@@ -75,25 +75,25 @@ app.controller('Player', ['$scope', '$http', '$timeout', '$routeParams', functio
     }
 
     $scope.getDCs = function() {
-        $http.get("/catan/player/dcs?gameId="+$scope.gameId).success(function (response) {
+        $http.get("/player/dcs?gameId="+$scope.gameId).success(function (response) {
             $scope.dcs = response.dcs;
         });
     }
 
     $scope.playDC = function(type) {
-        $http.get("/catan/player/play_dc?gameId="+$scope.gameId+"&type="+type).success(function (response) {
+        $http.get("/player/play_dc?gameId="+$scope.gameId+"&type="+type).success(function (response) {
             $scope.dcs = [];
         });
     }
 
     $scope.getBuildSelection = function(type) {
-        $http.get("/catan/player/build_selection?gameId="+$scope.gameId+"&type="+type).success(function (response) {
+        $http.get("/player/build_selection?gameId="+$scope.gameId+"&type="+type).success(function (response) {
             $scope.buildable = [];
         });
     }
 
     $scope.ok = function(ok) {
-        $http.get("/catan/player/confirm?gameId="+$scope.gameId+"&ok="+ok).success(function (response) {
+        $http.get("/player/confirm?gameId="+$scope.gameId+"&ok="+ok).success(function (response) {
             var player = response.player;
             $scope.state = response.state;
             $scope.name = player.name;
@@ -119,7 +119,7 @@ app.controller('Player', ['$scope', '$http', '$timeout', '$routeParams', functio
 
     $scope.cancelTurn = function(ok) {
         $scope.buildable = [];
-        $http.get("/catan/player/cancel?gameId="+$scope.gameId).success(function (response) {
+        $http.get("/player/cancel?gameId="+$scope.gameId).success(function (response) {
             var player = response.player;
             $scope.state = response.state;
             $scope.name = player.name;
@@ -130,21 +130,21 @@ app.controller('Player', ['$scope', '$http', '$timeout', '$routeParams', functio
     }
 
     $scope.roll = function() {
-        $http.get("/catan/player/roll?gameId="+$scope.gameId).success(function (response) {
+        $http.get("/player/roll?gameId="+$scope.gameId).success(function (response) {
 
         });
     }
 
     $scope.endTurn = function() {
         $scope.cancelAction();
-        $http.get("/catan/player/end_turn?gameId="+$scope.gameId).success(function (response) {
+        $http.get("/player/end_turn?gameId="+$scope.gameId).success(function (response) {
 
         });
     }
 
     $scope.rob = function(player) {
         $scope.robbable = [];
-        $http.get("/catan/player/rob?gameId="+$scope.gameId+"&robbedId="+player.id).success(function (response) {
+        $http.get("/player/rob?gameId="+$scope.gameId+"&robbedId="+player.id).success(function (response) {
 
         });
     }
@@ -179,14 +179,14 @@ app.controller('Player', ['$scope', '$http', '$timeout', '$routeParams', functio
     }
 
     $scope.submitDiscards = function() {
-        $http.post("/catan/player/exchange?gameId="+$scope.gameId,
+        $http.post("/player/exchange?gameId="+$scope.gameId,
                 {discard:$scope.discards,receive:$scope.exchanges}).success(function (response) {
             $scope.cancelAction();
         });
     }
 
     $scope.submitTradeRequest = function() {
-        $http.post("/catan/player/init_trade?gameId="+$scope.gameId,
+        $http.post("/player/init_trade?gameId="+$scope.gameId,
                 {discard:$scope.discards,receive:$scope.exchanges}).success(function (response) {
             $scope.cancelAction();
         });
@@ -194,13 +194,13 @@ app.controller('Player', ['$scope', '$http', '$timeout', '$routeParams', functio
 
     $scope.answerTrade = function(answer) {
         $scope.active = false;
-        $http.get("/catan/player/answer_trade?gameId="+$scope.gameId+"&answer="+answer).success(function (response) {
+        $http.get("/player/answer_trade?gameId="+$scope.gameId+"&answer="+answer).success(function (response) {
 
         });
     }
     $scope.acceptPlayerTrade = function(player) {
         $scope.cancelAction();
-        $http.get("/catan/player/accept_trade?gameId="+$scope.gameId+"&acceptedId="+player.id).success(function (response) {
+        $http.get("/player/accept_trade?gameId="+$scope.gameId+"&acceptedId="+player.id).success(function (response) {
 
         });
     }
@@ -222,7 +222,7 @@ app.controller('Player', ['$scope', '$http', '$timeout', '$routeParams', functio
         if(resource) {
             $scope.changeCardSelectionCount(resource, 1);
         }
-        $http.post("/catan/player/card_selection?gameId="+$scope.gameId,
+        $http.post("/player/card_selection?gameId="+$scope.gameId,
                 $scope.resourceSelection).success(function (response) {
             $scope.cancelAction();
         });

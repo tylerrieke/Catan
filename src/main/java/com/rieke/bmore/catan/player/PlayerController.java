@@ -312,7 +312,7 @@ public class PlayerController {
 
     @PostConstruct
     public void start() {
-        CatanStartup.jettyServer.afterDeployed();
+        //CatanStartup.jettyServer.afterDeployed();
     }
 
     public static String getIpAddr(HttpServletRequest request) {

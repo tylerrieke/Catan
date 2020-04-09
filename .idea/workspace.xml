@@ -2,118 +2,192 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="01996ec9-23a1-4dbb-b7ca-213d87ef1201" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/board/ExpansionBoardFactory.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/board/LegendEntry.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/game/Settings.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/pieces/PieceService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/pieces/dc/Monopoly.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/pieces/dc/YearOfPlenty.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/resources/ResourceSelection.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/turn/CancellableTurn.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/turn/CardSelectionTurn.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/turn/EndBuildTurn.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/turn/TradeTurn.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/pieces/dc/DevelopmentCard.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/turn/NormalTurn$State.class" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/pieces/dc/DevelopmentCard.java" afterPath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/pieces/DevelopmentCard.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/catan-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/target/catan-1.0-SNAPSHOT.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/board/BasicBoardFactory$CornerOrder.class" afterPath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/board/BasicBoardFactory$CornerOrder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/board/BasicBoardFactory.class" afterPath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/board/BasicBoardFactory.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/board/Board.class" afterPath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/board/Board.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/board/BoardController.class" afterPath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/board/BoardController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/board/item/corner/Corner.class" afterPath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/board/item/corner/Corner.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/board/item/edge/Edge.class" afterPath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/board/item/edge/Edge.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/board/item/edge/HarborEdge.class" afterPath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/board/item/edge/HarborEdge.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/board/item/tile/Tile$1.class" afterPath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/board/item/tile/Tile$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/board/item/tile/Tile.class" afterPath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/board/item/tile/Tile.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/game/Game$1.class" afterPath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/game/Game$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/game/Game$2.class" afterPath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/game/Game$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/game/Game$State.class" afterPath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/game/Game$State.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/game/Game.class" afterPath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/game/Game.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/game/GameFactory.class" afterPath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/game/GameFactory.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/game/GameService.class" afterPath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/game/GameService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/game/LargestArmy.class" afterPath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/game/LargestArmy.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/game/LongestRoad.class" afterPath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/game/LongestRoad.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/game/Special.class" afterPath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/game/Special.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/pieces/City.class" afterPath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/pieces/City.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/pieces/Piece.class" afterPath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/pieces/Piece.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/pieces/Road.class" afterPath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/pieces/Road.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/pieces/Settlement.class" afterPath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/pieces/Settlement.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/pieces/dc/Knight.class" afterPath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/pieces/dc/Knight.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/pieces/dc/RoadBuilding$1$1.class" afterPath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/pieces/dc/RoadBuilding$1$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/pieces/dc/RoadBuilding$1.class" afterPath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/pieces/dc/RoadBuilding$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/pieces/dc/RoadBuilding.class" afterPath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/pieces/dc/RoadBuilding.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/pieces/dc/VictoryPoint.class" afterPath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/pieces/dc/VictoryPoint.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/player/CardExchange.class" afterPath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/player/CardExchange.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/player/CatanPlayer.class" afterPath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/player/CatanPlayer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/player/CatanPlayerFactory.class" afterPath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/player/CatanPlayerFactory.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/player/DevelopmentCardSummary.class" afterPath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/player/DevelopmentCardSummary.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/player/PieceSummary.class" afterPath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/player/PieceSummary.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/player/PlayerController.class" afterPath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/player/PlayerController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/player/SimplePlayer.class" afterPath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/player/SimplePlayer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/turn/BuildTurn.class" afterPath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/turn/BuildTurn.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/turn/NormalTurn$1.class" afterPath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/turn/NormalTurn$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/turn/NormalTurn.class" afterPath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/turn/NormalTurn.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/turn/SetupTurn.class" afterPath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/turn/SetupTurn.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/turn/Turn.class" afterPath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/turn/Turn.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/original-catan-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/target/original-catan-1.0-SNAPSHOT.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_appengine_appengine_api_1_0_sdk_1_9_79.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_appengine_appengine_api_stubs_1_9_79.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_appengine_appengine_testing_1_9_79.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_appengine_appengine_tools_sdk_1_9_79.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_errorprone_error_prone_annotations_2_0_12.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_truth_truth_0_33.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_inject_javax_inject_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jstl_jstl_1_2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_all_2_0_2_beta.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nbactions.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/appengine-web.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/logging.properties" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/catan-1.0-SNAPSHOT.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/Catan.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/board/BasicBoardFactory$CornerOrder.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/board/BasicBoardFactory.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/board/Board.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/board/BoardController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/board/ExpansionBoardFactory.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/board/LegendEntry.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/board/item/BoardItem.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/board/item/SelectableBoardItem.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/board/item/corner/Corner.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/board/item/edge/Edge.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/board/item/edge/HarborEdge.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/board/item/tile/ResourceTile.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/board/item/tile/Tile$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/board/item/tile/Tile.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/board/item/tile/TileNumber.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/game/Die.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/game/Game$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/game/Game$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/game/Game$State.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/game/Game.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/game/GameFactory.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/game/GameService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/game/LargestArmy.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/game/LongestRoad.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/game/Settings.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/game/Special.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/pieces/City.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/pieces/DevelopmentCard.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/pieces/Piece.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/pieces/PieceService$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/pieces/PieceService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/pieces/Road.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/pieces/Settlement.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/pieces/dc/Knight.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/pieces/dc/Monopoly$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/pieces/dc/Monopoly.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/pieces/dc/RoadBuilding$1$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/pieces/dc/RoadBuilding$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/pieces/dc/RoadBuilding.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/pieces/dc/VictoryPoint.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/pieces/dc/YearOfPlenty$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/pieces/dc/YearOfPlenty.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/resources/Brick.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/resources/Ore.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/resources/Resource.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/resources/ResourceSelection.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/resources/ResourceService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/resources/Sheep.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/resources/Wheat.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/base/resources/Wood.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/gui/CatanStartup$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/gui/CatanStartup.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/jetty/CatanJettyRunner.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/player/CardExchange.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/player/CatanPlayer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/player/CatanPlayerFactory$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/player/CatanPlayerFactory.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/player/CatanPlayerService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/player/DevelopmentCardSummary.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/player/PieceSummary.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/player/PlayerController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/player/SimplePlayer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/turn/BuildTurn.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/turn/CancellableTurn.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/turn/CardSelectionTurn.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/turn/EndBuildTurn.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/turn/NormalTurn$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/turn/NormalTurn.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/turn/SetupTurn$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/turn/SetupTurn$State.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/turn/SetupTurn.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/turn/TradeTurn.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/turn/Turn$State.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/turn/Turn.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/user/User.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/rieke/bmore/catan/user/UserController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/mvc-context.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/spring/application-context.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/spring/bean-definitions.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/spring/properties-context.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/spring/security-context.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/webapp/WEB-INF/bmore-catan-servlet.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/webapp/WEB-INF/json-servlet.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/webapp/WEB-INF/web.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/webapp/WEB-INF/webdefault.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/webapp/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/webapp/mvc-context.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/webapp/resources/css/bootstrap-responsive.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/webapp/resources/css/bootstrap.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/webapp/resources/css/bootstrap3-panel.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/webapp/resources/css/chardinjs.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/webapp/resources/css/dice-1.0.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/webapp/resources/css/fastmoney.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/webapp/resources/css/flatybootstrap-old.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/webapp/resources/css/flatybootstrap.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/webapp/resources/css/font-awesome/css/font-awesome-ie7.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/webapp/resources/css/font-awesome/css/font-awesome-ie7.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/webapp/resources/css/font-awesome/css/font-awesome.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/webapp/resources/css/font-awesome/css/font-awesome.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/webapp/resources/css/font-awesome/font/FontAwesome.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/webapp/resources/css/font-awesome/font/fontawesome-webfont.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/webapp/resources/css/font-awesome/font/fontawesome-webfont.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/webapp/resources/css/font-awesome/font/fontawesome-webfont.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/webapp/resources/css/font-awesome/font/fontawesome-webfont.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/webapp/resources/css/font-awesome/less/bootstrap.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/webapp/resources/css/font-awesome/less/core.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/webapp/resources/css/font-awesome/less/extras.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/webapp/resources/css/font-awesome/less/font-awesome-ie7.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/webapp/resources/css/font-awesome/less/font-awesome.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/webapp/resources/css/font-awesome/less/icons.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/webapp/resources/css/font-awesome/less/mixins.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/webapp/resources/css/font-awesome/less/path.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/webapp/resources/css/font-awesome/less/variables.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/webapp/resources/css/font-awesome/scss/_bootstrap.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/webapp/resources/css/font-awesome/scss/_core.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/webapp/resources/css/font-awesome/scss/_extras.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/webapp/resources/css/font-awesome/scss/_icons.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/webapp/resources/css/font-awesome/scss/_mixins.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/webapp/resources/css/font-awesome/scss/_path.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/webapp/resources/css/font-awesome/scss/_variables.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/webapp/resources/css/font-awesome/scss/font-awesome-ie7.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/webapp/resources/css/font-awesome/scss/font-awesome.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/webapp/resources/css/gameboard-windows-overrides.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/webapp/resources/css/gameboard.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/webapp/resources/css/host.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/webapp/resources/css/main.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/webapp/resources/css/player.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/webapp/resources/fonts/LatoBold.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/webapp/resources/fonts/LatoItalic.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/webapp/resources/fonts/LatoRegular.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/webapp/resources/fonts/rounded_led_board-7.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/webapp/resources/js/controller.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/webapp/resources/js/gameboard/gameboard.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/webapp/resources/js/gameboard/gameboard.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/webapp/resources/js/globals.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/webapp/resources/js/player/player-registration.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/webapp/resources/js/player/player-registration.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/webapp/resources/js/player/player.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/webapp/resources/js/player/player.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/webapp/resources/js/tcrieke/detect-os.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/webapp/resources/js/thirdparty/angular-cookies.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/webapp/resources/js/thirdparty/angular-css.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/webapp/resources/js/thirdparty/angular-route.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/webapp/resources/js/thirdparty/angular.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/webapp/resources/js/thirdparty/angular.min.js.backup" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/webapp/resources/js/thirdparty/bootstrap.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/webapp/resources/js/thirdparty/chardinjs.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/webapp/resources/js/thirdparty/jquery.fileupload.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/webapp/resources/js/thirdparty/jquery.iframe-transport.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/webapp/resources/js/thirdparty/jquery.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/webapp/resources/js/thirdparty/jquery.ui.widget.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/webapp/resources/js/thirdparty/json3.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/webapp/resources/js/thirdparty/soundmanager2-jsmin.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/webapp/resources/js/thirdparty/spin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/webapp/spring/application-context.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/webapp/spring/bean-definitions.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/webapp/spring/properties-context.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/webapp/spring/security-context.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/original-catan-1.0-SNAPSHOT.jar" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/BasicBoardFactoryTest.class" afterPath="$PROJECT_DIR$/target/test-classes/BasicBoardFactoryTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Catan.iml" afterPath="$PROJECT_DIR$/.idea/Catan.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/board/BasicBoardFactory.java" afterPath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/board/BasicBoardFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/board/Board.java" afterPath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/board/Board.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/board/BoardController.java" afterPath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/board/BoardController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/board/item/corner/Corner.java" afterPath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/board/item/corner/Corner.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/board/item/edge/Edge.java" afterPath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/board/item/edge/Edge.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/board/item/edge/HarborEdge.java" afterPath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/board/item/edge/HarborEdge.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/board/item/tile/Tile.java" afterPath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/board/item/tile/Tile.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/game/Game.java" afterPath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/game/Game.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/game/GameFactory.java" afterPath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/game/GameFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/game/GameService.java" afterPath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/game/GameService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/game/LargestArmy.java" afterPath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/game/LargestArmy.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/game/LongestRoad.java" afterPath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/game/LongestRoad.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/game/Special.java" afterPath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/game/Special.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/pieces/City.java" afterPath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/pieces/City.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/pieces/Piece.java" afterPath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/pieces/Piece.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/pieces/Road.java" afterPath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/pieces/Road.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/pieces/Settlement.java" afterPath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/pieces/Settlement.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/pieces/dc/Knight.java" afterPath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/pieces/dc/Knight.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/pieces/dc/RoadBuilding.java" afterPath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/pieces/dc/RoadBuilding.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/pieces/dc/VictoryPoint.java" afterPath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/pieces/dc/VictoryPoint.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/player/CardExchange.java" afterPath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/player/CardExchange.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/player/CatanPlayer.java" afterPath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/player/CatanPlayer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/player/CatanPlayerFactory.java" afterPath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/player/CatanPlayerFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/player/DevelopmentCardSummary.java" afterPath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/player/DevelopmentCardSummary.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/player/PieceSummary.java" afterPath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/player/PieceSummary.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/player/PlayerController.java" afterPath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/player/PlayerController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/player/SimplePlayer.java" afterPath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/player/SimplePlayer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/turn/BuildTurn.java" afterPath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/turn/BuildTurn.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/turn/NormalTurn.java" afterPath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/turn/NormalTurn.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/turn/SetupTurn.java" afterPath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/turn/SetupTurn.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/turn/Turn.java" afterPath="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/turn/Turn.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/spring/bean-definitions.xml" afterPath="$PROJECT_DIR$/src/main/resources/spring/bean-definitions.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/gameboard.css" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/gameboard.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/main.css" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/player.css" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/player.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/gameboard/gameboard.html" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/gameboard/gameboard.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/gameboard/gameboard.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/gameboard/gameboard.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/player/player-registration.html" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/player/player-registration.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/player/player.html" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/player/player.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/player/player-registration.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/player/player-registration.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/player/player.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/player/player.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/spring/bean-definitions.xml" afterPath="$PROJECT_DIR$/src/main/webapp/spring/bean-definitions.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/BasicBoardFactoryTest.java" afterPath="$PROJECT_DIR$/src/test/java/BasicBoardFactoryTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/spring/bean-definitions.xml" afterPath="$PROJECT_DIR$/target/classes/spring/bean-definitions.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/webapp/resources/css/gameboard.css" afterPath="$PROJECT_DIR$/target/classes/webapp/resources/css/gameboard.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/webapp/resources/css/main.css" afterPath="$PROJECT_DIR$/target/classes/webapp/resources/css/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/webapp/resources/css/player.css" afterPath="$PROJECT_DIR$/target/classes/webapp/resources/css/player.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/webapp/resources/js/gameboard/gameboard.html" afterPath="$PROJECT_DIR$/target/classes/webapp/resources/js/gameboard/gameboard.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/webapp/resources/js/gameboard/gameboard.js" afterPath="$PROJECT_DIR$/target/classes/webapp/resources/js/gameboard/gameboard.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/webapp/resources/js/player/player-registration.html" afterPath="$PROJECT_DIR$/target/classes/webapp/resources/js/player/player-registration.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/webapp/resources/js/player/player.html" afterPath="$PROJECT_DIR$/target/classes/webapp/resources/js/player/player.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/webapp/resources/js/player/player.js" afterPath="$PROJECT_DIR$/target/classes/webapp/resources/js/player/player.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/webapp/spring/bean-definitions.xml" afterPath="$PROJECT_DIR$/target/classes/webapp/spring/bean-definitions.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/BasicBoardFactoryTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/BasicBoardFactoryTest.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-BasicBoardFactoryTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-BasicBoardFactoryTest.xml" />
     </list>
@@ -131,113 +205,102 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="Turn.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/turn/Turn.java">
+      <file leaf-file-name="CatanStartup.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/gui/CatanStartup.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="158">
-              <caret line="70" column="0" lean-forward="false" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
-              <folding>
-                <element signature="e#832#833#0" expanded="true" />
-                <element signature="e#861#862#0" expanded="true" />
-                <element signature="e#2182#2183#0" expanded="true" />
-                <element signature="e#2213#2214#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Game.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/game/Game.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="216" column="24" lean-forward="true" selection-start-line="216" selection-start-column="24" selection-end-line="216" selection-end-column="24" />
+            <state relative-caret-position="100">
+              <caret line="9" column="43" lean-forward="false" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NormalTurn.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/turn/NormalTurn.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="56">
-              <caret line="215" column="66" lean-forward="true" selection-start-line="215" selection-start-column="66" selection-end-line="215" selection-end-column="66" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EndBuildTurn.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/turn/EndBuildTurn.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="202">
-              <caret line="12" column="37" lean-forward="false" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#303#304#0" expanded="true" />
-                <element signature="e#339#340#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PlayerController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="PlayerController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/player/PlayerController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="70" column="31" lean-forward="false" selection-start-line="70" selection-start-column="30" selection-end-line="70" selection-end-column="31" />
+            <state relative-caret-position="185">
+              <caret line="314" column="10" lean-forward="false" selection-start-line="314" selection-start-column="10" selection-end-line="314" selection-end-column="10" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BuildTurn.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/turn/BuildTurn.java">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="517">
-              <caret line="58" column="23" lean-forward="true" selection-start-line="58" selection-start-column="23" selection-end-line="58" selection-end-column="23" />
+            <state relative-caret-position="113">
+              <caret line="76" column="27" lean-forward="false" selection-start-line="76" selection-start-column="27" selection-end-line="76" selection-end-column="27" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SetupTurn.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/turn/SetupTurn.java">
+      <file leaf-file-name="appengine-web.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/appengine-web.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1642">
-              <caret line="23" column="45" lean-forward="false" selection-start-line="23" selection-start-column="45" selection-end-line="23" selection-end-column="45" />
+            <state relative-caret-position="50">
+              <caret line="2" column="17" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Board.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/board/Board.java">
+      <file leaf-file-name="controller.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/controller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="78" column="0" lean-forward="false" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
+            <state relative-caret-position="-1265">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InvocableHandlerMethod.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/3.2.11.RELEASE/spring-web-3.2.11.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
+      <file leaf-file-name="player.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/player/player.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="246">
-              <caret line="141" column="0" lean-forward="false" selection-start-line="141" selection-start-column="0" selection-end-line="141" selection-end-column="0" />
+            <state relative-caret-position="325">
+              <caret line="13" column="18" lean-forward="true" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ExpansionBoardFactory.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/board/ExpansionBoardFactory.java">
+      <file leaf-file-name="gameboard.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/gameboard/gameboard.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="189">
+              <caret line="160" column="23" lean-forward="false" selection-start-line="160" selection-start-column="23" selection-end-line="160" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="player-registration.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/player/player-registration.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="186">
+              <caret line="65" column="19" lean-forward="false" selection-start-line="65" selection-start-column="19" selection-end-line="65" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CatanJettyRunner.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/jetty/CatanJettyRunner.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="27">
+              <caret line="4" column="45" lean-forward="false" selection-start-line="4" selection-start-column="45" selection-end-line="4" selection-end-column="45" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Catan.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/Catan.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -253,9 +316,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>sharedtiles</find>
-      <find>idToEdgeMap</find>
-      <find>HarborEdge</find>
       <find>important</find>
       <find>!important</find>
       <find>number of</find>
@@ -283,6 +343,9 @@
       <find>collectResources</find>
       <find>createS</find>
       <find>build_</find>
+      <find>servlet</find>
+      <find>main</find>
+      <find>/catan/</find>
     </findStrings>
     <replaceStrings>
       <replace>setCornderFields</replace>
@@ -296,10 +359,19 @@
       <replace>$scope.isTrading</replace>
       <replace>exchanging</replace>
       <replace>piece</replace>
+      <replace>/</replace>
     </replaceStrings>
+    <dirStrings>
+      <dir>C:\apps\Github\Catan\src\main</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
@@ -309,11 +381,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/webapp/resources/js/player/player-registration.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/resources/css/main.css" />
-        <option value="$PROJECT_DIR$/src/main/webapp/resources/js/player/player.js" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/player/PlayerController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/board/Board.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/player/SimplePlayer.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/player/CardExchange.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/player/DevelopmentCardSummary.java" />
@@ -354,12 +421,17 @@
         <option value="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/board/ExpansionBoardFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/board/BasicBoardFactory.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/js/gameboard/gameboard.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/resources/js/gameboard/gameboard.js" />
         <option value="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/turn/NormalTurn.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/turn/EndBuildTurn.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/turn/SetupTurn.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/turn/BuildTurn.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/game/Game.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/player/PlayerController.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/appengine-web.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/js/gameboard/gameboard.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/js/player/player-registration.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/js/player/player.js" />
       </list>
     </option>
   </component>
@@ -380,8 +452,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-11" />
     <option name="y" value="-11" />
-    <option name="width" value="1942" />
-    <option name="height" value="1042" />
+    <option name="width" value="1849" />
+    <option name="height" value="1102" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -435,39 +507,329 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Catan" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Catan" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Catan" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Catan" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Catan" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Catan" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Catan" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Catan" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Catan" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Catan" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="player" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Catan" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Catan" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Catan" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Catan" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Catan" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Catan" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="catan" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Catan" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Catan" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="catan" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="player" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Catan" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Catan" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="catan" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jetty" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Catan" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Catan" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="catan" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../SuperBowlSquares" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main" />
     <property name="SearchEverywhereHistoryKey" value="playerc&#9;FILE&#9;file://C:/apps/Github/Catan/src/main/java/com/rieke/bmore/catan/player/PlayerController.java&#10;game&#9;FILE&#9;file://C:/apps/Github/Catan/src/main/java/com/rieke/bmore/catan/base/game/Game.java&#10;setu&#9;FILE&#9;file://C:/apps/Github/Catan/src/main/java/com/rieke/bmore/catan/turn/SetupTurn.java&#10;build&#9;FILE&#9;file://C:/apps/Github/Catan/src/main/java/com/rieke/bmore/catan/turn/BuildTurn.java&#10;end&#9;FILE&#9;file://C:/apps/Github/Catan/src/main/java/com/rieke/bmore/catan/turn/EndBuildTurn.java&#10;Har&#9;FILE&#9;file://C:/apps/Github/Catan/src/main/java/com/rieke/bmore/catan/base/board/item/edge/HarborEdge.java&#10;roll&#9;PSI&#9;JAVA://com.rieke.bmore.catan.turn.NormalTurn#roll&#10;boardc&#9;PSI&#9;JAVA://com.rieke.bmore.catan.base.board.BoardController&#10;De&#9;FILE&#9;file://C:/apps/Github/Catan/src/main/java/com/rieke/bmore/catan/base/pieces/DevelopmentCard.java&#10;cit&#9;FILE&#9;file://C:/apps/Github/Catan/src/main/java/com/rieke/bmore/catan/base/pieces/City.java&#10;Se&#9;FILE&#9;file://C:/apps/Github/Catan/src/main/java/com/rieke/bmore/catan/base/pieces/Settlement.java&#10;Roa&#9;FILE&#9;file://C:/apps/Github/Catan/src/main/java/com/rieke/bmore/catan/base/pieces/Road.java&#10;road&#9;FILE&#9;file://C:/apps/Github/Catan/src/main/java/com/rieke/bmore/catan/base/pieces/Road.java&#10;summar&#9;PSI&#9;JAVA://com.rieke.bmore.catan.player.PieceSummary&#10;sum&#9;FILE&#9;file://C:/apps/Github/Catan/src/main/java/com/rieke/bmore/catan/player/PieceSummary.java&#10;cata&#9;FILE&#9;file://C:/apps/Github/Catan/src/main/java/com/rieke/bmore/catan/player/CatanPlayer.java&#10;player&#9;FILE&#9;file://C:/apps/Github/Catan/src/main/webapp/resources/js/player/player.html&#10;connect&#9;FILE&#9;jar://C:/Users/tcrie/.m2/repository/tcrieke/tcrieke-common/1.0-SNAPSHOT/tcrieke-common-1.0-SNAPSHOT.jar!/com/rieke/bmore/common/connection/ConnectionFactory.class&#10;Road&#9;FILE&#9;file://C:/apps/Github/Catan/src/main/java/com/rieke/bmore/catan/base/pieces/dc/RoadBuilding.java&#10;Mon&#9;FILE&#9;file://C:/apps/Github/Catan/src/main/java/com/rieke/bmore/catan/base/pieces/dc/Monopoly.java&#10;deve&#9;FILE&#9;file://C:/apps/Github/Catan/src/main/java/com/rieke/bmore/catan/base/pieces/dc/DevelopmentCard.java&#10;Lar&#9;FILE&#9;file://C:/apps/Github/Catan/src/main/java/com/rieke/bmore/catan/base/game/LargestArmy.java&#10;set&#9;FILE&#9;file://C:/apps/Github/Catan/src/main/java/com/rieke/bmore/catan/base/pieces/Settlement.java&#10;corn&#9;FILE&#9;file://C:/apps/Github/Catan/src/main/java/com/rieke/bmore/catan/base/board/item/corner/Corner.java&#10;boar&#9;FILE&#9;file://C:/apps/Github/Catan/src/main/java/com/rieke/bmore/catan/base/board/Board.java&#10;B&#9;FILE&#9;file://C:/apps/Github/Catan/src/main/java/com/rieke/bmore/catan/base/board/Board.java&#10;Norm&#9;PSI&#9;JAVA://com.rieke.bmore.catan.turn.NormalTurn&#10;Game&#9;FILE&#9;file://C:/apps/Github/Catan/src/main/java/com/rieke/bmore/catan/base/game/Game.java&#10;tile&#9;FILE&#9;file://C:/apps/Github/Catan/src/main/java/com/rieke/bmore/catan/base/board/item/tile/Tile.java&#10;edge&#9;FILE&#9;file://C:/apps/Github/Catan/src/main/java/com/rieke/bmore/catan/base/board/item/edge/Edge.java" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/player" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\apps\Github\Catan\src\main\webapp\js" />
+      <recent name="C:\apps\Github\Catan\src\main\webapp\css" />
+      <recent name="C:\apps\Github\Catan\src\main\webapp\fonts" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\apps\Github\Catan\src\main\resources\js" />
-      <recent name="C:\apps\Github\Catan\src\main\resources" />
-      <recent name="C:\apps\Github\Catan\src\main\webapp" />
-      <recent name="C:\apps\Github\Catan\src\main\java\com\rieke\bmore\catan\user" />
-      <recent name="C:\apps\Github\Catan\src\main\webapp\WEB-INF" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.rieke.bmore.catan.player" />
       <recent name="com.rieke.bmore.catan.jetty" />
       <recent name="com.rieke.bmore.catan.gui" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\apps\Github\Catan\src\main\webapp\js" />
-      <recent name="C:\apps\Github\Catan\src\main\webapp\css" />
-      <recent name="C:\apps\Github\Catan\src\main\webapp\fonts" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\apps\Github\Catan\src\main\webapp\WEB-INF" />
+      <recent name="C:\apps\Github\Catan" />
+      <recent name="C:\apps\Github\Catan\src\main\resources\js" />
+      <recent name="C:\apps\Github\Catan\src\main\resources" />
+      <recent name="C:\apps\Github\Catan\src\main\webapp" />
     </key>
   </component>
   <component name="RunManager" selected="JAR Application.Deploy Catan">
@@ -829,8 +1191,8 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
-    <editor active="true" />
+    <frame x="-11" y="-11" width="1849" height="1102" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -840,14 +1202,14 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31170663" sideWeight="0.3041715" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.060803473" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936978" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25564805" sideWeight="0.6958285" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32904884" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.155527" sideWeight="0.6958285" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32818073" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23513514" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2508918" sideWeight="0.48869884" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20660216" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23264782" sideWeight="0.48869884" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24972972" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -916,167 +1278,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/board/LegendEntry.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="16" column="34" lean-forward="false" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
-          <folding>
-            <element signature="e#408#409#0" expanded="false" />
-            <element signature="e#458#459#0" expanded="false" />
-            <element signature="e#500#501#0" expanded="false" />
-            <element signature="e#545#546#0" expanded="false" />
-            <element signature="e#572#573#0" expanded="false" />
-            <element signature="e#626#627#0" expanded="false" />
-            <element signature="e#658#659#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/pieces/DevelopmentCard.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="492">
-          <caret line="108" column="13" lean-forward="false" selection-start-line="108" selection-start-column="13" selection-end-line="108" selection-end-column="13" />
-          <folding>
-            <element signature="e#2591#2592#0" expanded="false" />
-            <element signature="e#2615#2616#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/pieces/PieceService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="367">
-          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/Catan.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/gui/CatanStartup.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-16">
-          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/jetty/CatanJettyRunner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="4" column="42" lean-forward="false" selection-start-line="4" selection-start-column="42" selection-end-line="4" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/3.2.11.RELEASE/spring-webmvc-3.2.11.RELEASE.jar!/org/springframework/web/servlet/FrameworkServlet.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="406" column="0" lean-forward="false" selection-start-line="406" selection-start-column="0" selection-end-line="406" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/player/CatanPlayerFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="33" column="59" lean-forward="false" selection-start-line="33" selection-start-column="59" selection-end-line="33" selection-end-column="59" />
-          <folding>
-            <element signature="e#1015#1231#0" expanded="false" />
-            <element signature="e#1230#1231#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/player/SimplePlayer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1275">
-          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/player/player.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1400">
-          <caret line="173" column="63" lean-forward="false" selection-start-line="173" selection-start-column="63" selection-end-line="173" selection-end-column="63" />
-          <folding>
-            <element signature="n#style#0;n#span#0;n#div#0;n#div#4;n#div#3;n#div#0;n#span#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#span#1;n#div#0;n#div#4;n#div#3;n#div#0;n#span#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-575">
-          <caret line="2" column="6" lean-forward="true" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/globals.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-725">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/game/GameFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="22" column="20" lean-forward="true" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/game/GameService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="18" column="36" lean-forward="false" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/jetty-launcher/jetty-launcher/1.0-SNAPSHOT/jetty-launcher-1.0-SNAPSHOT.jar!/com/rieke/jettylauncher/JettyRunner.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="56" column="0" lean-forward="false" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/board/item/edge/HarborEdge.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="13" column="11" lean-forward="false" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/bootstrap-responsive.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6">
-          <caret line="8" column="531" lean-forward="false" selection-start-line="8" selection-start-column="531" selection-end-line="8" selection-end-column="531" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/board/item/corner/Corner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="568">
-          <caret line="36" column="30" lean-forward="false" selection-start-line="36" selection-start-column="30" selection-end-line="36" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/board/item/edge/Edge.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/board/item/tile/Tile.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="158">
@@ -1088,22 +1289,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5725">
           <caret line="229" column="1" lean-forward="false" selection-start-line="229" selection-start-column="1" selection-end-line="229" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/tcrieke/tcrieke-common/1.0-SNAPSHOT/tcrieke-common-1.0-SNAPSHOT.jar!/com/rieke/bmore/common/player/PlayerFactory.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="24" column="26" lean-forward="false" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/tcrieke/tcrieke-common/1.0-SNAPSHOT/tcrieke-common-1.0-SNAPSHOT.jar!/com/rieke/bmore/common/player/PlayerService.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="37" lean-forward="false" selection-start-line="25" selection-start-column="37" selection-end-line="25" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1111,10 +1296,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="244">
           <caret line="3798" column="30" lean-forward="false" selection-start-line="3798" selection-start-column="30" selection-end-line="3798" selection-end-column="30" />
-          <folding>
-            <element signature="e#177013#177014#0" expanded="false" />
-            <element signature="e#177054#177055#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1122,7 +1303,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="350">
           <caret line="25" column="5" lean-forward="true" selection-start-line="19" selection-start-column="4" selection-end-line="25" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1130,10 +1310,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="125">
           <caret line="90" column="31" lean-forward="false" selection-start-line="90" selection-start-column="31" selection-end-line="90" selection-end-column="31" />
-          <folding>
-            <element signature="e#1102#1103#0" expanded="false" />
-            <element signature="e#1148#1149#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1141,15 +1317,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1225">
           <caret line="65" column="34" lean-forward="false" selection-start-line="65" selection-start-column="34" selection-end-line="65" selection-end-column="34" />
-          <folding>
-            <element signature="e#1432#1433#0" expanded="true" />
-            <element signature="e#1464#1465#0" expanded="true" />
-            <element signature="e#1514#1515#0" expanded="true" />
-            <element signature="e#1556#1557#0" expanded="true" />
-            <element signature="e#1624#1625#0" expanded="true" />
-            <element signature="e#1675#1676#0" expanded="true" />
-            <element signature="e#1717#1718#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1157,26 +1324,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="175">
           <caret line="7" column="49" lean-forward="true" selection-start-line="7" selection-start-column="49" selection-end-line="7" selection-end-column="49" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/turn/ContinuousBuildTurn.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="25" column="13" lean-forward="false" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/turn/ContinuousBuildTurn.java" />
     <entry file="file://$PROJECT_DIR$/src/test/java/BasicBoardFactoryTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="212">
           <caret line="20" column="60" lean-forward="false" selection-start-line="20" selection-start-column="60" selection-end-line="20" selection-end-column="60" />
-          <folding>
-            <element signature="e#477#478#0" expanded="false" />
-            <element signature="e#546#547#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1192,7 +1347,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="389">
           <caret line="55" column="8" lean-forward="false" selection-start-line="55" selection-start-column="8" selection-end-line="55" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1200,10 +1354,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="321">
           <caret line="107" column="0" lean-forward="false" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
-          <folding>
-            <element signature="e#4990#4991#0" expanded="false" />
-            <element signature="e#5047#5048#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1211,7 +1361,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="207" column="0" lean-forward="false" selection-start-line="207" selection-start-column="0" selection-end-line="207" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1219,7 +1368,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="83" column="0" lean-forward="false" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1227,7 +1375,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="996">
           <caret line="88" column="0" lean-forward="false" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1239,127 +1386,405 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/player/player.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="15" column="20" lean-forward="false" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/gameboard/gameboard.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="249">
           <caret line="56" column="25" lean-forward="false" selection-start-line="56" selection-start-column="25" selection-end-line="56" selection-end-column="25" />
-          <folding>
-            <element signature="n#style#0;n#button#1;n#div#0;n#div#0;n#div#0;n#span#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/gameboard/gameboard.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="33" column="20" lean-forward="false" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/turn/NormalTurn.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="56">
-          <caret line="215" column="66" lean-forward="true" selection-start-line="215" selection-start-column="66" selection-end-line="215" selection-end-column="66" />
+        <state relative-caret-position="4675">
+          <caret line="215" column="66" lean-forward="false" selection-start-line="215" selection-start-column="66" selection-end-line="215" selection-end-column="66" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/turn/EndBuildTurn.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
+        <state relative-caret-position="200">
           <caret line="12" column="37" lean-forward="false" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#303#304#0" expanded="true" />
-            <element signature="e#339#340#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/player/CatanPlayer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="147" column="59" lean-forward="false" selection-start-line="147" selection-start-column="59" selection-end-line="147" selection-end-column="59" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/board/ExpansionBoardFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
+        <state relative-caret-position="1325">
           <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/3.2.11.RELEASE/spring-web-3.2.11.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
+        <state relative-caret-position="3050">
           <caret line="141" column="0" lean-forward="false" selection-start-line="141" selection-start-column="0" selection-end-line="141" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/turn/Turn.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
+        <state relative-caret-position="1550">
           <caret line="70" column="0" lean-forward="false" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
           <folding>
-            <element signature="e#832#833#0" expanded="true" />
-            <element signature="e#861#862#0" expanded="true" />
-            <element signature="e#2182#2183#0" expanded="true" />
-            <element signature="e#2213#2214#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#910#911#0" expanded="false" />
+            <element signature="e#946#947#0" expanded="false" />
+            <element signature="e#978#979#0" expanded="false" />
+            <element signature="e#1015#1016#0" expanded="false" />
+            <element signature="e#2627#2628#0" expanded="false" />
+            <element signature="e#2669#2670#0" expanded="false" />
+            <element signature="e#2965#2966#0" expanded="false" />
+            <element signature="e#2997#2998#0" expanded="false" />
+            <element signature="e#3028#3029#0" expanded="false" />
+            <element signature="e#3055#3056#0" expanded="false" />
+            <element signature="e#3096#3097#0" expanded="false" />
+            <element signature="e#3128#3129#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/board/Board.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
+        <state relative-caret-position="1175">
           <caret line="78" column="0" lean-forward="false" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#1537#1538#0" expanded="false" />
+            <element signature="e#1564#1565#0" expanded="false" />
+            <element signature="e#1602#1603#0" expanded="false" />
+            <element signature="e#1634#1635#0" expanded="false" />
+            <element signature="e#1684#1685#0" expanded="false" />
+            <element signature="e#1718#1719#0" expanded="false" />
+            <element signature="e#1776#1777#0" expanded="false" />
+            <element signature="e#1810#1811#0" expanded="false" />
+            <element signature="e#1864#1865#0" expanded="false" />
+            <element signature="e#1900#1901#0" expanded="false" />
+            <element signature="e#1944#1945#0" expanded="false" />
+            <element signature="e#1972#1973#0" expanded="false" />
+            <element signature="e#2022#2023#0" expanded="false" />
+            <element signature="e#2055#2056#0" expanded="false" />
+            <element signature="e#2133#2134#0" expanded="false" />
+            <element signature="e#2167#2168#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/turn/SetupTurn.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1642">
+        <state relative-caret-position="400">
           <caret line="23" column="45" lean-forward="false" selection-start-line="23" selection-start-column="45" selection-end-line="23" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/turn/BuildTurn.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="517">
-          <caret line="58" column="23" lean-forward="true" selection-start-line="58" selection-start-column="23" selection-end-line="58" selection-end-column="23" />
+        <state relative-caret-position="1275">
+          <caret line="58" column="23" lean-forward="false" selection-start-line="58" selection-start-column="23" selection-end-line="58" selection-end-column="23" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/player/PieceSummary.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#657#658#0" expanded="false" />
+            <element signature="e#684#685#0" expanded="false" />
+            <element signature="e#965#966#0" expanded="false" />
+            <element signature="e#992#993#0" expanded="false" />
+            <element signature="e#1046#1047#0" expanded="false" />
+            <element signature="e#1078#1079#0" expanded="false" />
+            <element signature="e#1134#1135#0" expanded="false" />
+            <element signature="e#1166#1167#0" expanded="false" />
+            <element signature="e#1195#1196#0" expanded="false" />
+            <element signature="e#1223#1224#0" expanded="false" />
+            <element signature="e#1262#1263#0" expanded="false" />
+            <element signature="e#1296#1297#0" expanded="false" />
+            <element signature="e#1332#1333#0" expanded="false" />
+            <element signature="e#1364#1365#0" expanded="false" />
+            <element signature="e#1415#1416#0" expanded="false" />
+            <element signature="e#1457#1458#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/player/player.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4325">
+          <caret line="173" column="63" lean-forward="false" selection-start-line="173" selection-start-column="63" selection-end-line="173" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/player/player-registration.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/tcrieke/tcrieke-common/1.0-SNAPSHOT/tcrieke-common-1.0-SNAPSHOT.jar!/com/rieke/bmore/common/player/PlayerFactory.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/player/CatanPlayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="44" column="8" lean-forward="false" selection-start-line="44" selection-start-column="8" selection-end-line="44" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#3114#3115#0" expanded="false" />
+            <element signature="e#3146#3147#0" expanded="false" />
+            <element signature="e#4652#4653#0" expanded="false" />
+            <element signature="e#4695#4696#0" expanded="false" />
+            <element signature="e#4737#4738#0" expanded="false" />
+            <element signature="e#4778#4779#0" expanded="false" />
+            <element signature="e#4810#4811#0" expanded="false" />
+            <element signature="e#4838#4839#0" expanded="false" />
+            <element signature="e#4880#4881#0" expanded="false" />
+            <element signature="e#4914#4915#0" expanded="false" />
+            <element signature="e#5634#5635#0" expanded="false" />
+            <element signature="e#5659#5660#0" expanded="false" />
+            <element signature="e#8602#8603#0" expanded="false" />
+            <element signature="e#8633#8634#0" expanded="false" />
+            <element signature="e#9034#9035#0" expanded="false" />
+            <element signature="e#9074#9075#0" expanded="false" />
+            <element signature="e#9711#9712#0" expanded="false" />
+            <element signature="e#9764#9765#0" expanded="false" />
+            <element signature="e#11127#11128#0" expanded="false" />
+            <element signature="e#11161#11162#0" expanded="false" />
+            <element signature="e#11212#11213#0" expanded="false" />
+            <element signature="e#11258#11259#0" expanded="false" />
+            <element signature="e#11293#11294#0" expanded="false" />
+            <element signature="e#11327#11328#0" expanded="false" />
+            <element signature="e#11378#11379#0" expanded="false" />
+            <element signature="e#11424#11425#0" expanded="false" />
+            <element signature="e#11454#11455#0" expanded="false" />
+            <element signature="e#11482#11483#0" expanded="false" />
+            <element signature="e#11522#11523#0" expanded="false" />
+            <element signature="e#11556#11557#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/game/GameService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#782#783#0" expanded="false" />
+            <element signature="e#820#821#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/player/CatanPlayerFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="2" column="7" lean-forward="false" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+          <folding>
+            <element signature="e#1015#1231#0" expanded="false" />
+            <element signature="e#1230#1231#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/base/game/Game.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="216" column="24" lean-forward="true" selection-start-line="216" selection-start-column="24" selection-end-line="216" selection-end-column="24" />
+        <state relative-caret-position="149">
+          <caret line="33" column="22" lean-forward="false" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#4085#4086#0" expanded="false" />
+            <element signature="e#4169#4170#0" expanded="false" />
+            <element signature="e#4198#4199#0" expanded="false" />
+            <element signature="e#4223#4224#0" expanded="false" />
+            <element signature="e#4268#4269#0" expanded="false" />
+            <element signature="e#4298#4299#0" expanded="false" />
+            <element signature="e#4329#4330#0" expanded="false" />
+            <element signature="e#4357#4358#0" expanded="false" />
+            <element signature="e#5254#5255#0" expanded="false" />
+            <element signature="e#5282#5283#0" expanded="false" />
+            <element signature="e#5323#5324#0" expanded="false" />
+            <element signature="e#5357#5358#0" expanded="false" />
+            <element signature="e#5401#5402#0" expanded="false" />
+            <element signature="e#5472#5473#0" expanded="false" />
+            <element signature="e#6519#6520#0" expanded="false" />
+            <element signature="e#6553#6554#0" expanded="false" />
+            <element signature="e#6605#6606#0" expanded="false" />
+            <element signature="e#6651#6652#0" expanded="false" />
+            <element signature="e#10051#10052#0" expanded="false" />
+            <element signature="e#10091#10092#0" expanded="false" />
+            <element signature="e#10680#10681#0" expanded="false" />
+            <element signature="e#10719#10720#0" expanded="false" />
+            <element signature="e#10748#10749#0" expanded="false" />
+            <element signature="e#10787#10788#0" expanded="false" />
+            <element signature="e#11210#11211#0" expanded="false" />
+            <element signature="e#11241#11242#0" expanded="false" />
+            <element signature="e#17799#17800#0" expanded="false" />
+            <element signature="e#17832#17833#0" expanded="false" />
+            <element signature="e#18868#18869#0" expanded="false" />
+            <element signature="e#18906#18907#0" expanded="false" />
+            <element signature="e#18951#18952#0" expanded="false" />
+            <element signature="e#18986#18987#0" expanded="false" />
+            <element signature="e#21404#21405#0" expanded="false" />
+            <element signature="e#21441#21442#0" expanded="false" />
+            <element signature="e#21901#21902#0" expanded="false" />
+            <element signature="e#21937#21938#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/tcrieke/tcrieke-common/1.0-SNAPSHOT/tcrieke-common-1.0-SNAPSHOT.jar!/com/rieke/bmore/common/player/PlayerService.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="19" column="11" lean-forward="false" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/player/CatanPlayerService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="8" column="53" lean-forward="false" selection-start-line="8" selection-start-column="53" selection-end-line="8" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/jetty-launcher/jetty-launcher/1.0-SNAPSHOT/jetty-launcher-1.0-SNAPSHOT.jar!/com/rieke/jettylauncher/gui/Startup.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="56" column="11" lean-forward="false" selection-start-line="56" selection-start-column="11" selection-end-line="56" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catan/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nbactions.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/logging.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="7" column="8" lean-forward="false" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/jetty/CatanJettyRunner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="4" column="45" lean-forward="false" selection-start-line="4" selection-start-column="45" selection-end-line="4" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/Catan.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/gui/CatanStartup.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="9" column="43" lean-forward="false" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/jetty-launcher/jetty-launcher/1.0-SNAPSHOT/jetty-launcher-1.0-SNAPSHOT.jar!/com/rieke/jettylauncher/JettyRunner.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="120" column="16" lean-forward="false" selection-start-line="120" selection-start-column="16" selection-end-line="120" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/rieke/bmore/catan/player/PlayerController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="70" column="31" lean-forward="false" selection-start-line="70" selection-start-column="30" selection-end-line="70" selection-end-column="31" />
+        <state relative-caret-position="185">
+          <caret line="314" column="10" lean-forward="false" selection-start-line="314" selection-start-column="10" selection-end-line="314" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="113">
+          <caret line="76" column="27" lean-forward="false" selection-start-line="76" selection-start-column="27" selection-end-line="76" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/appengine-web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="2" column="17" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1265">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/gameboard/gameboard.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="160" column="23" lean-forward="false" selection-start-line="160" selection-start-column="23" selection-end-line="160" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/player/player-registration.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="65" column="19" lean-forward="false" selection-start-line="65" selection-start-column="19" selection-end-line="65" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/player/player.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="13" column="18" lean-forward="true" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
           <folding />
         </state>
       </provider>

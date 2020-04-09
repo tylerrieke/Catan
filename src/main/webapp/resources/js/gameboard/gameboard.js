@@ -19,7 +19,7 @@ app.controller('Gameboard', ['$scope', '$http', '$timeout', '$location', '$rootS
         vm.gameId = gameId;
         var onPage = ($location.path()=="/board");
         if(onPage) {
-            $http.get("/catan/board?gameId="+gameId).success(function (response) {
+            $http.get("/board?gameId="+gameId).success(function (response) {
                 vm.gameboard = response.board;
                 if(response.state == "OVER" && vm.state != "OVER") {
                     alert(response.currentPlayer+" wins!!");
@@ -48,7 +48,7 @@ app.controller('Gameboard', ['$scope', '$http', '$timeout', '$location', '$rootS
     };
 
     vm.createGameboard = function() {
-        $http.post("/catan/board/new", vm.settings).success(function (response) {
+        $http.post("/board/new", vm.settings).success(function (response) {
             vm.gameboard = response.board;
             if(vm.gameboard) {
                 vm.state = response.state;
@@ -61,7 +61,7 @@ app.controller('Gameboard', ['$scope', '$http', '$timeout', '$location', '$rootS
     vm.startGame = function() {
         var onPage = ($location.path()=="/board");
         if(onPage) {
-            $http.get("/catan/board/start?gameId="+vm.gameId).success(function (response) {
+            $http.get("/board/start?gameId="+vm.gameId).success(function (response) {
                 vm.gameboard = response.board;
                 vm.state = response.state;
                 vm.players = response.players;
@@ -72,7 +72,7 @@ app.controller('Gameboard', ['$scope', '$http', '$timeout', '$location', '$rootS
     vm.makeFirst = function(name) {
         var onPage = ($location.path()=="/board");
         if(onPage) {
-            $http.get("/catan/board/playerFirst?gameId="+vm.gameId+"&playerName="+name).success(function (response) {
+            $http.get("/board/playerFirst?gameId="+vm.gameId+"&playerName="+name).success(function (response) {
                 vm.players = response.players;
             });
         }
@@ -127,7 +127,7 @@ app.controller('Gameboard', ['$scope', '$http', '$timeout', '$location', '$rootS
     vm.onCornerClick = function(tile, num) {
         var corner = tile.corners[num];
         if(corner.selectable) {
-            $http.get("/catan/player/build_settlement?gameId="+vm.gameId+"&cornerId="+corner.id).success(function (response) {
+            $http.get("/player/build_settlement?gameId="+vm.gameId+"&cornerId="+corner.id).success(function (response) {
 
             });
         }
@@ -136,7 +136,7 @@ app.controller('Gameboard', ['$scope', '$http', '$timeout', '$location', '$rootS
     vm.onEdgeClick = function(tile, num) {
         var edge = tile.edges[num];
         if(edge.selectable) {
-            $http.get("/catan/player/build_road?gameId="+vm.gameId+"&edgeId="+edge.id).success(function (response) {
+            $http.get("/player/build_road?gameId="+vm.gameId+"&edgeId="+edge.id).success(function (response) {
 
             });
         }
@@ -158,7 +158,7 @@ app.controller('Gameboard', ['$scope', '$http', '$timeout', '$location', '$rootS
 
     vm.onNumberClick = function(tile) {
         if(vm.actions && vm.actions.indexOf('ROBBER') >= 0 && tile.id != vm.robberId && tile.selectable) {
-            $http.get("/catan/player/robber?gameId="+vm.gameId+"&tileId="+tile.id).success(function (response) {
+            $http.get("/player/robber?gameId="+vm.gameId+"&tileId="+tile.id).success(function (response) {
 
             });
         }

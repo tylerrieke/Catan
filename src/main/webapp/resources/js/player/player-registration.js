@@ -18,7 +18,7 @@ app.controller('PlayerRegistration', ['$scope', '$http', '$timeout', '$location'
     $scope.getGameboard = function(gameId) {
         var onPage = ($location.path()=="/player-registration");
         if(onPage) {
-            $http.get("/catan/board?gameId="+gameId).success(function (response) {
+            $http.get("/board?gameId="+gameId).success(function (response) {
                 $scope.state = response.state;
                 $scope.gameId = gameId;
                 $timeout(getPlayer, (onPage?501:2000));
@@ -30,7 +30,7 @@ app.controller('PlayerRegistration', ['$scope', '$http', '$timeout', '$location'
         var onPage = ($location.path()=="/player-registration");
 
         if(onPage) {
-            $http.get("/catan/player?gameId="+$scope.gameId+"&full=false").success(function (response) {
+            $http.get("/player?gameId="+$scope.gameId+"&full=false").success(function (response) {
                 var player = response.player;
                 $scope.state = response.state;
                 if(!$scope.editing) {
@@ -40,7 +40,7 @@ app.controller('PlayerRegistration', ['$scope', '$http', '$timeout', '$location'
 
                 if ($scope.state === "SETUP" || $scope.state === "ACTIVE") {
                     $scope.active = false;
-                    window.location = '/catan/#/player/'+$scope.gameId;
+                    window.location = '/#/player/'+$scope.gameId;
                     return;
                 }
             });
@@ -63,7 +63,7 @@ app.controller('PlayerRegistration', ['$scope', '$http', '$timeout', '$location'
             $scope.displayEditing = false;
         }
         var editingNum = $scope.editingCount;
-        $http.get("/catan/player/update?name="+$scope.name+"&display="+$scope.display+"&gameId="+$scope.gameId).success(function (response) {
+        $http.get("/player/update?name="+$scope.name+"&display="+$scope.display+"&gameId="+$scope.gameId).success(function (response) {
             if(response.error) {
                 $scope.errorMessage = response.error;
                 $scope.errorCount++;
