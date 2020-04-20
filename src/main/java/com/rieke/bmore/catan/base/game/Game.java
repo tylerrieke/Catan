@@ -215,16 +215,18 @@ public class Game {
     }
 
     public void createSettlement(CatanPlayer player, int cornerId) {
-        Turn turn = getCurrentTurn();
-        if(/*player.equals(turn.getPlayer()) &&*/ turn instanceof SetupTurn) {
-            ((SetupTurn) turn).setCorner(getBoard().getIdToCornerMap().get(cornerId));
-        } else if(turn instanceof NormalTurn || turn instanceof EndBuildTurn) {
-            Turn childTurn = turn.getChildTurn();
-            if(childTurn instanceof BuildTurn) {
-                ((BuildTurn) childTurn).setBoardItem(getBoard().getIdToCornerMap().get(cornerId));
+        synchronized (this) {
+            Turn turn = getCurrentTurn();
+            if (/*player.equals(turn.getPlayer()) &&*/ turn instanceof SetupTurn) {
+                ((SetupTurn) turn).setCorner(getBoard().getIdToCornerMap().get(cornerId));
+            } else if (turn instanceof NormalTurn || turn instanceof EndBuildTurn) {
+                Turn childTurn = turn.getChildTurn();
+                if (childTurn instanceof BuildTurn) {
+                    ((BuildTurn) childTurn).setBoardItem(getBoard().getIdToCornerMap().get(cornerId));
+                }
             }
+            processState(turn);
         }
-        processState(turn);
     }
 
     public void createRoad(CatanPlayer player, int edgeId) {
@@ -241,9 +243,11 @@ public class Game {
     }
 
     public void ok(CatanPlayer player, boolean ok) {
-        Turn turn = getCurrentTurn();
-        turn.setConfirmation(ok);
-        processState(turn);
+        synchronized (this) {
+            Turn turn = getCurrentTurn();
+            turn.setConfirmation(ok);
+            processState(turn);
+        }
     }
 
     private void processState(Turn turn) {
@@ -267,7 +271,7 @@ public class Game {
     public int roll(CatanPlayer player) {
         Turn turn = getCurrentTurn();
         int roll = dice1.roll() + dice2.roll();
-        synchronized (getId()) {
+        synchronized (this) {
             if (turn instanceof NormalTurn) {
                 if(((NormalTurn) turn).getState().equals(NormalTurn.State.ROLL)) {
                     ((NormalTurn) turn).setRoll(roll);
@@ -320,12 +324,14 @@ public class Game {
         return new ArrayList<>();
     }
 
-    public synchronized void endTurn(CatanPlayer player) {
-        Turn turn = getCurrentTurn();
-        if(turn.getPlayer().equals(player)) {
-            turn.setDone(true);
+    public void endTurn(CatanPlayer player) {
+        synchronized (this) {
+            Turn turn = getCurrentTurn();
+            if (turn.getPlayer().equals(player)) {
+                turn.setDone(true);
+            }
+            processState(turn);
         }
-        processState(turn);
     }
 
     public int getRobberId() {
@@ -443,42 +449,48 @@ public class Game {
     }
 
     public void acceptPlayerTrade(CatanPlayer player, Integer acceptedId) {
-        CatanPlayer accepted = (acceptedId!=null?getPlayerById(acceptedId):null);
-        Turn turn = getCurrentTurn().getChildTurn();
-        if (turn != null && turn instanceof TradeTurn && turn.getPlayer().equals(player)) {
-            if(accepted!=null) {
-                ((TradeTurn) turn).setAcceptedPlayer(accepted);
-            } else {
-                turn.cancel();
+        synchronized (this) {
+            CatanPlayer accepted = (acceptedId != null ? getPlayerById(acceptedId) : null);
+            Turn turn = getCurrentTurn().getChildTurn();
+            if (turn != null && turn instanceof TradeTurn && turn.getPlayer().equals(player)) {
+                if (accepted != null) {
+                    ((TradeTurn) turn).setAcceptedPlayer(accepted);
+                } else {
+                    turn.cancel();
+                }
+                processState(getCurrentTurn());
             }
-            processState(getCurrentTurn());
         }
     }
 
     public void robPlayer(CatanPlayer player, int robbedId) {
-        CatanPlayer robbed = getPlayerById(robbedId);
-        Turn turn = getCurrentTurn();
-        if(robbed != null && turn.getPlayer().equals(player)) {
-            if(turn instanceof NormalTurn) {
-                ((NormalTurn) turn).setRobbedPlayer(robbed);
+        synchronized (this) {
+            CatanPlayer robbed = getPlayerById(robbedId);
+            Turn turn = getCurrentTurn();
+            if (robbed != null && turn.getPlayer().equals(player)) {
+                if (turn instanceof NormalTurn) {
+                    ((NormalTurn) turn).setRobbedPlayer(robbed);
+                }
+                processState(turn);
             }
-            processState(turn);
         }
     }
 
     public void applyExchange(CatanPlayer player, CardExchange cardExchange) {
-        Turn turn = getCurrentTurn();
-        if(isValidExchange(player, cardExchange)) {
-            for (Map.Entry<String, Integer> discard : cardExchange.getDiscard().entrySet()) {
-                player.addResource(resourceService.getResourceByName(discard.getKey()), -discard.getValue());
+        synchronized (this) {
+            Turn turn = getCurrentTurn();
+            if (isValidExchange(player, cardExchange)) {
+                for (Map.Entry<String, Integer> discard : cardExchange.getDiscard().entrySet()) {
+                    player.addResource(resourceService.getResourceByName(discard.getKey()), -discard.getValue());
+                }
+                for (Map.Entry<String, Integer> receive : cardExchange.getReceive().entrySet()) {
+                    player.addResource(resourceService.getResourceByName(receive.getKey()), receive.getValue());
+                }
+                if (turn instanceof NormalTurn) {
+                    ((NormalTurn) turn).getRobberDiscardMap().remove(player);
+                }
+                processState(turn);
             }
-            for (Map.Entry<String, Integer> receive : cardExchange.getReceive().entrySet()) {
-                player.addResource(resourceService.getResourceByName(receive.getKey()), receive.getValue());
-            }
-            if (turn instanceof NormalTurn) {
-                ((NormalTurn) turn).getRobberDiscardMap().remove(player);
-            }
-            processState(turn);
         }
     }
 
@@ -504,9 +516,11 @@ public class Game {
     }
 
     public void cancelTurn(CatanPlayer player) {
-        Turn turn = getCurrentTurn();
-        turn.cancel();
-        processState(turn);
+        synchronized (this) {
+            Turn turn = getCurrentTurn();
+            turn.cancel();
+            processState(turn);
+        }
     }
 
     public Map<String, Special> getSpecialMap() {
@@ -531,13 +545,15 @@ public class Game {
     }
 
     public void playDC(CatanPlayer player, String dcType) {
-        DevelopmentCard dc = player.getOnePlayableDcByType(dcType);
-        Turn turn = getCurrentTurn();
-        if(dc != null && turn instanceof NormalTurn) {
-            dc.play((NormalTurn)turn);
-            if(dc.getClass().equals(Knight.class)) {
-                specialMap.get(LARGEST_ARMY).evaluateAll();
-                calculatePlayerPoints(players);
+        synchronized (this) {
+            DevelopmentCard dc = player.getOnePlayableDcByType(dcType);
+            Turn turn = getCurrentTurn();
+            if (dc != null && turn instanceof NormalTurn) {
+                dc.play((NormalTurn) turn);
+                if (dc.getClass().equals(Knight.class)) {
+                    specialMap.get(LARGEST_ARMY).evaluateAll();
+                    calculatePlayerPoints(players);
+                }
             }
         }
     }
@@ -551,13 +567,15 @@ public class Game {
     }
 
     public void playCardSelection(CatanPlayer player, Map<String, Integer> cardSelection) {
-        Turn turn = getCurrentTurn();
-        if(turn instanceof NormalTurn) {
-            if(turn.getChildTurn() instanceof CardSelectionTurn) {
-                ((NormalTurn) turn).setCardSelection(cardSelection);
+        synchronized (this) {
+            Turn turn = getCurrentTurn();
+            if (turn instanceof NormalTurn) {
+                if (turn.getChildTurn() instanceof CardSelectionTurn) {
+                    ((NormalTurn) turn).setCardSelection(cardSelection);
+                }
             }
+            processState(turn);
         }
-        processState(turn);
     }
 
     public ResourceSelection getResourceSelection(CatanPlayer catanPlayer) {
