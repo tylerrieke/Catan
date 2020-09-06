@@ -64,6 +64,7 @@ public class BoardController {
         responseMap.put("robberFriendly", game.isFriendlyRobber());
         responseMap.put("pieceCosts", game.getPieceCosts());
         responseMap.put("message", game.getMessage());
+        responseMap.put("rollMap", game.getRollMap());
         if(game.getCurrentTurn() != null) {
             responseMap.put("currentPlayer", game.getCurrentTurn().getPlayer().getName());
         }
