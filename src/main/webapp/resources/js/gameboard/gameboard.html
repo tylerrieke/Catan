@@ -140,6 +140,26 @@
             </tr>
         </table>
     </div>
+    <div style="position: absolute;background-color: burlywood;bottom: 220px;left: 0px;color: blanchedalmond;border: thick brown solid;border-radius: 5px;">
+        <table>
+            <tr>
+                <th>Roll</th>
+                <th>Count</th>
+                <th>Probability</th>
+            </tr>
+            <tr ng-repeat="rollStat in rollStats | orderBy:num" style="border: brown thin solid">
+                <td style="color: black; padding: 0px 10px 0px 1px;">
+                    {{rollStat.num}}
+                </td>
+                <td style="padding-top:2px; padding: 0px 10px 2px 1px;">
+                    {{rollStat.countText}}
+                </td>
+                <td style="color: blue; padding-top:2px; padding: 0px 10px 2px 1px;">
+                    ({{rollStat.probability}}%)
+                </td>
+            </tr>
+        </table>
+    </div>
     <div class="player-section span4" style="float:left; margin-left:4px;padding-right:9px;">
         <div ng-class="{'row':true,'player-row':true}" style="font-size:15px;font-weight:bold;width:300px;">
             <row>

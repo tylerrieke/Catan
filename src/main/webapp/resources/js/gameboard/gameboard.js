@@ -35,6 +35,15 @@ app.controller('Gameboard', ['$scope', '$http', '$timeout', '$location', '$rootS
                 vm.robberFriendly = response.robberFriendly;
                 vm.message = decodeURIComponent(response.message);
                 vm.pieceCosts = response.pieceCosts;
+                var rolls = [];
+                angular.forEach(response.rollMap, (count, num) => {
+                    rolls.push({
+                        num: new Number(num),
+                        countText: vm.calcRollText(count),
+                        probability: vm.calcRollProb(num)
+                    });
+                });
+                vm.rollStats = rolls;
                 if(vm.state != "OVER") {
                     $timeout(function(){vm.getGameboard(gameId)}, (onPage?501:2000));
                 }
@@ -162,6 +171,18 @@ app.controller('Gameboard', ['$scope', '$http', '$timeout', '$location', '$rootS
 
             });
         }
+    }
+
+    vm.calcRollText = function(count) {
+        var total = 0;
+        if (!vm.rollStats) return 0;
+        angular.forEach(vm.rollStats, (val) => { total+=val; });
+        var percent = total ? Math.round(count/total * 100) : 0;
+        return `${count}${count ? ' (' + percent +'%)' : ''}`;
+    }
+
+    vm.calcRollProb = function(num) {
+        return Math.round((6 - Math.abs(7 - num))/36 * 100);
     }
 }]);
 
