@@ -14,6 +14,7 @@ import com.rieke.bmore.catan.turn.*;
 import com.rieke.bmore.common.connection.ConnectionFactory;
 
 import java.util.*;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class Game {
 
@@ -43,6 +44,8 @@ public class Game {
     private int robberId = -1;
     private List<DevelopmentCard> developmentCards = new ArrayList<>();
     private List<LegendEntry> legendEntries = new ArrayList<>();
+    private Map<Integer, AtomicInteger> rollMap = new HashMap<>();
+
 
     private Map<String, Special> specialMap = new HashMap<>();
 
@@ -60,6 +63,10 @@ public class Game {
         dice2 = new Die();
         this.resourceService = resourceService;
         this.pieceService = pieceService;
+
+        for (int i =2; i <= 12; i ++) {
+            rollMap.put(i, new AtomicInteger());
+        }
 
         maxVictoryPoints = settings.getVictoryPoints();
         friendlyRobber = settings.isFriendly();
@@ -275,6 +282,7 @@ public class Game {
             if (turn instanceof NormalTurn) {
                 if(((NormalTurn) turn).getState().equals(NormalTurn.State.ROLL)) {
                     ((NormalTurn) turn).setRoll(roll);
+                    rollMap.get(roll).incrementAndGet();
                     payOutRoll(roll);
                 }
                 roll = ((NormalTurn) turn).getRoll();
@@ -282,6 +290,10 @@ public class Game {
             processState(turn);
         }
         return roll;
+    }
+
+    public Map<Integer, AtomicInteger> getRollMap() {
+        return rollMap;
     }
 
     public void playRobber(CatanPlayer player, int tileId) {
