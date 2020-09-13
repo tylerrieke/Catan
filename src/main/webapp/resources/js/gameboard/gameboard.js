@@ -36,6 +36,8 @@ app.controller('Gameboard', ['$scope', '$http', '$timeout', '$location', '$rootS
                 vm.message = decodeURIComponent(response.message);
                 vm.pieceCosts = response.pieceCosts;
                 var rolls = [];
+                vm.totalRolls = 0;
+                angular.forEach(response.rollMap, (count) => { vm.totalRolls+=count; });
                 angular.forEach(response.rollMap, (count, num) => {
                     rolls.push({
                         num: new Number(num),
@@ -174,10 +176,7 @@ app.controller('Gameboard', ['$scope', '$http', '$timeout', '$location', '$rootS
     }
 
     vm.calcRollText = function(count) {
-        var total = 0;
-        if (!vm.rollStats) return 0;
-        angular.forEach(vm.rollStats, (val) => { total+=val; });
-        var percent = total ? Math.round(count/total * 100) : 0;
+        var percent = vm.totalRolls ? Math.round(count/vm.totalRolls * 100) : 0;
         return `${count}${count ? ' (' + percent +'%)' : ''}`;
     }
 
