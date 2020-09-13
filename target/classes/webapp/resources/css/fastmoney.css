@@ -1,0 +1,116 @@
+@font-face {
+    font-family: "Scoreboard Font";
+    src: url(../fonts/rounded_led_board-7.ttf) format("truetype");
+}
+
+body {
+    background: #133AD8 none repeat scroll 0 0;
+}
+
+.container-navbar-pad {
+    margin-bottom: 0px;
+    padding-top: 10px;
+    width: 975px;
+}
+
+.gameboard {
+    background: darkblue;
+}
+
+.answer-section {
+    background: none repeat scroll 0 0 darkblue;
+    border: 1px double;
+    border-radius: 10px;
+    margin-left: -15px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-top: 10px;
+    width: 975px;
+}
+
+.answer-section-single {
+    background: darkblue none repeat scroll 0 0;
+    border: 1px double;
+    border-radius: 10px;
+    margin-left: 225px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-top: 10px;
+    width: 495px;
+}
+
+.answer-row {
+    margin-left: -15px;
+    padding-bottom: 5px;
+}
+
+.answer-visible {
+    background: none repeat scroll 0 0 #222222;
+    font-family: 'Arial Rounded MT Bold', 'Helvetica Rounded', Arial, sans-serif;;
+    border: 5px solid #133AD8;
+    border-radius: 3px;
+    color: white;
+    font-size: 50px;
+    line-height: 100px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.answer-not-visible {
+    background: none repeat scroll 0 0 #222222;
+    border: 5px solid #133AD8;
+    border-radius: 3px;
+    color: #222222;
+    font-size: 50px;
+    line-height: 100px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.answer-points {
+    background: none repeat scroll 0 0 #222222;
+    float: right;
+    margin-left: 0px;
+}
+
+.answer-value-sm {
+    font-size:50px;
+    line-height: 100px;
+    margin-left:0px;
+}
+
+.answer-value-md {
+    font-size:40px;
+    line-height: 100px;
+    margin-left:0px;
+
+}
+
+.answer-value-lg {
+    font-size:30px;
+    line-height: 100px;
+    margin-left:0px;
+}
+
+.answer-value-xl {
+    font-size:30px;
+    line-height: 50px;
+    margin-left:0px;
+}
+
+.score-board {
+    background: none repeat scroll 0 0 #333333;
+    border: 5px solid #133AD8;
+    border-radius: 5px;
+    color: white;
+    font-family: "Scoreboard Font";
+    font-size: 45px;
+    line-height: 20px;
+    margin-left: 380px;
+    margin-right: 390px;
+    margin-top: 5px;
+    padding-bottom: 10px;
+    padding-top: 50px;
+    text-align: right;
+}
+

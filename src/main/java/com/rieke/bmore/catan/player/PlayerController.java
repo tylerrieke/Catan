@@ -1,6 +1,5 @@
 package com.rieke.bmore.catan.player;
 
-import com.google.appengine.repackaged.com.google.common.hash.Hashing;
 import com.rieke.bmore.catan.base.game.Game;
 import com.rieke.bmore.catan.base.game.GameService;
 import com.rieke.bmore.catan.base.resources.ResourceSelection;
@@ -19,7 +18,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.annotation.PostConstruct;
 import javax.servlet.http.HttpServletRequest;
-import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -38,7 +36,7 @@ public class PlayerController {
         Game game = gameService.getGame(gameId);
         if (game != null) {
             Turn turn = game.getCurrentTurn();
-            CatanPlayer player = game.getPlayer(getPlayerToken(request));
+            CatanPlayer player = game.getPlayer(getIpAddr(request));
             if(player != null) {
                 responseMap.put("player", player);
                 responseMap.put("active", player.equals(game.getActivePlayer()));
@@ -65,7 +63,7 @@ public class PlayerController {
             HttpServletRequest request) throws InvalidPlayerException {
         Map<String, Object> responseMap = new HashMap<>();
         Game game = gameService.getGame(gameId);
-        game.updatePlayer(getPlayerToken(request),name,display);
+        game.updatePlayer(getIpAddr(request),name,display);
         return new ResponseEntity<>(responseMap,
                 HttpStatus.OK);
     }
@@ -77,7 +75,7 @@ public class PlayerController {
             HttpServletRequest request) throws InvalidPlayerException {
         Map<String, Object> responseMap = new HashMap<>();
         Game game = gameService.getGame(gameId);
-        game.startBuildSelection(game.getPlayer(getPlayerToken(request)),type);
+        game.startBuildSelection(game.getPlayer(getIpAddr(request)),type);
         return new ResponseEntity<>(responseMap,
                 HttpStatus.OK);
     }
@@ -89,7 +87,7 @@ public class PlayerController {
             HttpServletRequest request) throws InvalidPlayerException {
         Map<String, Object> responseMap = new HashMap<>();
         Game game = gameService.getGame(gameId);
-        game.createSettlement(game.getPlayer(getPlayerToken(request)),cornerId);
+        game.createSettlement(game.getPlayer(getIpAddr(request)),cornerId);
         return new ResponseEntity<>(responseMap,
                 HttpStatus.OK);
     }
@@ -101,7 +99,7 @@ public class PlayerController {
             HttpServletRequest request) throws InvalidPlayerException {
         Map<String, Object> responseMap = new HashMap<>();
         Game game = gameService.getGame(gameId);
-        game.createRoad(game.getPlayer(getPlayerToken(request)),edgeId);
+        game.createRoad(game.getPlayer(getIpAddr(request)),edgeId);
         return new ResponseEntity<>(responseMap,
                 HttpStatus.OK);
     }
@@ -113,7 +111,7 @@ public class PlayerController {
             HttpServletRequest request) throws InvalidPlayerException {
         Map<String, Object> responseMap = new HashMap<>();
         Game game = gameService.getGame(gameId);
-        game.playRobber(game.getPlayer(getPlayerToken(request)),tileId);
+        game.playRobber(game.getPlayer(getIpAddr(request)),tileId);
         return new ResponseEntity<>(responseMap,
                 HttpStatus.OK);
     }
@@ -124,7 +122,7 @@ public class PlayerController {
             HttpServletRequest request) throws InvalidPlayerException {
         Map<String, Object> responseMap = new HashMap<>();
         Game game = gameService.getGame(gameId);
-        game.roll(game.getPlayer(getPlayerToken(request)));
+        game.roll(game.getPlayer(getIpAddr(request)));
         return new ResponseEntity<>(responseMap,
                 HttpStatus.OK);
     }
@@ -135,7 +133,7 @@ public class PlayerController {
             HttpServletRequest request) throws InvalidPlayerException {
         Map<String, Object> responseMap = new HashMap<>();
         Game game = gameService.getGame(gameId);
-        game.endTurn(game.getPlayer(getPlayerToken(request)));
+        game.endTurn(game.getPlayer(getIpAddr(request)));
         return new ResponseEntity<>(responseMap,
                 HttpStatus.OK);
     }
@@ -146,7 +144,7 @@ public class PlayerController {
             HttpServletRequest request) throws InvalidPlayerException {
         Map<String, Object> responseMap = new HashMap<>();
         Game game = gameService.getGame(gameId);
-        game.applyExchange(game.getPlayer(getPlayerToken(request)),exchange);
+        game.applyExchange(game.getPlayer(getIpAddr(request)),exchange);
         return new ResponseEntity<>(responseMap,
                 HttpStatus.OK);
     }
@@ -158,7 +156,7 @@ public class PlayerController {
             HttpServletRequest request) throws InvalidPlayerException {
         Map<String, Object> responseMap = new HashMap<>();
         Game game = gameService.getGame(gameId);
-        CatanPlayer player = game.getPlayer(getPlayerToken(request));
+        CatanPlayer player = game.getPlayer(getIpAddr(request));
         game.ok(player,ok);
         responseMap.put("player", player);
         responseMap.put("active", player.equals(game.getActivePlayer()));
@@ -174,7 +172,7 @@ public class PlayerController {
             HttpServletRequest request) throws InvalidPlayerException {
         Map<String, Object> responseMap = new HashMap<>();
         Game game = gameService.getGame(gameId);
-        CatanPlayer player = game.getPlayer(getPlayerToken(request));
+        CatanPlayer player = game.getPlayer(getIpAddr(request));
         game.cancelTurn(player);
         responseMap.put("player", player);
         responseMap.put("active", player.equals(game.getActivePlayer()));
@@ -191,7 +189,7 @@ public class PlayerController {
             HttpServletRequest request) throws InvalidPlayerException {
         Map<String, Object> responseMap = new HashMap<>();
         Game game = gameService.getGame(gameId);
-        responseMap.put("robbable", game.getRobbable(game.getPlayer(getPlayerToken(request))));
+        responseMap.put("robbable", game.getRobbable(game.getPlayer(getIpAddr(request))));
         return new ResponseEntity<>(responseMap,
                 HttpStatus.OK);
     }
@@ -202,7 +200,7 @@ public class PlayerController {
             HttpServletRequest request) throws InvalidPlayerException {
         Map<String, Object> responseMap = new HashMap<>();
         Game game = gameService.getGame(gameId);
-        responseMap.put("buildable", game.getPlayer(getPlayerToken(request)).getAvailablePieces());
+        responseMap.put("buildable", game.getPlayer(getIpAddr(request)).getAvailablePieces());
         return new ResponseEntity<>(responseMap,
                 HttpStatus.OK);
     }
@@ -213,7 +211,7 @@ public class PlayerController {
             HttpServletRequest request) throws InvalidPlayerException {
         Map<String, Object> responseMap = new HashMap<>();
         Game game = gameService.getGame(gameId);
-        responseMap.put("selection", game.getResourceSelection(game.getPlayer(getPlayerToken(request))));
+        responseMap.put("selection", game.getResourceSelection(game.getPlayer(getIpAddr(request))));
         return new ResponseEntity<>(responseMap,
                 HttpStatus.OK);
     }
@@ -225,7 +223,7 @@ public class PlayerController {
             HttpServletRequest request) throws InvalidPlayerException {
         Map<String, Object> responseMap = new HashMap<>();
         Game game = gameService.getGame(gameId);
-        game.playCardSelection(game.getPlayer(getPlayerToken(request)),selection);
+        game.playCardSelection(game.getPlayer(getIpAddr(request)),selection);
         return new ResponseEntity<>(responseMap,
                 HttpStatus.OK);
     }
@@ -236,7 +234,7 @@ public class PlayerController {
             HttpServletRequest request) throws InvalidPlayerException {
         Map<String, Object> responseMap = new HashMap<>();
         Game game = gameService.getGame(gameId);
-        responseMap.put("dcs", game.getPlayer(getPlayerToken(request)).getAvailableDCs());
+        responseMap.put("dcs", game.getPlayer(getIpAddr(request)).getAvailableDCs());
         return new ResponseEntity<>(responseMap,
                 HttpStatus.OK);
     }
@@ -248,7 +246,7 @@ public class PlayerController {
             HttpServletRequest request) throws InvalidPlayerException {
         Map<String, Object> responseMap = new HashMap<>();
         Game game = gameService.getGame(gameId);
-        game.playDC(game.getPlayer(getPlayerToken(request)),type);
+        game.playDC(game.getPlayer(getIpAddr(request)),type);
         return new ResponseEntity<>(responseMap,
                 HttpStatus.OK);
     }
@@ -259,7 +257,7 @@ public class PlayerController {
             HttpServletRequest request) throws InvalidPlayerException {
         Map<String, Object> responseMap = new HashMap<>();
         Game game = gameService.getGame(gameId);
-        responseMap.put("tradeable", game.getPlayer(getPlayerToken(request)).getTradeable());
+        responseMap.put("tradeable", game.getPlayer(getIpAddr(request)).getTradeable());
         return new ResponseEntity<>(responseMap,
                 HttpStatus.OK);
     }
@@ -271,7 +269,7 @@ public class PlayerController {
             HttpServletRequest request) throws InvalidPlayerException {
         Map<String, Object> responseMap = new HashMap<>();
         Game game = gameService.getGame(gameId);
-        game.robPlayer(game.getPlayer(getPlayerToken(request)), robbedId);
+        game.robPlayer(game.getPlayer(getIpAddr(request)), robbedId);
         return new ResponseEntity<>(responseMap,
                 HttpStatus.OK);
     }
@@ -283,7 +281,7 @@ public class PlayerController {
             HttpServletRequest request) throws InvalidPlayerException {
         Map<String, Object> responseMap = new HashMap<>();
         Game game = gameService.getGame(gameId);
-        game.answerTradeRequest(game.getPlayer(getPlayerToken(request)), answer);
+        game.answerTradeRequest(game.getPlayer(getIpAddr(request)), answer);
         return new ResponseEntity<>(responseMap,
                 HttpStatus.OK);
     }
@@ -295,7 +293,7 @@ public class PlayerController {
             HttpServletRequest request) throws InvalidPlayerException {
         Map<String, Object> responseMap = new HashMap<>();
         Game game = gameService.getGame(gameId);
-        game.acceptPlayerTrade(game.getPlayer(getPlayerToken(request)), accepted);
+        game.acceptPlayerTrade(game.getPlayer(getIpAddr(request)), accepted);
         return new ResponseEntity<>(responseMap,
                 HttpStatus.OK);
     }
@@ -307,14 +305,14 @@ public class PlayerController {
             HttpServletRequest request) throws InvalidPlayerException {
         Map<String, Object> responseMap = new HashMap<>();
         Game game = gameService.getGame(gameId);
-        game.requestTrade(game.getPlayer(getPlayerToken(request)),exchange);
+        game.requestTrade(game.getPlayer(getIpAddr(request)),exchange);
         return new ResponseEntity<>(responseMap,
                 HttpStatus.OK);
     }
 
     @PostConstruct
     public void start() {
-        //CatanStartup.jettyServer.afterDeployed();
+        CatanStartup.jettyServer.afterDeployed();
     }
 
     public static String getIpAddr(HttpServletRequest request) {
@@ -335,11 +333,5 @@ public class PlayerController {
             }
         }
         return request.getRemoteAddr();
-    }
-
-    public static String getPlayerToken(HttpServletRequest request) {
-        return Hashing.sha256()
-                .hashString(getIpAddr(request) + request.getHeader("User-Agent"), StandardCharsets.UTF_8)
-                .toString();
     }
 }

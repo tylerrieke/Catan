@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
+       default-autowire="byName">
+
+    <bean id="ore" class="com.rieke.bmore.catan.base.resources.Ore"/>
+    <bean id="brick" class="com.rieke.bmore.catan.base.resources.Brick"/>
+    <bean id="sheep" class="com.rieke.bmore.catan.base.resources.Sheep"/>
+    <bean id="wheat" class="com.rieke.bmore.catan.base.resources.Wheat"/>
+    <bean id="wood" class="com.rieke.bmore.catan.base.resources.Wood"/>
+
+    <bean id="resourceService" class="com.rieke.bmore.catan.base.resources.ResourceService"
+          scope="singleton">
+    </bean>
+
+    <bean id="road" class="com.rieke.bmore.catan.base.pieces.Road"/>
+    <bean id="settlement" class="com.rieke.bmore.catan.base.pieces.Settlement"/>
+    <bean id="city" class="com.rieke.bmore.catan.base.pieces.City"/>
+    <bean id="dc" class="com.rieke.bmore.catan.base.pieces.DevelopmentCard"/>
+
+    <bean id="pieceService" class="com.rieke.bmore.catan.base.pieces.PieceService"
+          scope="singleton">
+    </bean>
+
+    <bean id="basicBoardFactory" class="com.rieke.bmore.catan.base.board.BasicBoardFactory"
+          scope="singleton">
+        <constructor-arg index="0" ref="resourceService"/>
+    </bean>
+
+    <bean id="expansionBoardFactory" class="com.rieke.bmore.catan.base.board.ExpansionBoardFactory"
+          scope="singleton">
+        <constructor-arg index="0" ref="resourceService"/>
+    </bean>
+
+    <bean id="connectionFactory" class="com.rieke.bmore.common.connection.ConnectionFactory"
+          scope="singleton">
+    </bean>
+
+    <bean id="gameFactory" class="com.rieke.bmore.catan.base.game.GameFactory"
+          scope="singleton">
+        <constructor-arg index="0" ref="resourceService"/>
+        <constructor-arg index="1" ref="pieceService"/>
+    </bean>
+
+    <bean id="gameService" class="com.rieke.bmore.catan.base.game.GameService"
+          scope="singleton">
+        <constructor-arg index="0" ref="gameFactory"/>
+    </bean>
+
+    <bean id="boardController" class="com.rieke.bmore.catan.base.board.BoardController"
+          scope="singleton">
+        <constructor-arg index="0" ref="gameService"/>
+    </bean>
+
+</beans>
