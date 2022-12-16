@@ -15,7 +15,7 @@
     <properties>
         <maven.build.timestamp.format>E yyyy-MM-dd HH:mm:ss z</maven.build.timestamp.format>
         <environment.name>local</environment.name>
-        <org.springframework.version>3.2.11.RELEASE</org.springframework.version>
+        <org.springframework.version>5.2.20.RELEASE</org.springframework.version>
         <org.springframework.security.version>3.2.5.RELEASE</org.springframework.security.version>
         <com.atomikos.version>1.1</com.atomikos.version>
         <commons.io.version>2.4</commons.io.version>
